@@ -1,0 +1,4 @@
+cliente,email,telefono,destinazione,periodo,porto,cabina,adulti,bambini,eta_bambini,budget,note
+Giulia Martini,giulia.martini@example.com,+39 333 111 2222,Grecia,Agosto 2026,Venezia,Esterna,2,1,8,4500,Preferenza nave con piscina
+Marco Verdi,marco.verdi@example.com,,Fiordi Norvegesi,,Amburgo,Balcone,2,0,,,Ha gia comunicato email e cabina
+Sara Costa,sara.costa@example.com,+39 347 222 9090,Mediterraneo Occidentale,Settembre 2026,Genova,Interna,2,0,,2600,Richiede alternative economiche

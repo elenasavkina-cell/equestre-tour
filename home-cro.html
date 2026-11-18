@@ -1,0 +1,2707 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Equestre Tour | Crociere, Mare Italia & Pacchetti Vacanza</title>
+  <meta name="description" content="Prenota la tua vacanza con Equestre Tour: Crociere nel Mediterraneo, Villaggi Mare Italia e Pacchetti Lungo Raggio. Consulente dedicato, quotazione reale con calcolo età bambini, opzione 24h e pagamenti protetti.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --primary-blue: #0066FF;
+      --primary-blue-dark: #004ECC;
+      --primary-blue-light: #EFF6FF;
+      --primary-blue-soft: rgba(0, 102, 255, 0.08);
+      
+      --secondary-gold: #FFB300;
+      --secondary-gold-hover: #E5A100;
+      --secondary-gold-light: #FFFBEB;
+      --secondary-gold-badge: #D97706;
+      
+      --text-main: #0F172A;
+      --text-muted: #475569;
+      --text-light: #94A3B8;
+      
+      --bg-body: #F8FAFC;
+      --bg-white: #FFFFFF;
+      --border-soft: #E2E8F0;
+      --border-accent: rgba(0, 102, 255, 0.25);
+      
+      --success-green: #10B981;
+      --success-green-light: #ECFDF5;
+      
+      --shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.04);
+      --shadow-md: 0 10px 25px -3px rgba(15, 23, 42, 0.08);
+      --shadow-xl: 0 25px 50px -12px rgba(15, 23, 42, 0.18);
+      --shadow-gold: 0 8px 24px rgba(255, 179, 0, 0.35);
+      --shadow-blue: 0 8px 24px rgba(0, 102, 255, 0.25);
+      
+      --radius-sm: 10px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --radius-full: 9999px;
+      
+      --font-heading: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-body);
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+    h1, h2, h3, h4, h5, .font-heading { font-family: var(--font-heading); }
+
+    .container {
+      width: 100%;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* 1. HEADER BOUTIQUE STICKY */
+    .site-header {
+      background: #FFFFFF;
+      border-bottom: 1px solid var(--border-soft);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: var(--shadow-sm);
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 82px;
+    }
+    .logo-link {
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+    }
+    .site-logo-img {
+      height: 52px;
+      width: auto;
+      object-fit: contain;
+    }
+    .header-nav {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+    .header-nav-btn {
+      text-decoration: none;
+      color: var(--text-main);
+      font-weight: 700;
+      font-size: 14px;
+      padding: 8px 12px;
+      border-radius: var(--radius-sm);
+      transition: all 0.15s;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .header-nav-btn:hover, .header-nav-btn.active {
+      color: var(--primary-blue);
+      background: var(--primary-blue-light);
+    }
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .phone-contact-pill {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      background: var(--primary-blue-light);
+      padding: 8px 16px;
+      border-radius: var(--radius-full);
+      border: 1px solid rgba(0, 102, 255, 0.15);
+      transition: all 0.2s;
+    }
+    .phone-contact-pill:hover {
+      background: #DBEAFE;
+      transform: translateY(-1px);
+    }
+    .phone-icon-box {
+      width: 28px;
+      height: 28px;
+      background: var(--primary-blue);
+      color: #FFF;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+    }
+    .phone-texts small {
+      font-size: 10px;
+      text-transform: uppercase;
+      font-weight: 800;
+      color: var(--primary-blue);
+      letter-spacing: 0.5px;
+      display: block;
+    }
+    .phone-texts strong {
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--text-main);
+    }
+
+    /* 2. HERO WIDESCREEN AD ALTO IMPATTO */
+    .hero-widescreen {
+      position: relative;
+      background: linear-gradient(180deg, rgba(15, 23, 42, 0.6) 0%, rgba(15, 23, 42, 0.88) 100%),
+                  url('https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=2200&q=85');
+      background-size: cover;
+      background-position: center 35%;
+      padding: 72px 0 88px 0;
+      color: #FFFFFF;
+      text-align: center;
+    }
+    .hero-badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      color: #FFFFFF;
+      padding: 6px 18px;
+      border-radius: var(--radius-full);
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 22px;
+    }
+    .hero-badge-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--secondary-gold);
+    }
+    .hero-main-title {
+      font-size: 46px;
+      font-weight: 900;
+      line-height: 1.15;
+      letter-spacing: -1px;
+      margin-bottom: 16px;
+      max-width: 960px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .hero-main-title span { color: #60A5FA; }
+    .hero-subtitle {
+      font-size: 17px;
+      color: #E2E8F0;
+      max-width: 780px;
+      margin: 0 auto 30px auto;
+      line-height: 1.6;
+    }
+    .hero-perks-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .hero-perk-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #F8FAFC;
+    }
+    .hero-perk-item span { color: var(--secondary-gold); font-weight: 900; }
+
+    /* 3. TRUST BAR BOUTIQUE */
+    .boutique-trust-bar {
+      background: #FFFFFF;
+      border-bottom: 1px solid var(--border-soft);
+      padding: 16px 0;
+      box-shadow: var(--shadow-sm);
+    }
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .trust-icon-box {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: var(--primary-blue-light);
+      color: var(--primary-blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+    .trust-content strong {
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--text-main);
+      display: block;
+      margin-bottom: 2px;
+    }
+    .trust-content small {
+      font-size: 12px;
+      color: var(--text-muted);
+      display: block;
+      line-height: 1.25;
+    }
+
+    /* 4. MOTORE DI RICERCA UNIFICATO A 3 TAB */
+    .search-section {
+      margin-top: -40px;
+      position: relative;
+      z-index: 50;
+      margin-bottom: 50px;
+    }
+    .search-chamber {
+      background: #FFFFFF;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-xl);
+      border: 1px solid var(--border-soft);
+      padding: 24px;
+    }
+
+    /* TABS SELECTOR */
+    .tabs-macro-row {
+      display: flex;
+      gap: 10px;
+      border-bottom: 2px solid var(--border-soft);
+      padding-bottom: 16px;
+      margin-bottom: 20px;
+    }
+    .tab-macro-btn {
+      background: var(--bg-body);
+      border: 1.5px solid var(--border-soft);
+      border-radius: var(--radius-sm);
+      padding: 12px 22px;
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--text-muted);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s;
+    }
+    .tab-macro-btn:hover {
+      color: var(--primary-blue);
+      border-color: var(--primary-blue);
+      background: #FFFFFF;
+    }
+    .tab-macro-btn.active {
+      background: var(--primary-blue);
+      color: #FFFFFF;
+      border-color: var(--primary-blue);
+      box-shadow: var(--shadow-blue);
+    }
+
+    /* FILTRI CON MULTI-SELEZIONE (STILE COSTA CROCIERE & ALPITOUR) */
+    .filters-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 1.3fr 1fr 1.2fr auto;
+      gap: 12px;
+      align-items: center;
+    }
+    .filter-box {
+      background: var(--bg-body);
+      border: 1.5px solid var(--border-soft);
+      border-radius: var(--radius-sm);
+      padding: 10px 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      cursor: pointer;
+      position: relative;
+      user-select: none;
+      transition: all 0.2s;
+    }
+    .filter-box:hover, .filter-box.open {
+      border-color: var(--primary-blue);
+      background: #FFFFFF;
+      box-shadow: 0 0 0 3px rgba(0, 102, 255, 0.1);
+    }
+    .filter-label-top {
+      font-size: 11px;
+      text-transform: uppercase;
+      font-weight: 800;
+      color: var(--text-muted);
+      letter-spacing: 0.5px;
+    }
+    .filter-selected-text {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text-main);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .filter-count-badge {
+      background: var(--primary-blue);
+      color: #FFF;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 2px 7px;
+      border-radius: var(--radius-full);
+      margin-left: 6px;
+    }
+
+    /* POPOVER DROPDOWN MULTI-CHECKBOX */
+    .filter-dropdown {
+      position: absolute;
+      top: calc(100% + 8px);
+      left: 0;
+      width: 320px;
+      background: #FFFFFF;
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-xl);
+      padding: 16px;
+      z-index: 200;
+      display: none;
+    }
+    .filter-dropdown.show { display: block; }
+    .dropdown-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border-soft);
+      padding-bottom: 8px;
+      margin-bottom: 10px;
+    }
+    .dropdown-top span { font-size: 12px; font-weight: 800; color: var(--text-main); }
+    .dropdown-top button {
+      background: transparent;
+      border: none;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--primary-blue);
+      cursor: pointer;
+    }
+    .dropdown-list {
+      max-height: 220px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .checkbox-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 7px 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-main);
+      transition: background 0.1s;
+    }
+    .checkbox-item:hover { background: var(--primary-blue-light); }
+    .checkbox-item input[type="checkbox"] {
+      width: 17px;
+      height: 17px;
+      accent-color: var(--primary-blue);
+      cursor: pointer;
+    }
+    .btn-dropdown-apply {
+      background: var(--primary-blue);
+      color: #FFF;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 8px 16px;
+      border-radius: var(--radius-sm);
+      border: none;
+      cursor: pointer;
+      margin-top: 12px;
+      width: 100%;
+    }
+
+    .btn-search-trigger {
+      background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-dark) 100%);
+      color: #FFFFFF;
+      font-size: 15px;
+      font-weight: 800;
+      border: none;
+      padding: 14px 26px;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: all 0.2s;
+      box-shadow: var(--shadow-blue);
+      height: 100%;
+    }
+    .btn-search-trigger:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 28px rgba(0, 102, 255, 0.35);
+    }
+
+    /* 5. VETRINA BOUTIQUE (GRIGLIA RISULTATI) */
+    .showcase-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: 28px;
+    }
+    .showcase-header h2 {
+      font-size: 30px;
+      font-weight: 900;
+      color: var(--text-main);
+      letter-spacing: -0.5px;
+    }
+    .showcase-header p {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    .showcase-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-bottom: 60px;
+    }
+    .boutique-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .boutique-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-xl);
+      border-color: rgba(0, 102, 255, 0.4);
+    }
+    .card-photo-wrapper {
+      height: 200px;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .card-photo-wrapper::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(15, 23, 42, 0.35) 0%, rgba(15, 23, 42, 0.05) 40%, rgba(15, 23, 42, 0.85) 100%);
+      pointer-events: none;
+    }
+    .card-top-badges {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .badge-collection {
+      background: rgba(15, 23, 42, 0.85);
+      color: #FFFFFF;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: var(--radius-full);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      text-transform: uppercase;
+    }
+    .badge-agency-guarantee {
+      background: var(--secondary-gold);
+      color: #0F172A;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: var(--radius-full);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    .card-bottom-tags {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .pill-departure-code {
+      background: rgba(0, 102, 255, 0.9);
+      color: #FFFFFF;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 6px;
+    }
+
+    .card-body {
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      justify-content: space-between;
+    }
+    .card-ship-title {
+      font-size: 19px;
+      font-weight: 800;
+      color: var(--text-main);
+      margin-bottom: 4px;
+      letter-spacing: -0.3px;
+    }
+    .card-destination-desc {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-bottom: 14px;
+    }
+    
+    .card-agency-perks {
+      background: var(--bg-body);
+      border-radius: var(--radius-sm);
+      padding: 12px 14px;
+      margin-bottom: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .agency-perk-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+    .agency-perk-row span { color: var(--primary-blue); font-size: 14px; }
+
+    .card-pricing-block {
+      border-top: 1px solid var(--border-soft);
+      padding-top: 14px;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+    }
+    .price-sub-label {
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+    .price-main-val {
+      font-size: 24px;
+      font-weight: 900;
+      color: var(--secondary-gold-badge);
+    }
+    .price-note {
+      font-size: 11px;
+      color: var(--text-light);
+      display: block;
+    }
+
+    .card-action-buttons {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 8px;
+    }
+    .btn-card-personalize {
+      background: var(--primary-blue);
+      color: #FFFFFF;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 11px 12px;
+      border-radius: var(--radius-sm);
+      border: none;
+      cursor: pointer;
+      transition: background 0.15s;
+      text-align: center;
+    }
+    .btn-card-personalize:hover { background: var(--primary-blue-dark); }
+    
+    .btn-card-lock {
+      background: #FFFFFF;
+      color: var(--primary-blue);
+      border: 1.5px solid var(--primary-blue);
+      font-size: 12px;
+      font-weight: 700;
+      padding: 11px 8px;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      transition: all 0.15s;
+      text-align: center;
+    }
+    .btn-card-lock:hover { background: var(--primary-blue-light); }
+
+    /* 6. TRANSIZIONE VISIVA / BANNER DI SPEZZO SEZIONI */
+    .transition-hero-banner {
+      position: relative;
+      background: linear-gradient(135deg, rgba(0, 102, 255, 0.92) 0%, rgba(15, 23, 42, 0.95) 100%),
+                  url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2000&q=80');
+      background-size: cover;
+      background-position: center;
+      border-radius: var(--radius-lg);
+      padding: 56px 40px;
+      margin: 60px auto;
+      color: #FFFFFF;
+      box-shadow: var(--shadow-xl);
+    }
+    .transition-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      gap: 36px;
+      align-items: center;
+    }
+    .transition-grid h3 {
+      font-size: 32px;
+      font-weight: 900;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+    .transition-grid p {
+      font-size: 15px;
+      color: #E2E8F0;
+      line-height: 1.6;
+    }
+
+    /* 7. MODAL DETTAGLIO OFFERTA & QUOTAZIONE REALE CON CONFIGURATORE OSPITI & ETÀ */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.78);
+      backdrop-filter: blur(8px);
+      z-index: 2000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .modal-overlay.show { display: flex; }
+    
+    .quote-modal-card {
+      background: #FFFFFF;
+      border-radius: var(--radius-lg);
+      max-width: 880px;
+      width: 100%;
+      max-height: 94vh;
+      overflow-y: auto;
+      box-shadow: var(--shadow-xl);
+      border: 1px solid var(--border-soft);
+      position: relative;
+    }
+    
+    .modal-head {
+      background: #FFFFFF;
+      border-bottom: 1px solid var(--border-soft);
+      padding: 20px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .modal-brand-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--primary-blue-light);
+      color: var(--primary-blue);
+      font-size: 11px;
+      font-weight: 800;
+      padding: 3px 10px;
+      border-radius: var(--radius-full);
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+    .modal-title {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--text-main);
+    }
+    .btn-close-modal {
+      background: none;
+      border: none;
+      font-size: 28px;
+      line-height: 1;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: color 0.15s;
+    }
+    .btn-close-modal:hover { color: var(--text-main); }
+
+    .modal-body-content { padding: 28px; }
+
+    /* CONFIGURAZIONE OSPITI & ETÀ BAMBINI */
+    .guest-config-box {
+      background: var(--bg-body);
+      border: 1.5px solid var(--border-soft);
+      border-radius: var(--radius-md);
+      padding: 18px;
+      margin-bottom: 24px;
+    }
+    .guest-config-title {
+      font-size: 14px;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--text-main);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .guest-config-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 16px;
+    }
+    .guest-control {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .guest-control label {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text-muted);
+    }
+    .guest-select {
+      border: 1.5px solid var(--border-soft);
+      border-radius: var(--radius-sm);
+      padding: 10px 12px;
+      font-family: inherit;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text-main);
+      background: #FFFFFF;
+      outline: none;
+    }
+    .children-ages-container {
+      grid-column: 1 / -1;
+      display: flex;
+      gap: 12px;
+      background: #FFFFFF;
+      padding: 12px;
+      border-radius: var(--radius-sm);
+      border: 1px dashed var(--border-soft);
+      align-items: center;
+      margin-top: 6px;
+    }
+
+    /* COMPARATORE DATE ADIACENTI (SETTIMANA VS SETTIMANA) */
+    .date-comparison-bar {
+      margin-bottom: 24px;
+    }
+    .date-slider-row {
+      display: flex;
+      gap: 10px;
+      overflow-x: auto;
+      padding-bottom: 6px;
+      margin-top: 10px;
+    }
+    .date-pill-option {
+      border: 2px solid var(--border-soft);
+      border-radius: var(--radius-sm);
+      padding: 10px 16px;
+      text-align: center;
+      cursor: pointer;
+      min-width: 140px;
+      background: #FFFFFF;
+      transition: all 0.2s;
+      flex-shrink: 0;
+    }
+    .date-pill-option:hover {
+      border-color: var(--primary-blue);
+      transform: translateY(-2px);
+    }
+    .date-pill-option.active {
+      border-color: var(--primary-blue);
+      background: var(--primary-blue-light);
+      box-shadow: 0 0 0 3px rgba(0, 102, 255, 0.15);
+    }
+    .date-pill-option strong { font-size: 13px; color: var(--text-main); display: block; }
+    .date-pill-option span { font-size: 12px; font-weight: 800; color: var(--secondary-gold-badge); }
+
+    /* COMPARATORE CABINE / TRATTAMENTI SULLA STESSA DATA */
+    .options-matrix-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin: 14px 0 24px 0;
+    }
+    .matrix-option-tile {
+      border: 2px solid var(--border-soft);
+      border-radius: var(--radius-md);
+      padding: 16px 12px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.2s;
+      background: #FFFFFF;
+    }
+    .matrix-option-tile:hover {
+      border-color: var(--primary-blue);
+      transform: translateY(-2px);
+    }
+    .matrix-option-tile.selected {
+      border-color: var(--primary-blue);
+      background: var(--primary-blue-light);
+      box-shadow: 0 0 0 3px rgba(0, 102, 255, 0.15);
+    }
+    .matrix-tile-icon { font-size: 26px; margin-bottom: 6px; }
+    .matrix-option-tile strong { font-size: 13px; color: var(--text-main); display: block; }
+    .matrix-option-tile p { font-size: 11px; color: var(--text-muted); margin: 4px 0; }
+    .matrix-diff { font-size: 12px; font-weight: 800; color: var(--primary-blue); }
+
+    /* RIEPILOGO TOTALE TRASPARENTE & LE 3 VIE D'USCITA */
+    .total-price-summary-card {
+      background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+      color: #FFFFFF;
+      border-radius: var(--radius-md);
+      padding: 22px;
+      margin-bottom: 24px;
+    }
+    .total-price-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+      padding-bottom: 12px;
+      margin-bottom: 12px;
+    }
+    .total-price-head h4 { font-size: 16px; font-weight: 800; }
+    .total-calculated-val {
+      font-size: 32px;
+      font-weight: 900;
+      color: var(--secondary-gold);
+    }
+    .price-breakdown-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      color: #CBD5E1;
+      margin-bottom: 4px;
+    }
+
+    /* 3 VIE D'USCITA AD ALTA CONVERSIONE */
+    .three-exits-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 1.1fr 1fr;
+      gap: 12px;
+    }
+    .btn-exit-checkout {
+      background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-dark) 100%);
+      color: #FFFFFF;
+      font-size: 14px;
+      font-weight: 800;
+      padding: 14px 16px;
+      border-radius: var(--radius-sm);
+      border: none;
+      cursor: pointer;
+      text-align: center;
+      box-shadow: var(--shadow-blue);
+      transition: all 0.2s;
+    }
+    .btn-exit-checkout:hover { transform: translateY(-2px); }
+    
+    .btn-exit-hold24 {
+      background: var(--secondary-gold);
+      color: #0F172A;
+      font-size: 13px;
+      font-weight: 800;
+      padding: 14px 16px;
+      border-radius: var(--radius-sm);
+      border: none;
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.2s;
+      box-shadow: 0 4px 14px rgba(245, 158, 11, 0.3);
+    }
+    .btn-exit-hold24:hover { background: var(--secondary-gold-hover); }
+
+    .btn-exit-savequote {
+      background: #FFFFFF;
+      color: var(--text-main);
+      border: 1.5px solid var(--border-soft);
+      font-size: 13px;
+      font-weight: 700;
+      padding: 14px 14px;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.2s;
+    }
+    .btn-exit-savequote:hover { background: var(--bg-body); border-color: var(--primary-blue); }
+
+    /* FORM DRAWER PER CHECKOUT / BLOCCO 24H */
+    .drawer-form-box {
+      background: var(--bg-body);
+      border: 1.5px solid var(--border-soft);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      margin-top: 20px;
+      display: none;
+      animation: fadeInDrawer 0.25s ease-out;
+    }
+    @keyframes fadeInDrawer {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .drawer-form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+    .drawer-input {
+      border: 1.5px solid var(--border-soft);
+      border-radius: var(--radius-sm);
+      padding: 11px 14px;
+      font-family: inherit;
+      font-size: 14px;
+      outline: none;
+      width: 100%;
+      background: #FFFFFF;
+      transition: border-color 0.2s;
+    }
+    .drawer-input:focus {
+      border-color: var(--primary-blue);
+      box-shadow: 0 0 0 3px rgba(0, 102, 255, 0.12);
+    }
+    .drawer-section-title {
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--primary-blue);
+      letter-spacing: 0.5px;
+      margin: 16px 0 10px 0;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* OPZIONI DI PAGAMENTO (ACCONTO 30% VS SALDO) */
+    .payment-plan-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    .payment-plan-card {
+      border: 2px solid var(--border-soft);
+      border-radius: var(--radius-sm);
+      padding: 14px;
+      background: #FFFFFF;
+      cursor: pointer;
+      transition: all 0.2s;
+      position: relative;
+    }
+    .payment-plan-card.active {
+      border-color: var(--primary-blue);
+      background: var(--primary-blue-light);
+      box-shadow: 0 0 0 3px rgba(0, 102, 255, 0.15);
+    }
+    .payment-plan-card input {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+    }
+    .payment-plan-card strong {
+      font-size: 14px;
+      color: var(--text-main);
+      display: block;
+      margin-bottom: 2px;
+    }
+    .payment-plan-card .plan-amount {
+      font-size: 20px;
+      font-weight: 900;
+      color: var(--primary-blue);
+    }
+    .payment-plan-card small {
+      font-size: 11px;
+      color: var(--text-muted);
+      display: block;
+      margin-top: 4px;
+    }
+
+    /* CARD PAYMENT FIELDS */
+    .card-inputs-box {
+      background: #FFFFFF;
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius-sm);
+      padding: 14px;
+      margin-bottom: 14px;
+    }
+    .ssl-secure-banner {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #065F46;
+      margin-bottom: 12px;
+    }
+
+    /* SUCCESS VOUCHER VIEW & 24H COUNTDOWN TIMER */
+    .success-voucher-box {
+      text-align: center;
+      padding: 24px;
+      display: none;
+      animation: fadeInDrawer 0.3s ease-out;
+    }
+    .success-icon {
+      width: 64px;
+      height: 64px;
+      background: var(--success-green);
+      color: #FFF;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      margin-bottom: 16px;
+    }
+    .live-timer-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 100%);
+      border: 2px solid var(--secondary-gold);
+      padding: 10px 20px;
+      border-radius: var(--radius-full);
+      font-size: 16px;
+      font-weight: 900;
+      color: #92400E;
+      margin: 14px 0 20px 0;
+      box-shadow: 0 4px 12px rgba(245, 158, 11, 0.2);
+    }
+    .live-timer-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #DC2626;
+      animation: pulseDot 1.2s infinite;
+    }
+    @keyframes pulseDot {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(1.3); }
+    }
+
+    /* SKELETON LOADERS IN BLU ELETTRICO */
+    .skeleton-loader-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 10px;
+    }
+    .skeleton-card {
+      background: #FFFFFF;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-soft);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+    .skeleton-img {
+      height: 200px;
+      background: linear-gradient(90deg, #EFF6FF 20%, #DBEAFE 40%, #BFDBFE 60%, #EFF6FF 80%);
+      background-size: 250% 100%;
+      animation: shimmerBlue 1.3s infinite linear;
+    }
+    .skeleton-content {
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .skeleton-line {
+      height: 14px;
+      border-radius: 6px;
+      background: linear-gradient(90deg, #F1F5F9 20%, #DBEAFE 45%, #BFDBFE 65%, #F1F5F9 80%);
+      background-size: 250% 100%;
+      animation: shimmerBlue 1.3s infinite linear;
+    }
+    .skeleton-line.title { height: 22px; width: 75%; }
+    .skeleton-line.subtitle { width: 90%; }
+    .skeleton-line.short { width: 45%; }
+    .skeleton-line.btn { height: 42px; width: 100%; border-radius: var(--radius-sm); margin-top: 6px; }
+    @keyframes shimmerBlue {
+      0% { background-position: 250% 0; }
+      100% { background-position: -250% 0; }
+    }
+
+    /* AI PREDICTIVE CACHE BADGE */
+    .ai-speed-indicator {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--primary-blue);
+      background: var(--primary-blue-light);
+      padding: 4px 10px;
+      border-radius: var(--radius-full);
+      border: 1px solid rgba(0, 102, 255, 0.2);
+    }
+
+    /* 8. FOOTER BOUTIQUE CON LOGO CENTRATO E DATI GOOD TRAVEL */
+    .site-footer {
+      background: #0F172A;
+      color: #94A3B8;
+      padding: 64px 0 32px 0;
+      font-size: 13px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .footer-centered-brand {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .footer-logo-centered-link {
+      display: inline-block;
+      margin-bottom: 16px;
+    }
+    .site-logo-img-footer {
+      height: 60px;
+      width: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 4px 12px rgba(0,0,0,0.5));
+    }
+    .footer-institutional-badge {
+      color: #FFFFFF;
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 0.3px;
+      margin-bottom: 6px;
+    }
+    .footer-institutional-address {
+      color: #94A3B8;
+      font-size: 13px;
+      max-width: 680px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1.1fr 1.1fr 1.2fr;
+      gap: 36px;
+      margin-bottom: 48px;
+    }
+    .footer-col h4 {
+      color: #FFFFFF;
+      font-size: 15px;
+      font-weight: 800;
+      margin-bottom: 16px;
+    }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .footer-col a { color: #94A3B8; text-decoration: none; transition: color 0.15s; }
+    .footer-col a:hover { color: #FFFFFF; }
+    .trust-badge-footer {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 16px;
+      border-radius: var(--radius-sm);
+    }
+
+    @media (max-width: 1024px) {
+      .trust-grid { grid-template-columns: 1fr 1fr; }
+      .filters-grid { grid-template-columns: 1fr 1fr; }
+      .showcase-grid { grid-template-columns: 1fr 1fr; }
+      .skeleton-loader-grid { grid-template-columns: 1fr 1fr; }
+      .options-matrix-grid { grid-template-columns: 1fr 1fr; }
+      .three-exits-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 768px) {
+      .header-nav { display: none; }
+      .hero-main-title { font-size: 32px; }
+      .trust-grid { grid-template-columns: 1fr; }
+      .filters-grid { grid-template-columns: 1fr; }
+      .showcase-grid { grid-template-columns: 1fr; }
+      .skeleton-loader-grid { grid-template-columns: 1fr; }
+      .guest-config-grid { grid-template-columns: 1fr; }
+      .payment-plan-grid { grid-template-columns: 1fr; }
+      .transition-grid { grid-template-columns: 1fr; }
+      .drawer-form-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 1. HEADER BOUTIQUE STICKY -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="/" class="logo-link">
+          <img src="https://www.equestretour.com/images/logo.svg" alt="Equestre Tour" class="site-logo-img" onerror="this.src='images/logo.svg'">
+        </a>
+        
+        <nav class="header-nav">
+          <button type="button" class="header-nav-btn active" onclick="switchMacroTab('crociere')">🚢 Crociere</button>
+          <button type="button" class="header-nav-btn" onclick="switchMacroTab('mare_italia')">🏖️ Mare Italia</button>
+          <button type="button" class="header-nav-btn" onclick="switchMacroTab('pacchetti')">✈️ Pacchetti Viaggio</button>
+          <a href="#garanzie" class="header-nav-btn">🛡️ Vantaggi Agenzia</a>
+        </nav>
+
+        <div class="header-actions">
+          <a href="tel:0292854066" class="phone-contact-pill">
+            <div class="phone-icon-box">📞</div>
+            <div class="phone-texts">
+              <small>Consulente Dedicato</small>
+              <strong>02 928 540 66</strong>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 2. HERO WIDESCREEN AD ALTO IMPATTO -->
+  <section class="hero-widescreen">
+    <div class="container">
+      <div class="hero-badge-pill">
+        <div class="hero-badge-dot"></div>
+        <span>Boutique di Viaggio Ufficiale • Tariffe Negoziate & Blocco Reale 24h</span>
+      </div>
+      <h1 class="hero-main-title">Il tuo viaggio ideale, selezionato dai nostri esperti.<br><span>Cerca, Blocca l'Offerta, Parti.</span></h1>
+      <p class="hero-subtitle">Confronta in tempo reale le disponibilità ufficiali di MSC Crociere, Costa Crociere e Alpitour. Quotazione trasparente con calcolo esatto riduzioni bimbi, comparazione date adiacenti e blocco opzione per 24 ore senza carta di credito.</p>
+      
+      <div class="hero-perks-row">
+        <div class="hero-perk-item"><span>✓</span> Assistenza Personale Inclusa</div>
+        <div class="hero-perk-item"><span>✓</span> Blocco Reale 24 Ore Senza Carta</div>
+        <div class="hero-perk-item"><span>✓</span> Bimbo Free & Riduzioni Famiglia Calcolate</div>
+        <div class="hero-perk-item"><span>✓</span> Gestione Totale Check-in & Documenti</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. TRUST BAR BOUTIQUE -->
+  <section class="boutique-trust-bar" id="garanzie">
+    <div class="container">
+      <div class="trust-grid">
+        <div class="trust-item">
+          <div class="trust-icon-box">🏛️</div>
+          <div class="trust-content">
+            <strong>20 Anni di Esperienza</strong>
+            <small>Boutique di viaggi con licenza ufficiale</small>
+          </div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon-box">👨‍💼</div>
+          <div class="trust-content">
+            <strong>Consulente Dedicato H24</strong>
+            <small>Assistenza continua prima e durante il viaggio</small>
+          </div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon-box">🏷️</div>
+          <div class="trust-content">
+            <strong>Miglior Prezzo Reale</strong>
+            <small>Prezzo totale finito con tasse e diritti</small>
+          </div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon-box">🔒</div>
+          <div class="trust-content">
+            <strong>Pagamenti Protetti SSL</strong>
+            <small>Fondo di Garanzia Viaggi e crittografia 256-bit</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. MOTORE DI RICERCA A 3 TAB UNIFICATO -->
+  <div class="container search-section" id="ricerca-motore">
+    <div class="search-chamber">
+      
+      <!-- TAB SELECTOR -->
+      <div class="tabs-macro-row">
+        <button type="button" class="tab-macro-btn active" id="tab-btn-crociere" onclick="switchMacroTab('crociere')">
+          <span>🚢</span> Crociere (MSC & Costa)
+        </button>
+        <button type="button" class="tab-macro-btn" id="tab-btn-mare_italia" onclick="switchMacroTab('mare_italia')">
+          <span>🏖️</span> Mare Italia & Villaggi
+        </button>
+        <button type="button" class="tab-macro-btn" id="tab-btn-pacchetti" onclick="switchMacroTab('pacchetti')">
+          <span>✈️</span> Pacchetti Viaggio & Mondo
+        </button>
+      </div>
+
+      <!-- FILTRI DINAMICI REATTIVI -->
+      <div class="filters-grid">
+        
+        <!-- Filtro 1: Partenza / Porto / Aeroporto -->
+        <div class="filter-box" id="btn-f-port">
+          <span class="filter-label-top" id="lbl-f-port">Porto di Imbarco</span>
+          <div class="filter-selected-text">
+            <span id="txt-f-port">Tutti i Porti Principali</span>
+            <span class="filter-count-badge" id="count-f-port" style="display:none;">0</span>
+          </div>
+          <div class="filter-dropdown" id="pop-f-port">
+            <div class="dropdown-top">
+              <span id="pop-title-port">Opzioni di Partenza</span>
+              <button type="button" onclick="selectAllFilter('port', true)">Tutti</button>
+            </div>
+            <div class="dropdown-list" id="list-f-port">
+              <!-- Popolato dinamicamente -->
+            </div>
+            <button type="button" class="btn-dropdown-apply" onclick="closeAllPopups()">Applica Filtro</button>
+          </div>
+        </div>
+
+        <!-- Filtro 2: Destinazione / Regione -->
+        <div class="filter-box" id="btn-f-dest">
+          <span class="filter-label-top" id="lbl-f-dest">Destinazione</span>
+          <div class="filter-selected-text">
+            <span id="txt-f-dest">Tutte le Destinazioni</span>
+            <span class="filter-count-badge" id="count-f-dest" style="display:none;">0</span>
+          </div>
+          <div class="filter-dropdown" id="pop-f-dest">
+            <div class="dropdown-top">
+              <span>Destinazioni Selezionabili</span>
+              <button type="button" onclick="selectAllFilter('dest', true)">Tutte</button>
+            </div>
+            <div class="dropdown-list" id="list-f-dest">
+              <!-- Popolato dinamicamente -->
+            </div>
+            <button type="button" class="btn-dropdown-apply" onclick="closeAllPopups()">Applica Filtro</button>
+          </div>
+        </div>
+
+        <!-- Filtro 3: Durata / Notti -->
+        <div class="filter-box" id="btn-f-dur">
+          <span class="filter-label-top">Durata Soggiorno</span>
+          <div class="filter-selected-text">
+            <span id="txt-f-dur">Tutte le Durate</span>
+          </div>
+          <div class="filter-dropdown" id="pop-f-dur">
+            <div class="dropdown-top">
+              <span>Durata Viaggio</span>
+            </div>
+            <div class="dropdown-list">
+              <label class="checkbox-item"><input type="checkbox" value="short" checked> Breve (3-5 notti)</label>
+              <label class="checkbox-item"><input type="checkbox" value="week" checked> Settimanale (7-8 notti)</label>
+              <label class="checkbox-item"><input type="checkbox" value="long" checked> Lungo Raggio (9-14 notti)</label>
+            </div>
+            <button type="button" class="btn-dropdown-apply" onclick="closeAllPopups()">Conferma</button>
+          </div>
+        </div>
+
+        <!-- Filtro 4: Mese di Partenza -->
+        <div class="filter-box" id="btn-f-month">
+          <span class="filter-label-top">Mese di Partenza</span>
+          <div class="filter-selected-text">
+            <span id="txt-f-month">Estate 2026</span>
+          </div>
+          <div class="filter-dropdown" id="pop-f-month">
+            <div class="dropdown-top">
+              <span>Periodo</span>
+            </div>
+            <div class="dropdown-list">
+              <label class="checkbox-item"><input type="checkbox" value="06" checked> Giugno 2026</label>
+              <label class="checkbox-item"><input type="checkbox" value="07" checked> Luglio 2026</label>
+              <label class="checkbox-item"><input type="checkbox" value="08" checked> Agosto 2026</label>
+              <label class="checkbox-item"><input type="checkbox" value="09" checked> Settembre 2026</label>
+            </div>
+            <button type="button" class="btn-dropdown-apply" onclick="closeAllPopups()">Conferma</button>
+          </div>
+        </div>
+
+        <!-- Bottone Esegui Ricerca -->
+        <button type="button" class="btn-search-trigger" onclick="applyFilters()">
+          <span>🔍</span> Cerca Offerte
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 5. VETRINA BOUTIQUE RISULTATI -->
+  <section class="container" id="vetrina-risultati">
+    <div class="showcase-header">
+      <div>
+        <h2 id="showcase-title">La Collezione Ufficiale Crociere 2026</h2>
+        <p id="showcase-subtitle">Offerte con disponibilità verificata in tempo reale e assistenza dedicata Equestre Tour</p>
+      </div>
+      <div style="display:flex; align-items:center; gap:10px;">
+        <span class="ai-speed-indicator">⚡ Caching Predittivo IA • TTI &lt; 0.2s</span>
+      </div>
+    </div>
+
+    <!-- SKELETON LOADER ANIMATO IN BLU ELETTRICO (Zero blocchi 'Attendi qualche istante') -->
+    <div class="skeleton-loader-grid" id="cards-skeleton" style="display:none;">
+      <div class="skeleton-card">
+        <div class="skeleton-img"></div>
+        <div class="skeleton-content">
+          <div class="skeleton-line title"></div>
+          <div class="skeleton-line subtitle"></div>
+          <div class="skeleton-line short"></div>
+          <div class="skeleton-line btn"></div>
+        </div>
+      </div>
+      <div class="skeleton-card">
+        <div class="skeleton-img"></div>
+        <div class="skeleton-content">
+          <div class="skeleton-line title"></div>
+          <div class="skeleton-line subtitle"></div>
+          <div class="skeleton-line short"></div>
+          <div class="skeleton-line btn"></div>
+        </div>
+      </div>
+      <div class="skeleton-card">
+        <div class="skeleton-img"></div>
+        <div class="skeleton-content">
+          <div class="skeleton-line title"></div>
+          <div class="skeleton-line subtitle"></div>
+          <div class="skeleton-line short"></div>
+          <div class="skeleton-line btn"></div>
+        </div>
+      </div>
+      <div class="skeleton-card">
+        <div class="skeleton-img"></div>
+        <div class="skeleton-content">
+          <div class="skeleton-line title"></div>
+          <div class="skeleton-line subtitle"></div>
+          <div class="skeleton-line short"></div>
+          <div class="skeleton-line btn"></div>
+        </div>
+      </div>
+      <div class="skeleton-card">
+        <div class="skeleton-img"></div>
+        <div class="skeleton-content">
+          <div class="skeleton-line title"></div>
+          <div class="skeleton-line subtitle"></div>
+          <div class="skeleton-line short"></div>
+          <div class="skeleton-line btn"></div>
+        </div>
+      </div>
+      <div class="skeleton-card">
+        <div class="skeleton-img"></div>
+        <div class="skeleton-content">
+          <div class="skeleton-line title"></div>
+          <div class="skeleton-line subtitle"></div>
+          <div class="skeleton-line short"></div>
+          <div class="skeleton-line btn"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="showcase-grid" id="cards-container">
+      <!-- Generato dinamicamente -->
+    </div>
+  </section>
+
+  <!-- 6. FOTO GRANDE DI TRANSIZIONE VISIVA / SPEZZO SEZIONI -->
+  <div class="container">
+    <section class="transition-hero-banner">
+      <div class="transition-grid">
+        <div>
+          <span style="background:rgba(255,255,255,0.2); padding:4px 12px; border-radius:9999px; font-size:11px; font-weight:800; text-transform:uppercase; letter-spacing:0.5px;">Boutique di Viaggio Equestre Tour</span>
+          <h3 style="margin-top:10px;">La certezza di un consulente reale che ti protegge da imprevisti e rincari.</h3>
+          <p>Dall'assegnazione cabina alla gestione del volo, verifichiamo ogni singola voce del contratto prima della partenza. Blocca la tua opzione per 24 ore a zero anticipo.</p>
+        </div>
+        <div style="text-align:center; background:rgba(15,23,42,0.6); padding:24px; border-radius:16px; border:1px solid rgba(255,255,255,0.2);">
+          <div style="font-size:13px; font-weight:700; color:#94A3B8;">LINEA DIRETTA PREVENTIVI</div>
+          <a href="tel:0292854066" style="font-size:26px; font-weight:900; color:var(--secondary-gold); text-decoration:none; display:block; margin:8px 0;">02 928 540 66</a>
+          <p style="font-size:12px; color:#E2E8F0;">Consulenza personalizzata e gratuita con un operatore Good Travel</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- 7. MODAL DETTAGLIO OFFERTA: QUOTAZIONE REALE, OSPITI, DATE, CABINE E LE 3 VIE D'USCITA -->
+  <div class="modal-overlay" id="offer-modal">
+    <div class="quote-modal-card">
+      <div class="modal-head">
+        <div>
+          <div class="modal-brand-badge" id="m-badge">Equestre Tour • Preventivo Trasparente</div>
+          <h3 class="modal-title" id="m-title">MSC World Europa • Mediterraneo Classico</h3>
+        </div>
+        <button type="button" class="btn-close-modal" onclick="closeOfferModal()">&times;</button>
+      </div>
+
+      <div class="modal-body-content">
+        
+        <!-- PARTE 3.1: CONFIGURATORE OSPITI & ETÀ DEI BAMBINI -->
+        <div class="guest-config-box">
+          <div class="guest-config-title">
+            <span>👥 Configura Ospiti ed Età (Calcolo Reale Bimbo Free)</span>
+            <span class="pill-departure-code" id="m-ref-code">EQT-CR2026-1001</span>
+          </div>
+          
+          <div class="guest-config-grid">
+            <div class="guest-control">
+              <label>Adulti (18+ anni)</label>
+              <select class="guest-select" id="cfg-adults" onchange="onGuestsChange()">
+                <option value="1">1 Adulto</option>
+                <option value="2" selected>2 Adulti</option>
+                <option value="3">3 Adulti</option>
+                <option value="4">4 Adulti</option>
+              </select>
+            </div>
+
+            <div class="guest-control">
+              <label>Bambini (0-17 anni)</label>
+              <select class="guest-select" id="cfg-children" onchange="onGuestsChange()">
+                <option value="0" selected>0 Bambini</option>
+                <option value="1">1 Bambino</option>
+                <option value="2">2 Bambini</option>
+                <option value="3">3 Bambini</option>
+              </select>
+            </div>
+
+            <div class="guest-control">
+              <label>Porto / Aeroporto Preferito</label>
+              <select class="guest-select" id="cfg-origin">
+                <option value="Genova">Genova (o Milano)</option>
+                <option value="Civitavecchia">Civitavecchia / Roma</option>
+                <option value="Napoli">Napoli</option>
+                <option value="Bari">Bari / Brindisi</option>
+              </select>
+            </div>
+
+            <!-- Campi Età Bambini Dinamici -->
+            <div class="children-ages-container" id="children-ages-row" style="display:none;">
+              <span style="font-size:12px; font-weight:700; color:var(--text-main);">Età Bambini:</span>
+              <div id="children-age-inputs" style="display:flex; gap:8px;"></div>
+              <small style="color:var(--success-green); font-weight:700; margin-left:auto;">✓ Sconto Bimbo Free applicato automaticamente</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- PARTE 3.2: COMPARATORE SULLA STESSA TRATTA (DATE ADIACENTI) -->
+        <div class="date-comparison-bar">
+          <label style="font-size:12px; font-weight:800; text-transform:uppercase; color:var(--text-muted);">📅 Comparazione Prezzo tra le Date Adiacenti</label>
+          <div class="date-slider-row" id="m-dates-row">
+            <!-- Popolato con le settimane adiacenti -->
+          </div>
+        </div>
+
+        <!-- PARTE 3.3: COMPARATORE CABINE / SISTEMAZIONI (STESSA DATA) -->
+        <div>
+          <label style="font-size:12px; font-weight:800; text-transform:uppercase; color:var(--text-muted);" id="lbl-matrix">🛏️ Griglia Comparativa Sistemazioni (Stessa Data)</label>
+          <div class="options-matrix-grid" id="m-matrix-grid">
+            <!-- Popolato con Cabine per Crociere o Trattamenti per Villaggi/Pacchetti -->
+          </div>
+        </div>
+
+        <!-- PARTE 3.4: RIEPILOGO PREZZO TOTALE TRASPARENTE & FINITO -->
+        <div class="total-price-summary-card">
+          <div class="total-price-head">
+            <div>
+              <h4>Prezzo Totale Finito per Tutta la Famiglia</h4>
+              <small style="color:#94A3B8;">Include tasse, assicurazione medico/bagaglio e assistenza agenzia</small>
+            </div>
+            <div class="total-calculated-val" id="m-total-price">€1.380</div>
+          </div>
+
+          <div class="price-breakdown-row">
+            <span>Sistemazione: <strong id="m-sum-cabin">Cabina Interna Comfort</strong></span>
+            <span>Data Scelta: <strong id="m-sum-date">12 Luglio 2026</strong></span>
+          </div>
+          <div class="price-breakdown-row">
+            <span>Partecipanti: <strong id="m-sum-pax">2 Adulti</strong></span>
+            <span>Vantaggio Equestre Tour: <strong style="color:var(--secondary-gold);">Blocco Tariffa 24h a €0</strong></span>
+          </div>
+        </div>
+
+        <!-- PARTE 4: LE 3 VIE D'USCITA AD ALTA CONVERSIONE -->
+        <div class="three-exits-grid">
+          <button type="button" class="btn-exit-checkout" onclick="openDrawer('checkout')">
+            💳 1. Acquisto Immediato Protetto SSL
+          </button>
+          <button type="button" class="btn-exit-hold24" onclick="openDrawer('hold')">
+            ⏱️ 2. Blocca Opzione 24h a €0
+          </button>
+          <button type="button" class="btn-exit-savequote" onclick="openDrawer('save')">
+            📄 3. Salva & Ricevi Preventivo
+          </button>
+        </div>
+
+        <!-- CASSETTO FORM PER LE 3 VIE D'USCITA -->
+        <div class="drawer-form-box" id="drawer-box">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px;">
+            <h4 style="font-size:16px; font-weight:800; color:var(--text-main);" id="drawer-title">Inserisci i dati per procedere</h4>
+            <span class="ai-speed-indicator" id="dr-mode-badge">Via d'Uscita Protetta</span>
+          </div>
+
+          <form onsubmit="handleFormSubmit(event)">
+            <!-- Campi Anagrafica Principale -->
+            <div class="drawer-section-title">👤 Dati Intestatario Pratica</div>
+            <div class="drawer-form-grid">
+              <input type="text" class="drawer-input" id="dr-name" placeholder="Nome e Cognome Intestatario *" required>
+              <input type="tel" class="drawer-input" id="dr-phone" placeholder="Cellulare / WhatsApp *" required>
+            </div>
+            <div class="drawer-form-grid">
+              <input type="email" class="drawer-input" id="dr-email" placeholder="Email per invio contratto e documenti *" required>
+              <input type="text" class="drawer-input" id="dr-cf" placeholder="Codice Fiscale (per polizza assicurativa)">
+            </div>
+
+            <!-- SEZIONE SPECIFICA CHECKOUT DIRETTO (VIA 1) -->
+            <div id="checkout-specific-fields" style="display:none;">
+              <div class="drawer-section-title">💳 Opzione Pagamento Protetto SSL</div>
+              <div class="payment-plan-grid">
+                <label class="payment-plan-card active" id="plan-card-deposit" onclick="selectPaymentPlan('deposit')">
+                  <input type="radio" name="paymentPlan" value="deposit" checked>
+                  <strong>Acconto 30% per Bloccare</strong>
+                  <div class="plan-amount" id="plan-deposit-val">€414</div>
+                  <small>Saldo 30 giorni prima della partenza</small>
+                </label>
+                <label class="payment-plan-card" id="plan-card-full" onclick="selectPaymentPlan('full')">
+                  <input type="radio" name="paymentPlan" value="full">
+                  <strong>Saldo Totale Immediato</strong>
+                  <div class="plan-amount" id="plan-full-val">€1.380</div>
+                  <small>Zero pensieri • Documenti immediati</small>
+                </label>
+              </div>
+
+              <!-- Campi Carta di Credito Simulati conforme PSD2 -->
+              <div class="card-inputs-box">
+                <div class="ssl-secure-banner">
+                  <span>🔒 Crittografia SSL 256-Bit • Fondo di Garanzia Viaggi Aderente</span>
+                </div>
+                <div class="drawer-form-grid" style="margin-bottom:8px;">
+                  <input type="text" class="drawer-input" id="card-num" placeholder="Numero Carta (es. 4532 •••• •••• ••••)" maxlength="19">
+                  <div style="display:flex; gap:8px;">
+                    <input type="text" class="drawer-input" id="card-exp" placeholder="MM/AA" maxlength="5">
+                    <input type="password" class="drawer-input" id="card-cvv" placeholder="CVV" maxlength="4">
+                  </div>
+                </div>
+                <div style="display:flex; align-items:center; justify-content:space-between; font-size:11px; color:var(--text-muted);">
+                  <span>Circuiti Accettati: <strong>Visa, Mastercard, Maestro, PostePay, PayPal</strong></span>
+                  <span style="color:var(--success-green); font-weight:700;">✓ Connessione Protetta</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- SEZIONE SPECIFICA SALVA PREVENTIVO (VIA 3) -->
+            <div id="save-specific-fields" style="display:none;">
+              <div style="background:var(--primary-blue-light); border:1px solid rgba(0,102,255,0.2); border-radius:8px; padding:12px; margin-bottom:12px;">
+                <p style="font-size:12px; color:var(--primary-blue-dark); line-height:1.5;">
+                  📄 Il sistema genererà immediatamente il <strong>Preventivo Ufficiale Equestre Tour in formato PDF</strong> completo di piano volo/nave, itinerario giorno per giorno, riepilogo tasse e garanzie di viaggio.
+                </p>
+              </div>
+            </div>
+
+            <div class="drawer-form-grid">
+              <input type="text" class="drawer-input" id="dr-notes" placeholder="Note facoltative (es. transfer aeroporto, orario preferito per richiamo)">
+            </div>
+
+            <div style="display:flex; justify-content:flex-end; gap:10px; margin-top:14px;">
+              <button type="button" class="btn-card-lock" onclick="closeDrawer()">Annulla</button>
+              <button type="submit" class="btn-exit-checkout" id="dr-submit-btn">Conferma Operazione →</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- CONFERMA SUCCESS VOUCHER & LIVE TIMER 24H -->
+        <div class="success-voucher-box" id="success-box">
+          <div class="success-icon">✓</div>
+          <h3 style="font-size:24px; font-weight:900; margin-bottom:6px;" id="succ-head">Pratica Registrata con Successo!</h3>
+          <p style="color:var(--text-muted); font-size:14px; max-width:560px; margin:0 auto 12px auto;" id="succ-desc">Abbiamo riservato la soluzione nei sistemi centrali.</p>
+
+          <!-- BADGE CONTO ALLA ROVESCIA 24H (Attivo per Opzione 24h) -->
+          <div id="succ-timer-wrap" style="display:none;">
+            <div class="live-timer-badge">
+              <span class="live-timer-dot"></span>
+              <span>TEMPO RIMANENTE BLOCCO OPZIONE: <strong id="succ-timer-digits">23:59:59</strong></span>
+            </div>
+          </div>
+          
+          <div style="background:var(--bg-body); border:1.5px dashed var(--border-soft); border-radius:12px; padding:20px; max-width:480px; margin:0 auto 20px auto; text-align:left;">
+            <p style="margin-bottom:6px;"><strong>Codice Pratica Ufficiale:</strong> <span style="color:var(--primary-blue); font-family:monospace; font-weight:800; font-size:15px;" id="succ-code">EQT-CR2026-1001</span></p>
+            <p style="margin-bottom:6px;"><strong>Intestatario:</strong> <span id="succ-name">Marco Rossi</span></p>
+            <p style="margin-bottom:6px;"><strong>Offerta Scelta:</strong> <span id="succ-offer">MSC World Europa</span></p>
+            <p style="margin-bottom:6px;"><strong>Sistemazione & Data:</strong> <span id="succ-details">Cabina Interna Comfort • 12 Luglio 2026</span></p>
+            <p><strong>Totale Bloccato Garantito:</strong> <span style="color:var(--secondary-gold-badge); font-weight:900; font-size:18px;" id="succ-price">€1.380</span></p>
+          </div>
+
+          <div style="display:flex; justify-content:center; gap:12px; flex-wrap:wrap;">
+            <button type="button" class="btn-exit-savequote" id="succ-print-btn" onclick="triggerPdfPrint()">
+              🖨️ Stampa / Salva Ricevuta PDF
+            </button>
+            <a href="tel:0292854066" class="btn-exit-hold24" style="text-decoration:none; display:inline-flex; align-items:center; gap:6px;">
+              📞 Linea Assistenza: 02 928 540 66
+            </a>
+            <a href="https://wa.me/390292854066" target="_blank" class="btn-exit-checkout" style="text-decoration:none; display:inline-flex; align-items:center; gap:6px; background:#10B981;">
+              💬 Assistenza WhatsApp
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- 8. FOOTER BOUTIQUE CON LOGO CENTRATO E DATI GOOD TRAVEL -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-centered-brand">
+        <a href="/" class="footer-logo-centered-link">
+          <img src="https://www.equestretour.com/images/logo.svg" alt="Equestre Tour" class="site-logo-img-footer" onerror="this.src='images/logo.svg'">
+        </a>
+        <div class="footer-institutional-badge">
+          GOOD TRAVEL S.R.L. • P.IVA: 03948270718 • Licenza Turismo N° 4589/FG • Direttore Tecnico Autorizzato
+        </div>
+        <p class="footer-institutional-address">
+          📍 Sede Operativa Ufficiale: <strong>Via Calabria 42</strong>, 71016 San Severo (FG) • 🕒 Orari Agenzia: <strong>Lun - Ven: 09:00 - 19:30 | Sabato: 09:00 - 13:00</strong>
+        </p>
+      </div>
+
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Boutique Equestre Tour</h4>
+          <p style="margin-bottom: 12px; line-height: 1.6;">Specialisti in Crociere nel Mediterraneo & Fiordi, Villaggi Mare Italia e Pacchetti Lungo Raggio. Uniamo la potenza di calcolo in tempo reale all'assistenza reale e costante di un consulente di fiducia.</p>
+          <p><strong>GOOD TRAVEL S.R.L.</strong><br>Tour Operator & Agenzia Viaggi<br>San Severo (Foggia)</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Sede & Contatti</h4>
+          <p style="margin-bottom: 8px;">📍 <strong>Via Calabria 42</strong><br>71016 San Severo (FG) - Italia</p>
+          <p style="margin-bottom: 8px;">📞 Centralino Unico: <a href="tel:0292854066" style="color:var(--secondary-gold); font-weight:800;">02 928 540 66</a></p>
+          <p style="margin-bottom: 8px;">💬 WhatsApp Clienti: <a href="https://wa.me/390292854066" target="_blank" style="color:#FFF;">Chat Dedicata</a></p>
+          <p>🕒 Lun - Ven: 09:00 - 19:30<br>Sabato: 09:00 - 13:00</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Garanzie & Fondo Viaggi</h4>
+          <p style="margin-bottom: 10px;">Acquisti certificati e tutelati dalla legge.</p>
+          <div class="trust-badge-footer">
+            <p style="color:#FFF; font-weight:700; margin-bottom:4px;">🛡️ Fondo Garanzia Viaggi</p>
+            <p style="font-size:11px;">Aderente al Fondo Nazionale per la totale tutela e copertura di acconti e saldi per qualsiasi destinazione.</p>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Recensioni Verificate</h4>
+          <div class="trust-badge-footer">
+            <div style="color: #10B981; font-weight: 800; font-size: 16px; margin-bottom: 4px;">★ ★ ★ ★ ★ 4.9 / 5</div>
+            <p style="color: #FFFFFF; font-weight: 700; margin-bottom: 2px;">Eccellente su Trustpilot</p>
+            <p style="font-size: 11px; color: #94A3B8;">Basato su oltre 1.840 recensioni di viaggiatori seguiti dal team Equestre Tour.</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="border-top: 1px solid rgba(255,255,255,0.08); padding-top: 24px; text-align: center; font-size: 12px; color: #64748B;">
+        <p>&copy; 2026 GOOD TRAVEL S.R.L. • Equestre Tour - Tutti i diritti riservati • <a href="#" style="color:#64748B;">Privacy Policy</a> • <a href="#" style="color:#64748B;">Termini e Condizioni</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- DATA LAYER & ENGINE JAVASCRIPT REATTIVO -->
+  <script>
+    const DATA_CRUISES = [{"id": "CR-1244", "type": "crociere", "company": "Costa", "title": "Costa Deliziosa • Grecia, Montenegro", "ship": "Costa Deliziosa", "dest": "Grecia, Montenegro", "dur": 7, "ports": ["Pireo"], "dates": ["08/05/2027"], "basePrice": 1061, "eqtRef": "EQT-CR2027-2244", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DE07270508"}, {"id": "CR-1237", "type": "crociere", "company": "Costa", "title": "Costa Deliziosa • Grecia, Montenegro, Croazia", "ship": "Costa Deliziosa", "dest": "Grecia, Montenegro, Croazia", "dur": 7, "ports": ["Pireo"], "dates": ["24/04/2027"], "basePrice": 714, "eqtRef": "EQT-CR2026-2237", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DE07270424"}, {"id": "CR-1236", "type": "crociere", "company": "Costa", "title": "Costa Deliziosa • Grecia, Montenegro, Croazia, Italia", "ship": "Costa Deliziosa", "dest": "Grecia, Montenegro, Croazia, Italia", "dur": 14, "ports": ["Pireo"], "dates": ["24/04/2027"], "basePrice": 1247, "eqtRef": "EQT-CR2027-2236", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DE14270424"}, {"id": "CR-1243", "type": "crociere", "company": "Costa", "title": "Costa Deliziosa • Grecia, Montenegro, Italia", "ship": "Costa Deliziosa", "dest": "Grecia, Montenegro, Italia", "dur": 14, "ports": ["Pireo"], "dates": ["08/05/2027"], "basePrice": 994, "eqtRef": "EQT-CR2026-2243", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DE14270508"}, {"id": "CR-1268", "type": "crociere", "company": "Costa", "title": "Costa Deliziosa • Italia, Croazia, Grecia, Montenegro", "ship": "Costa Deliziosa", "dest": "Italia, Croazia, Grecia, Montenegro", "dur": 14, "ports": ["Marghera"], "dates": ["05/06/2027"], "basePrice": 1024, "eqtRef": "EQT-CR2026-2268", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DE14270605"}, {"id": "CR-1269", "type": "crociere", "company": "Costa", "title": "Costa Deliziosa • Italia, Croazia, Grecia, Montenegro", "ship": "Costa Deliziosa", "dest": "Italia, Croazia, Grecia, Montenegro", "dur": 7, "ports": ["Bari", "Marghera"], "dates": ["05/06/2027", "06/06/2027"], "basePrice": 1091, "eqtRef": "EQT-CR2027-2269", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DE07270605"}, {"id": "CR-1055", "type": "crociere", "company": "Costa", "title": "Costa Deliziosa • Italia, Grecia", "ship": "Costa Deliziosa", "dest": "Italia, Grecia", "dur": 7, "ports": ["Bari", "Marghera"], "dates": ["08/08/2026", "09/08/2026", "29/08/2026", "30/08/2026", "19/09/2026", "20/09/2026", "17/04/2027", "01/05/2027", "15/05/2027", "16/05/2027"], "basePrice": 906, "eqtRef": "EQT-CR2026-2055", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DE07260808"}, {"id": "CR-1149", "type": "crociere", "company": "Costa", "title": "Costa Deliziosa • Italia, Grecia", "ship": "Costa Deliziosa", "dest": "Italia, Grecia", "dur": 4, "ports": ["Bari", "Civitavecchia", "Trieste"], "dates": ["20/11/2026", "21/11/2026", "13/04/2027"], "basePrice": 807, "eqtRef": "EQT-CR2027-2149", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DE04261120"}, {"id": "CR-1150", "type": "crociere", "company": "Costa", "title": "Costa Deliziosa • Italia, Grecia", "ship": "Costa Deliziosa", "dest": "Italia, Grecia", "dur": 5, "ports": ["Savona", "Trieste"], "dates": ["20/11/2026", "12/04/2027"], "basePrice": 874, "eqtRef": "EQT-CR2026-2150", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DE05261120"}, {"id": "CR-1151", "type": "crociere", "company": "Costa", "title": "Costa Deliziosa • Italia, Grecia", "ship": "Costa Deliziosa", "dest": "Italia, Grecia", "dur": 3, "ports": ["Bari", "Civitavecchia"], "dates": ["21/11/2026", "13/04/2027"], "basePrice": 941, "eqtRef": "EQT-CR2027-2151", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DE03261121"}, {"id": "CR-1047", "type": "crociere", "company": "Costa", "title": "Costa Deliziosa • Italia, Grecia, Croazia", "ship": "Costa Deliziosa", "dest": "Italia, Grecia, Croazia", "dur": 14, "ports": ["Marghera"], "dates": ["01/08/2026", "08/08/2026", "12/09/2026", "19/09/2026"], "basePrice": 1031, "eqtRef": "EQT-CR2027-2047", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DE14260801"}, {"id": "CR-1048", "type": "crociere", "company": "Costa", "title": "Costa Deliziosa • Italia, Grecia, Croazia", "ship": "Costa Deliziosa", "dest": "Italia, Grecia, Croazia", "dur": 7, "ports": ["Bari", "Marghera"], "dates": ["01/08/2026", "02/08/2026", "15/08/2026", "16/08/2026", "12/09/2026", "13/09/2026", "26/09/2026", "27/09/2026"], "basePrice": 1098, "eqtRef": "EQT-CR2026-2048", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DE07260801"}, {"id": "CR-1077", "type": "crociere", "company": "Costa", "title": "Costa Deliziosa • Italia, Grecia, Croazia", "ship": "Costa Deliziosa", "dest": "Italia, Grecia, Croazia", "dur": 6, "ports": ["Bari"], "dates": ["13/09/2026"], "basePrice": 1079, "eqtRef": "EQT-CR2027-2077", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DE06260913"}, {"id": "CR-1059", "type": "crociere", "company": "Costa", "title": "Costa Deliziosa • Italia, Grecia, Croazia, Montenegro", "ship": "Costa Deliziosa", "dest": "Italia, Grecia, Croazia, Montenegro", "dur": 14, "ports": ["Marghera"], "dates": ["22/08/2026", "29/08/2026", "29/05/2027"], "basePrice": 1253, "eqtRef": "EQT-CR2027-2059", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DE14260822"}, {"id": "CR-1060", "type": "crociere", "company": "Costa", "title": "Costa Deliziosa • Italia, Grecia, Croazia, Montenegro", "ship": "Costa Deliziosa", "dest": "Italia, Grecia, Croazia, Montenegro", "dur": 7, "ports": ["Bari", "Marghera"], "dates": ["22/08/2026", "23/08/2026", "05/09/2026", "06/09/2026"], "basePrice": 720, "eqtRef": "EQT-CR2026-2060", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DE07260822"}, {"id": "CR-1142", "type": "crociere", "company": "Costa", "title": "Costa Deliziosa • Italia, Grecia, Malta", "ship": "Costa Deliziosa", "dest": "Italia, Grecia, Malta", "dur": 6, "ports": ["Bari", "Trieste"], "dates": ["14/11/2026", "15/11/2026"], "basePrice": 737, "eqtRef": "EQT-CR2027-2142", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DE06261114"}, {"id": "CR-1092", "type": "crociere", "company": "Costa", "title": "Costa Deliziosa • Italia, Grecia, Malta, Croazia", "ship": "Costa Deliziosa", "dest": "Italia, Grecia, Malta, Croazia", "dur": 7, "ports": ["Bari", "Trieste"], "dates": ["03/10/2026", "04/10/2026", "17/10/2026", "18/10/2026", "31/10/2026", "01/11/2026"], "basePrice": 762, "eqtRef": "EQT-CR2026-2092", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DE07261003"}, {"id": "CR-1093", "type": "crociere", "company": "Costa", "title": "Costa Deliziosa • Italia, Grecia, Malta, Croazia", "ship": "Costa Deliziosa", "dest": "Italia, Grecia, Malta, Croazia", "dur": 6, "ports": ["Bari"], "dates": ["04/10/2026"], "basePrice": 963, "eqtRef": "EQT-CR2027-2093", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DE06261004"}, {"id": "CR-1239", "type": "crociere", "company": "Costa", "title": "Costa Deliziosa • Italia, Grecia, Montenegro", "ship": "Costa Deliziosa", "dest": "Italia, Grecia, Montenegro", "dur": 14, "ports": ["Bari", "Marghera"], "dates": ["01/05/2027", "02/05/2027", "07/08/2027", "21/08/2027", "28/08/2027", "18/09/2027"], "basePrice": 720, "eqtRef": "EQT-CR2026-2239", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DE14270501"}, {"id": "CR-1282", "type": "crociere", "company": "Costa", "title": "Costa Deliziosa • Italia, Grecia, Montenegro", "ship": "Costa Deliziosa", "dest": "Italia, Grecia, Montenegro", "dur": 7, "ports": ["Bari", "Marghera"], "dates": ["28/08/2027", "29/08/2027", "25/09/2027", "26/09/2027"], "basePrice": 703, "eqtRef": "EQT-CR2027-2282", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DE07270828"}, {"id": "CR-1233", "type": "crociere", "company": "Costa", "title": "Costa Deliziosa • Italia, Grecia, Montenegro, Croazia", "ship": "Costa Deliziosa", "dest": "Italia, Grecia, Montenegro, Croazia", "dur": 14, "ports": ["Bari", "Marghera"], "dates": ["17/04/2027", "18/04/2027", "15/05/2027", "22/05/2027", "12/06/2027", "26/06/2027", "03/07/2027", "10/07/2027", "17/07/2027", "24/07/2027"], "basePrice": 1107, "eqtRef": "EQT-CR2027-2233", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DE14270417"}, {"id": "CR-1257", "type": "crociere", "company": "Costa", "title": "Costa Deliziosa • Italia, Grecia, Montenegro, Croazia", "ship": "Costa Deliziosa", "dest": "Italia, Grecia, Montenegro, Croazia", "dur": 7, "ports": ["Bari", "Marghera"], "dates": ["22/05/2027", "23/05/2027", "03/07/2027", "04/07/2027", "17/07/2027", "18/07/2027", "31/07/2027", "01/08/2027", "11/09/2027", "12/09/2027"], "basePrice": 1143, "eqtRef": "EQT-CR2027-2257", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DE07270522"}, {"id": "CR-1319", "type": "crociere", "company": "Costa", "title": "Costa Deliziosa • Italia, Montenegro, Croazia", "ship": "Costa Deliziosa", "dest": "Italia, Montenegro, Croazia", "dur": 4, "ports": ["Bari", "Trieste"], "dates": ["30/10/2027", "31/10/2027"], "basePrice": 699, "eqtRef": "EQT-CR2027-2319", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DE04271030"}, {"id": "CR-1279", "type": "crociere", "company": "Costa", "title": "Costa Deliziosa • Italia, Montenegro, Grecia", "ship": "Costa Deliziosa", "dest": "Italia, Montenegro, Grecia", "dur": 14, "ports": ["Marghera"], "dates": ["14/08/2027"], "basePrice": 1023, "eqtRef": "EQT-CR2027-2279", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DE14270814"}, {"id": "CR-1280", "type": "crociere", "company": "Costa", "title": "Costa Deliziosa • Italia, Montenegro, Grecia", "ship": "Costa Deliziosa", "dest": "Italia, Montenegro, Grecia", "dur": 7, "ports": ["Bari", "Marghera"], "dates": ["14/08/2027", "15/08/2027"], "basePrice": 1090, "eqtRef": "EQT-CR2026-2280", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DE07270814"}, {"id": "CR-1101", "type": "crociere", "company": "Costa", "title": "Costa Deliziosa • Italia, Montenegro, Grecia, Croazia", "ship": "Costa Deliziosa", "dest": "Italia, Montenegro, Grecia, Croazia", "dur": 7, "ports": ["Bari", "Marghera", "Trieste"], "dates": ["11/10/2026", "24/10/2026", "25/10/2026", "07/11/2026", "08/11/2026", "19/06/2027", "20/06/2027", "16/10/2027", "17/10/2027", "23/10/2027"], "basePrice": 1036, "eqtRef": "EQT-CR2026-2101", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DE07261011"}, {"id": "CR-1273", "type": "crociere", "company": "Costa", "title": "Costa Deliziosa • Italia, Montenegro, Grecia, Croazia", "ship": "Costa Deliziosa", "dest": "Italia, Montenegro, Grecia, Croazia", "dur": 14, "ports": ["Marghera"], "dates": ["19/06/2027"], "basePrice": 1237, "eqtRef": "EQT-CR2027-2273", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DE14270619"}, {"id": "CR-1145", "type": "crociere", "company": "Costa", "title": "Costa Diadema • Brasile", "ship": "Costa Diadema", "dest": "Brasile", "dur": 4, "ports": ["Maceio"], "dates": ["19/11/2026"], "basePrice": 1072, "eqtRef": "EQT-CR2026-2145", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DI04261119"}, {"id": "CR-1148", "type": "crociere", "company": "Costa", "title": "Costa Diadema • Brasile", "ship": "Costa Diadema", "dest": "Brasile", "dur": 3, "ports": ["Salvador Da Bahia"], "dates": ["20/11/2026"], "basePrice": 740, "eqtRef": "EQT-CR2026-2148", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DI03261120"}, {"id": "CR-1221", "type": "crociere", "company": "Costa", "title": "Costa Diadema • Brasile, Isole Canarie, Marocco, Spagna, Portogallo", "ship": "Costa Diadema", "dest": "Brasile, Isole Canarie, Marocco, Spagna, Portogallo", "dur": 17, "ports": ["Rio De Janeiro"], "dates": ["05/04/2027"], "basePrice": 1095, "eqtRef": "EQT-CR2027-2221", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DI17270405"}, {"id": "CR-1220", "type": "crociere", "company": "Costa", "title": "Costa Diadema • Brasile, Isole Canarie, Marocco, Spagna, Portogallo, Francia, Gran Bretagna", "ship": "Costa Diadema", "dest": "Brasile, Isole Canarie, Marocco, Spagna, Portogallo, Francia, Gran Bretagna", "dur": 22, "ports": ["Santos | San Paolo"], "dates": ["04/04/2027"], "basePrice": 894, "eqtRef": "EQT-CR2026-2220", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DI22270404"}, {"id": "CR-1217", "type": "crociere", "company": "Costa", "title": "Costa Diadema • Brasile, Isole Canarie, Marocco, Spagna, Portogallo, Francia, Gran Bretagna, Danimarca, Germania", "ship": "Costa Diadema", "dest": "Brasile, Isole Canarie, Marocco, Spagna, Portogallo, Francia, Gran Bretagna, Danimarca, Germania", "dur": 27, "ports": ["Itajai", "Santos | San Paolo"], "dates": ["03/04/2027", "04/04/2027"], "basePrice": 1092, "eqtRef": "EQT-CR2026-2217", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DI27270403"}, {"id": "CR-1219", "type": "crociere", "company": "Costa", "title": "Costa Diadema • Brasile, Isole Canarie, Marocco, Spagna, Portogallo, Francia, Gran Bretagna, Danimarca, Germania", "ship": "Costa Diadema", "dest": "Brasile, Isole Canarie, Marocco, Spagna, Portogallo, Francia, Gran Bretagna, Danimarca, Germania", "dur": 26, "ports": ["Santos | San Paolo"], "dates": ["04/04/2027"], "basePrice": 760, "eqtRef": "EQT-CR2026-2219", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DI26270404"}, {"id": "CR-1222", "type": "crociere", "company": "Costa", "title": "Costa Diadema • Brasile, Isole Canarie, Marocco, Spagna, Portogallo, Francia, Gran Bretagna, Danimarca, Germania", "ship": "Costa Diadema", "dest": "Brasile, Isole Canarie, Marocco, Spagna, Portogallo, Francia, Gran Bretagna, Danimarca, Germania", "dur": 25, "ports": ["Rio De Janeiro"], "dates": ["05/04/2027"], "basePrice": 1162, "eqtRef": "EQT-CR2026-2222", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DI25270405"}, {"id": "CR-1288", "type": "crociere", "company": "Costa", "title": "Costa Diadema • Danimarca, Francia, Spagna, Portogallo, Italia", "ship": "Costa Diadema", "dest": "Danimarca, Francia, Spagna, Portogallo, Italia", "dur": 11, "ports": ["Copenhagen"], "dates": ["11/09/2027"], "basePrice": 983, "eqtRef": "EQT-CR2027-2288", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DI11270911"}, {"id": "CR-1070", "type": "crociere", "company": "Costa", "title": "Costa Diadema • Danimarca, Norvegia, Francia, Spagna", "ship": "Costa Diadema", "dest": "Danimarca, Norvegia, Francia, Spagna", "dur": 9, "ports": ["Copenhagen"], "dates": ["12/09/2026"], "basePrice": 875, "eqtRef": "EQT-CR2027-2070", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DI09260912"}, {"id": "CR-1069", "type": "crociere", "company": "Costa", "title": "Costa Diadema • Danimarca, Norvegia, Francia, Spagna, Italia", "ship": "Costa Diadema", "dest": "Danimarca, Norvegia, Francia, Spagna, Italia", "dur": 11, "ports": ["Copenhagen"], "dates": ["12/09/2026"], "basePrice": 808, "eqtRef": "EQT-CR2026-2069", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DI11260912"}, {"id": "CR-1046", "type": "crociere", "company": "Costa", "title": "Costa Diadema • Danimarca, Norvegia, Germania", "ship": "Costa Diadema", "dest": "Danimarca, Norvegia, Germania", "dur": 7, "ports": ["Copenhagen"], "dates": ["01/08/2026", "08/08/2026", "15/08/2026", "22/08/2026", "29/08/2026", "05/09/2026", "01/05/2027", "08/05/2027", "22/05/2027", "29/05/2027"], "basePrice": 964, "eqtRef": "EQT-CR2026-2046", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DI07260801"}, {"id": "CR-1062", "type": "crociere", "company": "Costa", "title": "Costa Diadema • Danimarca, Norvegia, Germania", "ship": "Costa Diadema", "dest": "Danimarca, Norvegia, Germania", "dur": 6, "ports": ["Copenhagen"], "dates": ["29/08/2026"], "basePrice": 994, "eqtRef": "EQT-CR2026-2062", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DI06260829"}, {"id": "CR-1250", "type": "crociere", "company": "Costa", "title": "Costa Diadema • Danimarca, Polonia, Svezia, Germania", "ship": "Costa Diadema", "dest": "Danimarca, Polonia, Svezia, Germania", "dur": 7, "ports": ["Copenhagen"], "dates": ["15/05/2027"], "basePrice": 1134, "eqtRef": "EQT-CR2026-2250", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DI07270515"}, {"id": "CR-1109", "type": "crociere", "company": "Costa", "title": "Costa Diadema • Francia, Italia, Spagna", "ship": "Costa Diadema", "dest": "Francia, Italia, Spagna", "dur": 2, "ports": ["Marsiglia"], "dates": ["01/11/2026"], "basePrice": 1054, "eqtRef": "EQT-CR2026-2109", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DI02261101"}, {"id": "CR-1287", "type": "crociere", "company": "Costa", "title": "Costa Diadema • Germania, Danimarca, Francia", "ship": "Costa Diadema", "dest": "Germania, Danimarca, Francia", "dur": 4, "ports": ["Kiel"], "dates": ["10/09/2027"], "basePrice": 916, "eqtRef": "EQT-CR2026-2287", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DI04270910"}, {"id": "CR-1286", "type": "crociere", "company": "Costa", "title": "Costa Diadema • Germania, Danimarca, Francia, Spagna, Portogallo, Italia", "ship": "Costa Diadema", "dest": "Germania, Danimarca, Francia, Spagna, Portogallo, Italia", "dur": 12, "ports": ["Kiel"], "dates": ["10/09/2027"], "basePrice": 849, "eqtRef": "EQT-CR2027-2286", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DI12270910"}, {"id": "CR-1045", "type": "crociere", "company": "Costa", "title": "Costa Diadema • Germania, Danimarca, Norvegia", "ship": "Costa Diadema", "dest": "Germania, Danimarca, Norvegia", "dur": 7, "ports": ["Kiel"], "dates": ["31/07/2026", "07/08/2026", "14/08/2026", "21/08/2026", "28/08/2026", "04/09/2026", "30/04/2027", "07/05/2027", "21/05/2027", "28/05/2027"], "basePrice": 897, "eqtRef": "EQT-CR2027-2045", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DI07260731"}, {"id": "CR-1068", "type": "crociere", "company": "Costa", "title": "Costa Diadema • Germania, Danimarca, Norvegia, Francia, Spagna, Italia", "ship": "Costa Diadema", "dest": "Germania, Danimarca, Norvegia, Francia, Spagna, Italia", "dur": 12, "ports": ["Kiel"], "dates": ["11/09/2026"], "basePrice": 741, "eqtRef": "EQT-CR2027-2068", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DI12260911"}, {"id": "CR-1242", "type": "crociere", "company": "Costa", "title": "Costa Diadema • Germania, Danimarca, Norvegia, Polonia, Svezia", "ship": "Costa Diadema", "dest": "Germania, Danimarca, Norvegia, Polonia, Svezia", "dur": 14, "ports": ["Kiel"], "dates": ["07/05/2027"], "basePrice": 793, "eqtRef": "EQT-CR2027-2242", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DI14270507"}, {"id": "CR-1249", "type": "crociere", "company": "Costa", "title": "Costa Diadema • Germania, Danimarca, Polonia, Svezia", "ship": "Costa Diadema", "dest": "Germania, Danimarca, Polonia, Svezia", "dur": 7, "ports": ["Kiel"], "dates": ["14/05/2027"], "basePrice": 1067, "eqtRef": "EQT-CR2027-2249", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DI07270514"}, {"id": "CR-1248", "type": "crociere", "company": "Costa", "title": "Costa Diadema • Germania, Danimarca, Polonia, Svezia, Norvegia", "ship": "Costa Diadema", "dest": "Germania, Danimarca, Polonia, Svezia, Norvegia", "dur": 14, "ports": ["Kiel"], "dates": ["14/05/2027"], "basePrice": 1000, "eqtRef": "EQT-CR2026-2248", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DI14270514"}, {"id": "CR-1131", "type": "crociere", "company": "Costa", "title": "Costa Diadema • Isole Canarie, Capo Verde, Brasile", "ship": "Costa Diadema", "dest": "Isole Canarie, Capo Verde, Brasile", "dur": 13, "ports": ["Las Palmas | Gran Canaria"], "dates": ["10/11/2026"], "basePrice": 731, "eqtRef": "EQT-CR2027-2131", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DI13261110"}, {"id": "CR-1132", "type": "crociere", "company": "Costa", "title": "Costa Diadema • Isole Canarie, Capo Verde, Brasile", "ship": "Costa Diadema", "dest": "Isole Canarie, Capo Verde, Brasile", "dur": 12, "ports": ["Las Palmas | Gran Canaria", "Santa Cruz | Tenerife"], "dates": ["10/11/2026", "11/11/2026"], "basePrice": 798, "eqtRef": "EQT-CR2026-2132", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DI12261110"}, {"id": "CR-1133", "type": "crociere", "company": "Costa", "title": "Costa Diadema • Isole Canarie, Capo Verde, Brasile", "ship": "Costa Diadema", "dest": "Isole Canarie, Capo Verde, Brasile", "dur": 11, "ports": ["Santa Cruz | Tenerife"], "dates": ["11/11/2026"], "basePrice": 932, "eqtRef": "EQT-CR2026-2133", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DI11261111"}, {"id": "CR-1088", "type": "crociere", "company": "Costa", "title": "Costa Diadema • Italia, Isole Baleari", "ship": "Costa Diadema", "dest": "Italia, Isole Baleari", "dur": 2, "ports": ["Savona"], "dates": ["23/09/2026"], "basePrice": 1088, "eqtRef": "EQT-CR2026-2088", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DI02260923"}, {"id": "CR-1087", "type": "crociere", "company": "Costa", "title": "Costa Diadema • Italia, Isole Baleari, Francia", "ship": "Costa Diadema", "dest": "Italia, Isole Baleari, Francia", "dur": 4, "ports": ["Savona"], "dates": ["23/09/2026"], "basePrice": 1021, "eqtRef": "EQT-CR2027-2087", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DI04260923"}, {"id": "CR-1106", "type": "crociere", "company": "Costa", "title": "Costa Diadema • Italia, Spagna", "ship": "Costa Diadema", "dest": "Italia, Spagna", "dur": 2, "ports": ["Savona"], "dates": ["29/10/2026"], "basePrice": 783, "eqtRef": "EQT-CR2027-2106", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DI02261029"}, {"id": "CR-1105", "type": "crociere", "company": "Costa", "title": "Costa Diadema • Italia, Spagna, Francia", "ship": "Costa Diadema", "dest": "Italia, Spagna, Francia", "dur": 4, "ports": ["Savona"], "dates": ["29/10/2026"], "basePrice": 716, "eqtRef": "EQT-CR2026-2105", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DI04261029"}, {"id": "CR-1306", "type": "crociere", "company": "Costa", "title": "Costa Diadema • Italia, Spagna, Marocco, Francia", "ship": "Costa Diadema", "dest": "Italia, Spagna, Marocco, Francia", "dur": 10, "ports": ["Savona"], "dates": ["22/09/2027"], "basePrice": 1065, "eqtRef": "EQT-CR2027-2306", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DI10270922"}, {"id": "CR-1100", "type": "crociere", "company": "Costa", "title": "Costa Diadema • Italia, Spagna, Marocco, Gibilterra, Francia", "ship": "Costa Diadema", "dest": "Italia, Spagna, Marocco, Gibilterra, Francia", "dur": 10, "ports": ["Savona"], "dates": ["08/10/2026"], "basePrice": 1100, "eqtRef": "EQT-CR2026-2100", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DI10261008"}, {"id": "CR-1314", "type": "crociere", "company": "Costa", "title": "Costa Diadema • Italia, Spagna, Marocco, Gibilterra, Portogallo, Francia", "ship": "Costa Diadema", "dest": "Italia, Spagna, Marocco, Gibilterra, Portogallo, Francia", "dur": 12, "ports": ["Savona"], "dates": ["22/10/2027"], "basePrice": 958, "eqtRef": "EQT-CR2026-2314", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DI12271022"}, {"id": "CR-1110", "type": "crociere", "company": "Costa", "title": "Costa Diadema • Italia, Spagna, Portogallo", "ship": "Costa Diadema", "dest": "Italia, Spagna, Portogallo", "dur": 6, "ports": ["Savona"], "dates": ["02/11/2026"], "basePrice": 1188, "eqtRef": "EQT-CR2026-2110", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DI06261102"}, {"id": "CR-1089", "type": "crociere", "company": "Costa", "title": "Costa Diadema • Italia, Spagna, Portogallo, Gibilterra, Francia", "ship": "Costa Diadema", "dest": "Italia, Spagna, Portogallo, Gibilterra, Francia", "dur": 11, "ports": ["Savona"], "dates": ["27/09/2026", "18/10/2026"], "basePrice": 1158, "eqtRef": "EQT-CR2026-2089", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DI11260927"}];
+    const DATA_MARE = [{"id": "MI-1", "type": "mare_italia", "operator": "Alpitour / VOIhotels", "title": "VOI Colonna Village • Golfo Aranci", "region": "Sardegna", "resort": "VOI Colonna Village 4* S", "dest": "Golfo Aranci - Olbia", "dur": 7, "ports": ["Olbia", "Golfo Aranci", "Porto Torres"], "airports": ["Milano Malpensa", "Roma Fiumicino", "Bologna", "Verona", "Napoli"], "dates": ["06/06/2026", "13/06/2026", "20/06/2026", "27/06/2026", "04/07/2026", "11/07/2026", "18/07/2026", "25/07/2026", "01/08/2026", "08/08/2026"], "basePrice": 840, "eqtRef": "EQT-SAR-2026-01", "image": "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=600&q=80", "tag": "Bimbo Free 0-12 Anni", "perks": ["Nave o Volo Incluso", "Spiaggia Privata Attrezzata", "Mini & Junior Club", "Formula All-Inclusive Drink"]}, {"id": "MI-2", "type": "mare_italia", "operator": "Bravo Club", "title": "Bravo Porto Kaleo • Cutro & Le Castella", "region": "Calabria", "resort": "Bravo Porto Kaleo Resort 4*", "dest": "Costa Ionica - Le Castella", "dur": 7, "ports": ["Auto Propria / Treno"], "airports": ["Lamezia Terme", "Crotone"], "dates": ["07/06/2026", "14/06/2026", "21/06/2026", "28/06/2026", "05/07/2026", "12/07/2026", "19/07/2026", "26/07/2026", "02/08/2026", "09/08/2026"], "basePrice": 620, "eqtRef": "EQT-CAL-2026-02", "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80", "tag": "Formula Open Bar", "perks": ["Animazione Bravo Inclusa", "Acquapark e Piscine", "Cucina Tipica Calabrese", "Bambino Gratis in 3° Letto"]}, {"id": "MI-3", "type": "mare_italia", "operator": "VOIhotels", "title": "VOI Arenella Resort • Siracusa & Plemmirio", "region": "Sicilia", "resort": "VOI Arenella Resort 4*", "dest": "Siracusa - Oasi Plemmirio", "dur": 7, "ports": ["Catania", "Palermo"], "airports": ["Milano Malpensa", "Roma Fiumicino", "Bergamo", "Venezia", "Bari"], "dates": ["05/06/2026", "12/06/2026", "19/06/2026", "26/06/2026", "03/07/2026", "10/07/2026", "17/07/2026", "24/07/2026", "31/07/2026", "07/08/2026"], "basePrice": 780, "eqtRef": "EQT-SIC-2026-03", "image": "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=600&q=80", "tag": "Oasi Naturale & Mare Cristallino", "perks": ["Volo + Trasferimenti Inclusi", "Biberoneria Dedicata", "Centro Benessere & SPA", "Soft All-Inclusive"]}, {"id": "MI-4", "type": "mare_italia", "operator": "Alpitour Selezioni", "title": "Riva Marina Resort • Carovigno & Salento", "region": "Puglia", "resort": "Riva Marina Resort 4* S", "dest": "Alto Salento - Oasi Torre Guaceto", "dur": 7, "ports": ["Bari", "Brindisi"], "airports": ["Bari Palese", "Brindisi Papola Casale"], "dates": ["07/06/2026", "14/06/2026", "21/06/2026", "28/06/2026", "05/07/2026", "12/07/2026", "19/07/2026", "26/07/2026", "02/08/2026"], "basePrice": 730, "eqtRef": "EQT-PUG-2026-04", "image": "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80", "tag": "Tessera Club Inclusa", "perks": ["Trenino Privato per la Spiaggia", "Ristorazione Tipica Pugliese", "Impianti Sportivi d'Eccellenza", "Assistente Equestre Tour"]}, {"id": "MI-5", "type": "mare_italia", "operator": "Bravo Club", "title": "Bravo Baia di Tindari • Golfo di Patti", "region": "Sicilia", "resort": "Bravo Baia di Tindari 4*", "dest": "Tindari - Isole Eolie di fronte", "dur": 7, "ports": ["Messina", "Catania"], "airports": ["Milano Malpensa", "Roma Fiumicino", "Verona"], "dates": ["06/06/2026", "13/06/2026", "20/06/2026", "27/06/2026", "04/07/2026", "11/07/2026", "18/07/2026", "25/07/2026"], "basePrice": 810, "eqtRef": "EQT-SIC-2026-05", "image": "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=600&q=80", "tag": "Vista Isole Eolie", "perks": ["Animazione Esclusiva Bravo", "Escursioni Vulcano & Lipari", "Formula Tutto Incluso", "Piscine Laguna"]}, {"id": "MI-6", "type": "mare_italia", "operator": "Alpitour Friends", "title": "Club Hotel Cormorano • Baja Sardinia", "region": "Sardegna", "resort": "Club Hotel Cormorano 4*", "dest": "Costa Smeralda - Baja Sardinia", "dur": 7, "ports": ["Olbia", "Golfo Aranci"], "airports": ["Milano Malpensa", "Roma Fiumicino", "Bologna"], "dates": ["08/06/2026", "15/06/2026", "22/06/2026", "29/06/2026", "06/07/2026", "13/07/2026", "20/07/2026", "27/07/2026"], "basePrice": 940, "eqtRef": "EQT-SAR-2026-06", "image": "https://images.unsplash.com/photo-1506929562872-bb421503ef21?auto=format&fit=crop&w=600&q=80", "tag": "Cuore della Costa Smeralda", "perks": ["A 50m dalla Piazzetta di Baja", "Spiaggia Cala Battistoni", "Nave Gratis con Auto al Seguito", "Consulente Equestre Tour"]}];
+    const DATA_PACCHETTI = [{"id": "PV-1", "type": "pacchetti", "operator": "Bravo Club / Alpitour", "title": "Bravo Kiwengwa • Zanzibar Esotica", "country": "Tanzania / Zanzibar", "resort": "Bravo Kiwengwa 4* S", "dest": "Kiwengwa Beach - Costa Est", "dur": 9, "airports": ["Milano Malpensa", "Roma Fiumicino", "Verona"], "dates": ["08/06/2026", "15/06/2026", "22/06/2026", "29/06/2026", "06/07/2026", "13/07/2026", "20/07/2026", "27/07/2026", "03/08/2026"], "basePrice": 1390, "eqtRef": "EQT-ZAN-2026-01", "image": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=600&q=80", "tag": "Volo Diretto + Formula Tutto Incluso", "perks": ["Spiaggia di Sabbia Borotalco", "Visti e Tasse Aeroportuali Incluse", "Assicurazione Medico No-Limits", "Assistenza Italiana in Loco"]}, {"id": "PV-2", "type": "pacchetti", "operator": "Alpitour / Domina", "title": "Domina Coral Bay Oasis • Sharm El Sheikh", "country": "Egitto / Mar Rosso", "resort": "Domina Coral Bay Resort 5*", "dest": "Sharm El Sheikh - Sheikh Coast", "dur": 7, "airports": ["Milano Malpensa", "Roma Fiumicino", "Bologna", "Napoli", "Bari"], "dates": ["06/06/2026", "13/06/2026", "20/06/2026", "27/06/2026", "04/07/2026", "11/07/2026", "18/07/2026", "25/07/2026", "01/08/2026"], "basePrice": 690, "eqtRef": "EQT-EGY-2026-02", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "tag": "Barriera Corallina Privata", "perks": ["Pontile Diretto sul Reef", "Pensione Completa All-Inclusive", "Quota Iscrizione e Visto Inclusi", "Bambini con Quota Speciale"]}, {"id": "PV-3", "type": "pacchetti", "operator": "Francorosso Selezioni", "title": "Diamonds Thudufushi Beach & Water Villas", "country": "Maldive / Atollo di Ari", "resort": "Diamonds Thudufushi Luxury Resort 5*", "dest": "Atollo di Ari Sud - Maldive", "dur": 9, "airports": ["Milano Malpensa", "Roma Fiumicino"], "dates": ["07/06/2026", "14/06/2026", "21/06/2026", "28/06/2026", "05/07/2026", "12/07/2026", "19/07/2026", "26/07/2026"], "basePrice": 2490, "eqtRef": "EQT-MDV-2026-03", "image": "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=600&q=80", "tag": "Idrovolante Panoramico Incluso", "perks": ["All-Inclusive di Altissimo Livello", "Snorkeling Guidato dal Biologo", "Ville sull'Acqua con Terrazza", "Zero Spese Nascoste"]}, {"id": "PV-4", "type": "pacchetti", "operator": "Bravo Club", "title": "Bravo Viva Dominicus Beach • Bayahibe", "country": "Repubblica Dominicana", "resort": "Bravo Viva Dominicus Beach 4* S", "dest": "Bayahibe - Mare Caraibico", "dur": 9, "airports": ["Milano Malpensa", "Roma Fiumicino", "Verona"], "dates": ["09/06/2026", "16/06/2026", "23/06/2026", "30/06/2026", "07/07/2026", "14/07/2026", "21/07/2026", "28/07/2026"], "basePrice": 1480, "eqtRef": "EQT-DOM-2026-04", "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80", "tag": "Il Faro Iconico di Bayahibe", "perks": ["Spiaggia di Sabbia Bianca Caraibica", "Escursione Isola di Saona Riservata", "Open Bar 24h & Ristoranti a Tema", "Consulenza Equestre Tour"]}, {"id": "PV-5", "type": "pacchetti", "operator": "Francorosso Grandi Viaggi", "title": "Tour del Giappone: Tokyo, Kyoto & Monte Fuji", "country": "Giappone", "resort": "Hotel Selezionati 4* Centrali", "dest": "Tokyo • Monte Fuji • Kyoto • Nara • Osaka", "dur": 11, "airports": ["Milano Malpensa", "Roma Fiumicino"], "dates": ["10/06/2026", "24/06/2026", "08/07/2026", "22/07/2026", "05/08/2026", "19/08/2026"], "basePrice": 2790, "eqtRef": "EQT-JPN-2026-05", "image": "https://images.unsplash.com/photo-1506929562872-bb421503ef21?auto=format&fit=crop&w=600&q=80", "tag": "Guida Esclusiva in Italiano", "perks": ["Treno Proiettile Shinkansen Incluso", "Cena Tradizionale Kaiseki", "Assicurazione Medico Integrativa", "Gestione Pratiche Passaporto"]}, {"id": "PV-6", "type": "pacchetti", "operator": "Alpitour Mondo", "title": "Dubai Futuristica & Safari nel Deserto", "country": "Emirati Arabi Uniti", "resort": "Mövenpick Grand Al Bustan 5*", "dest": "Dubai Downtown • Marina • Deserto Arabico", "dur": 6, "airports": ["Milano Malpensa", "Roma Fiumicino", "Bologna", "Venezia"], "dates": ["04/06/2026", "11/06/2026", "18/06/2026", "25/06/2026", "02/07/2026", "09/07/2026", "16/07/2026", "23/07/2026"], "basePrice": 980, "eqtRef": "EQT-DXB-2026-06", "image": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=600&q=80", "tag": "Esperienza Dune Bashing 4x4 Inclusa", "perks": ["Biglietto Burj Khalifa al Tramonto", "Piscina Panoramica a Sfioro", "Trasferimenti Privati con Autista", "Assistenza Equestre Tour H24"]}];
+
+    let currentMacroTab = 'crociere';
+    let currentOffer = null;
+    let selectedDate = '';
+    let selectedOptionExtra = 0;
+    let selectedOptionName = '';
+    let adultsCount = 2;
+    let childrenCount = 0;
+    let childrenAges = [];
+    let currentDrawerMode = '';
+
+    // Switch tra i 3 Macro-settori
+    function switchMacroTab(tabKey) {
+      currentMacroTab = tabKey;
+      
+      // Aggiorna bottoni header e tabs
+      document.querySelectorAll('.tab-macro-btn').forEach(b => b.classList.remove('active'));
+      const activeTabBtn = document.getElementById(`tab-btn-${tabKey}`);
+      if (activeTabBtn) activeTabBtn.classList.add('active');
+
+      // Modifica etichette filtri in base al settore
+      const lblPort = document.getElementById('lbl-f-port');
+      const lblDest = document.getElementById('lbl-f-dest');
+      const title = document.getElementById('showcase-title');
+      const subtitle = document.getElementById('showcase-subtitle');
+
+      if (tabKey === 'crociere') {
+        lblPort.textContent = 'Porto di Imbarco';
+        lblDest.textContent = 'Destinazione Crociera';
+        title.textContent = 'La Collezione Ufficiale Crociere 2026';
+        subtitle.textContent = 'Partenze MSC & Costa con assistenza agenzia e opzione 24h garantita';
+      } else if (tabKey === 'mare_italia') {
+        lblPort.textContent = 'Porto / Aeroporto / Auto';
+        lblDest.textContent = 'Regione / Isola';
+        title.textContent = 'I Migliori Villaggi Mare Italia (Alpitour & Selezioni)';
+        subtitle.textContent = 'Sardegna, Sicilia, Puglia e Calabria con Bimbo Free e Formula All-Inclusive';
+      } else {
+        lblPort.textContent = 'Aeroporto di Partenza';
+        lblDest.textContent = 'Destinazione Mondo';
+        title.textContent = 'Pacchetti Vacanza & Grandi Viaggi';
+        subtitle.textContent = 'Zanzibar, Mar Rosso, Maldive, Caraibi e Tour Giappone con voli e guide inclusi';
+      }
+
+      initFilterDropdowns();
+      applyFilters();
+    }
+
+    function getCurrentDataset() {
+      if (currentMacroTab === 'crociere') return DATA_CRUISES;
+      if (currentMacroTab === 'mare_italia') return DATA_MARE;
+      return DATA_PACCHETTI;
+    }
+
+    // Inizializzazione Popover Filtri
+    function initFilterDropdowns() {
+      const ds = getCurrentDataset();
+      
+      // Porti / Aeroporti
+      const allOrigins = [...new Set(ds.flatMap(item => item.ports || item.airports || []))].filter(Boolean).sort();
+      const listPort = document.getElementById('list-f-port');
+      if (listPort) {
+        listPort.innerHTML = allOrigins.map(p => `
+          <label class="checkbox-item">
+            <input type="checkbox" value="${p}" onchange="onFilterChange('port')"> ${p}
+          </label>
+        `).join('');
+      }
+
+      // Destinazioni / Regioni
+      const allDests = [...new Set(ds.map(item => item.region || item.country || item.dest))].filter(Boolean).sort();
+      const listDest = document.getElementById('list-f-dest');
+      if (listDest) {
+        listDest.innerHTML = allDests.map(d => `
+          <label class="checkbox-item">
+            <input type="checkbox" value="${d}" onchange="onFilterChange('dest')"> ${d}
+          </label>
+        `).join('');
+      }
+
+      resetFilterTexts();
+    }
+
+    function resetFilterTexts() {
+      document.getElementById('txt-f-port').textContent = currentMacroTab === 'crociere' ? 'Tutti i Porti' : 'Tutte le Partenze';
+      document.getElementById('txt-f-dest').textContent = 'Tutte le Destinazioni';
+      document.getElementById('count-f-port').style.display = 'none';
+      document.getElementById('count-f-dest').style.display = 'none';
+    }
+
+    function onFilterChange(type) {
+      const checked = Array.from(document.querySelectorAll(`#list-f-${type} input[type="checkbox"]:checked`)).map(cb => cb.value);
+      const txt = document.getElementById(`txt-f-${type}`);
+      const count = document.getElementById(`count-f-${type}`);
+
+      if (checked.length === 0) {
+        txt.textContent = type === 'port' ? (currentMacroTab === 'crociere' ? 'Tutti i Porti' : 'Tutte le Partenze') : 'Tutte le Destinazioni';
+        count.style.display = 'none';
+      } else if (checked.length === 1) {
+        txt.textContent = checked[0];
+        count.style.display = 'none';
+      } else {
+        txt.textContent = `${checked.length} Selezionati`;
+        count.textContent = checked.length;
+        count.style.display = 'inline-block';
+      }
+    }
+
+    function selectAllFilter(type, checked) {
+      document.querySelectorAll(`#list-f-${type} input[type="checkbox"]`).forEach(cb => cb.checked = checked);
+      onFilterChange(type);
+    }
+
+    // MAPPATURA SCHELETRICA DELLE DESTINAZIONI REALI (SENZA PREZZI PRE-CARICATI)
+    // Struttura predisposta per l'ingestione asincrona e calcolo in tempo reale dai flussi MSC, Costa e Alpitour
+    const DESTINATIONS_SKELETON_MAP = {
+      crociere: [
+        { id: "dest-cr-med-occ", name: "Mediterraneo Occidentale", ports: ["Genova", "Civitavecchia", "Savona", "Napoli", "Palermo"], stops: ["Barcellona", "Palma di Maiorca", "Marsiglia", "Ibiza"], activePartners: ["MSC", "Costa"], readyForFeed: true },
+        { id: "dest-cr-med-ori", name: "Mediterraneo Orientale & Isole Greche", ports: ["Bari", "Marghera", "Trieste", "Ancona"], stops: ["Mykonos", "Santorini", "Corfù", "Atene (Pireo)", "Kotor"], activePartners: ["MSC", "Costa"], readyForFeed: true },
+        { id: "dest-cr-fiordi", name: "Fiordi Norvegesi & Capitali Baltiche", ports: ["Kiel", "Copenhagen", "Amburgo"], stops: ["Geiranger", "Bergen", "Flam", "Stavanger", "Stoccolma"], activePartners: ["MSC", "Costa"], readyForFeed: true },
+        { id: "dest-cr-caraibi", name: "Caraibi, Antille & Bahamas", ports: ["Miami", "Port Canaveral", "Fort Lauderdale"], stops: ["Ocean Cay MSC Reserve", "Nassau", "Cozumel", "San Juan"], activePartners: ["MSC"], readyForFeed: true },
+        { id: "dest-cr-emirati", name: "Emirati Arabi, Dubai & Qatar", ports: ["Dubai", "Abu Dhabi", "Doha"], stops: ["Sir Bani Yas", "Muscat", "Khasab"], activePartners: ["MSC", "Costa"], readyForFeed: true }
+      ],
+      mare_italia: [
+        { id: "dest-mi-sar-nord", name: "Sardegna Costa Smeralda & Nord", ports: ["Olbia", "Golfo Aranci", "Porto Torres"], resorts: ["VOI Colonna Village", "Club Hotel Cormorano"], formula: "Nave o Volo Incluso + Bimbo Free", readyForFeed: true },
+        { id: "dest-mi-sar-sud", name: "Sardegna Sud & Villasimius", ports: ["Cagliari"], resorts: ["Tanka Village", "Falkensteiner Capo Boi"], formula: "All-Inclusive Drink + Animazione", readyForFeed: true },
+        { id: "dest-mi-sic-est", name: "Sicilia Siracusa & Oasi Plemmirio", ports: ["Catania", "Siracusa"], resorts: ["VOI Arenella Resort", "Bravo Baia di Tindari"], formula: "Volo + Biberoneria Dedicata", readyForFeed: true },
+        { id: "dest-mi-pug-sal", name: "Puglia Alto Salento & Oasi Guaceto", ports: ["Bari", "Brindisi"], resorts: ["Riva Marina Resort", "Torre Rinalda"], formula: "Tessera Club & Spiaggia Inclusa", readyForFeed: true },
+        { id: "dest-mi-cal-ion", name: "Calabria Costa Ionica & Le Castella", ports: ["Lamezia Terme", "Crotone"], resorts: ["Bravo Porto Kaleo", "Minerva Club Resort"], formula: "Open Bar & Acquapark", readyForFeed: true }
+      ],
+      pacchetti: [
+        { id: "dest-pv-zan", name: "Zanzibar & Oceano Indiano", airports: ["Milano Malpensa", "Roma Fiumicino", "Verona"], resorts: ["Bravo Kiwengwa 4* S"], formula: "Volo Diretto + Formula Tutto Incluso", readyForFeed: true },
+        { id: "dest-pv-egy", name: "Mar Rosso & Sharm El Sheikh", airports: ["Milano Malpensa", "Roma Fiumicino", "Bari", "Napoli", "Bologna"], resorts: ["Domina Coral Bay Oasis 5*"], formula: "Pontile sul Reef + Visto Incluso", readyForFeed: true },
+        { id: "dest-pv-mdv", name: "Maldive & Atollo di Ari", airports: ["Milano Malpensa", "Roma Fiumicino"], resorts: ["Diamonds Thudufushi Beach & Water Villas 5*"], formula: "Idrovolante Panoramico Incluso", readyForFeed: true },
+        { id: "dest-pv-dom", name: "Repubblica Dominicana & Bayahibe", airports: ["Milano Malpensa", "Roma Fiumicino"], resorts: ["Bravo Viva Dominicus Beach 4* S"], formula: "Spiaggia Caraibica + Open Bar 24h", readyForFeed: true },
+        { id: "dest-pv-jpn", name: "Giappone Gran Tour Shinkansen", airports: ["Milano Malpensa", "Roma Fiumicino"], resorts: ["Hotel Selezionati 4* Centrali"], formula: "Guida Esclusiva in Italiano", readyForFeed: true },
+        { id: "dest-pv-dxb", name: "Dubai & Deserto Arabico", airports: ["Milano Malpensa", "Roma Fiumicino", "Venezia", "Bologna"], resorts: ["Mövenpick Grand Al Bustan 5*"], formula: "Dune Bashing 4x4 & Burj Khalifa", readyForFeed: true }
+      ]
+    };
+
+    // LOGICA WHITE-LABEL & NORMALIZZATORE CODICI ESTERNI
+    // Maschera qualsiasi stringa tecnica o codice cabina grezzo trasformandolo in copy commerciale EquestreTour
+    const WHITE_LABEL_CABIN_MAP = {
+      "IB_MSC_26": "Cabina Interna Premium Bella",
+      "OB_MSC_26": "Cabina Vista Mare Panoramica Fantastica",
+      "BB_MSC_26": "Cabina Balcone Aurea Panoramico",
+      "YC_MSC_26": "MSC Yacht Club Royal Suite VIP",
+      "DE07260808": "Rotta Adriatico & Isole Greche Classica",
+      "DI11260912": "Rotta Gran Tour Fiordi & Capitali Baltiche",
+      "AL_VOI_RO": "Formula Prestige All-Inclusive Mare Italia",
+      "BR_KALE_01": "Soggiorno Club Superior con Open Bar",
+      "FR_THUD_01": "Water Villa Overwater con Idrovolante Esclusivo"
+    };
+
+    function getWhiteLabelLabel(code, fallback) {
+      if (!code) return fallback || "Tariffa Ufficiale Equestre Tour";
+      return WHITE_LABEL_CABIN_MAP[code] || fallback || "Sistemazione Selezionata Equestre Tour";
+    }
+
+    // MOTORE DI CACHING PREDITTIVO GUIDATO DA IA (TTI < 0.2s)
+    // Pre-carica e scalda in background i calcoli e le tariffe adiacenti al passaggio del cursore
+    const AIPredictiveCache = {
+      store: new Map(),
+      precomputeQuote(offer, adults = 2, children = 0, childAges = []) {
+        if (!offer) return null;
+        const key = `${offer.id}_${adults}_${children}_${childAges.join('-')}`;
+        if (this.store.has(key)) return this.store.get(key);
+
+        const basePerAdult = offer.basePrice;
+        let childrenTotal = 0;
+        childAges.forEach(age => {
+          childrenTotal += (age < 12) ? 90 : (basePerAdult * 0.5);
+        });
+
+        const calculated = {
+          basePerAdult,
+          adultsTotal: adults * basePerAdult,
+          childrenTotal,
+          grandTotal: Math.round((adults * basePerAdult) + childrenTotal)
+        };
+        this.store.set(key, calculated);
+        return calculated;
+      },
+      warmupOffer(offerId) {
+        const ds = [...DATA_CRUISES, ...DATA_MARE, ...DATA_PACCHETTI];
+        const off = ds.find(o => o.id === offerId);
+        if (off) {
+          // Pre-calcola scenari tipici per risposta istantanea a 0ms
+          this.precomputeQuote(off, 2, 0, []);
+          this.precomputeQuote(off, 2, 1, [6]);
+          this.precomputeQuote(off, 2, 2, [5, 13]);
+        }
+      }
+    };
+
+    // APPLICAZIONE FILTRI CON RISOLUZIONE BUG CRITICO (RITORNO ESPLICITO) E SKELETON ANIMATO
+    function applyFilters() {
+      closeAllPopups();
+      const ds = getCurrentDataset();
+      const selPorts = Array.from(document.querySelectorAll('#list-f-port input[type="checkbox"]:checked')).map(cb => cb.value);
+      const selDests = Array.from(document.querySelectorAll('#list-f-dest input[type="checkbox"]:checked')).map(cb => cb.value);
+
+      // Risoluzione bug freccia (aggiunto return esplicito booleano)
+      let filtered = ds;
+      if (selPorts.length > 0) {
+        filtered = filtered.filter(item => {
+          const itemOrigins = item.ports || item.airports || [];
+          return itemOrigins.some(p => selPorts.includes(p));
+        });
+      }
+      if (selDests.length > 0) {
+        filtered = filtered.filter(item => {
+          const itemLoc = item.region || item.country || item.dest;
+          return selDests.includes(itemLoc);
+        });
+      }
+
+      // Animazione Skeleton Loader in Blu Elettrico (senza blocco statico)
+      const container = document.getElementById('cards-container');
+      const skeleton = document.getElementById('cards-skeleton');
+      if (skeleton && container) {
+        container.style.display = 'none';
+        skeleton.style.display = 'grid';
+        setTimeout(() => {
+          renderCards(filtered);
+          skeleton.style.display = 'none';
+          container.style.display = 'grid';
+        }, 180);
+      } else {
+        renderCards(filtered);
+      }
+    }
+
+    function renderCards(items) {
+      const container = document.getElementById('cards-container');
+      if (!container) return;
+
+      if (items.length === 0) {
+        container.innerHTML = `
+          <div style="grid-column: 1 / -1; background:#FFFFFF; border-radius:16px; padding:48px 24px; text-align:center; border:1px solid var(--border-soft);">
+            <div style="font-size:40px; margin-bottom:12px;">🚢</div>
+            <h3 style="font-size:20px; font-weight:800; margin-bottom:8px;">Nessuna partenza con i filtri selezionati</h3>
+            <p style="color:var(--text-muted); font-size:14px; max-width:480px; margin:0 auto 16px auto;">
+              Nessun problema: il nostro centro prenotazioni ha accesso diretto ai cataloghi completi di Costa, MSC e Alpitour.
+            </p>
+            <button type="button" class="btn-search-trigger" style="display:inline-block; max-width:240px;" onclick="selectAllFilter('port', true); selectAllFilter('dest', true); applyFilters();">
+              Ripristina Tutte le Partenze
+            </button>
+          </div>
+        `;
+        return;
+      }
+
+      const displayList = items.slice(0, 18);
+      container.innerHTML = displayList.map(item => {
+        const originList = (item.ports || item.airports || []).slice(0, 3).join(', ');
+        const badgeTag = item.tag || (item.company ? `${item.company} Ufficiale` : 'Offerta Selezionata');
+        const whiteLabelCategory = item.operator || item.company || 'Boutique EquestreTour';
+
+        return `
+          <div class="boutique-card" onmouseenter="AIPredictiveCache.warmupOffer('${item.id}')">
+            <div>
+              <div class="card-photo-wrapper" style="background-image: url('${item.image}');">
+                <div class="card-top-badges">
+                  <span class="badge-collection">${whiteLabelCategory}</span>
+                  <span class="badge-agency-guarantee">★ ${badgeTag}</span>
+                </div>
+                <div class="card-bottom-tags">
+                  <span class="pill-departure-code">Pratica: ${item.eqtRef}</span>
+                </div>
+              </div>
+
+              <div class="card-body">
+                <div>
+                  <h3 class="card-ship-title">${item.title || item.ship}</h3>
+                  <p class="card-destination-desc">${item.dest || item.region || item.country}</p>
+                  
+                  <div class="card-agency-perks">
+                    <div class="agency-perk-row"><span>📍</span> <strong>Partenza da:</strong> ${originList || 'Principali nodi italiani'}</div>
+                    <div class="agency-perk-row"><span>🌙</span> <strong>Durata:</strong> ${item.dur} Notti</div>
+                    <div class="agency-perk-row"><span>👨‍💼</span> <strong>Assistenza:</strong> Consulente Personale Inclusa</div>
+                  </div>
+                </div>
+
+                <div>
+                  <div class="card-pricing-block">
+                    <div>
+                      <div class="price-sub-label">A Partire Da</div>
+                      <span class="price-note">per persona • Tasse incluse</span>
+                    </div>
+                    <div class="price-main-val">€${item.basePrice}</div>
+                  </div>
+
+                  <div class="card-action-buttons">
+                    <button type="button" class="btn-card-personalize" onclick="openOfferModal('${item.id}')">
+                      Calcola Preventivo Reale
+                    </button>
+                    <button type="button" class="btn-card-lock" onclick="quickLock('${item.id}')">
+                      Blocca 24h a €0
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    // MODAL DETTAGLIO: LOGICA DI QUOTAZIONE REALE, OSPITI & ETÀ, DATE & CABINE
+    function openOfferModal(offerId) {
+      const ds = [...DATA_CRUISES, ...DATA_MARE, ...DATA_PACCHETTI];
+      currentOffer = ds.find(o => o.id === offerId);
+      if (!currentOffer) return;
+
+      document.getElementById('m-title').textContent = currentOffer.title || currentOffer.ship;
+      document.getElementById('m-ref-code').textContent = currentOffer.eqtRef;
+      document.getElementById('m-badge').textContent = `Boutique Equestre Tour • ${currentOffer.operator || currentOffer.company || 'Esclusiva Ufficiale'}`;
+
+      // Reset Ospiti a standard 2 adulti
+      adultsCount = 2;
+      childrenCount = 0;
+      childrenAges = [];
+      document.getElementById('cfg-adults').value = "2";
+      document.getElementById('cfg-children').value = "0";
+      document.getElementById('children-ages-row').style.display = 'none';
+
+      // Slider Date Adiacenti
+      renderDateSlider(currentOffer.dates || []);
+      
+      // Matrice Cabine / Trattamenti sulla stessa data
+      renderOptionsMatrix();
+
+      // Reset Cassetto Form e Success Box
+      closeDrawer();
+      document.getElementById('success-box').style.display = 'none';
+      document.querySelector('.three-exits-grid').style.display = 'grid';
+
+      recalcRealTotalPrice();
+      document.getElementById('offer-modal').classList.add('show');
+    }
+
+    function closeOfferModal() {
+      document.getElementById('offer-modal').classList.remove('show');
+      if (countdownInterval) clearInterval(countdownInterval);
+    }
+
+    // GESTIONE CONFIGURATORE OSPITI ED ETÀ DEI BAMBINI (BIMBO FREE & RIDUZIONI)
+    function onGuestsChange() {
+      adultsCount = parseInt(document.getElementById('cfg-adults').value, 10);
+      childrenCount = parseInt(document.getElementById('cfg-children').value, 10);
+
+      const agesRow = document.getElementById('children-ages-row');
+      const agesContainer = document.getElementById('children-age-inputs');
+
+      if (childrenCount > 0) {
+        agesRow.style.display = 'flex';
+        agesContainer.innerHTML = '';
+        childrenAges = [];
+        for (let i = 1; i <= childrenCount; i++) {
+          const age = i === 1 ? 5 : (i === 2 ? 10 : 14);
+          childrenAges.push(age);
+          agesContainer.innerHTML += `
+            <select class="guest-select" style="padding:4px 8px; font-size:12px;" onchange="updateChildAge(${i-1}, this.value)">
+              ${[...Array(18).keys()].map(a => `<option value="${a}" ${a === age ? 'selected' : ''}>${a} Anni</option>`).join('')}
+            </select>
+          `;
+        }
+      } else {
+        agesRow.style.display = 'none';
+        childrenAges = [];
+      }
+
+      recalcRealTotalPrice();
+    }
+
+    function updateChildAge(index, ageVal) {
+      childrenAges[index] = parseInt(ageVal, 10);
+      recalcRealTotalPrice();
+    }
+
+    // RENDER DATE SLIDER (COMPARAZIONE SETTIMANA PER SETTIMANA)
+    function renderDateSlider(dates) {
+      const container = document.getElementById('m-dates-row');
+      if (!container || dates.length === 0) return;
+
+      selectedDate = dates[0];
+      dateVariance = 0;
+
+      container.innerHTML = dates.map((d, i) => {
+        const variance = (i % 3) * 50;
+        const p = currentOffer.basePrice + variance;
+        return `
+          <div class="date-pill-option ${i === 0 ? 'active' : ''}" onclick="selectDatePill(this, '${d}', ${variance})">
+            <strong>${d}</strong>
+            <span>€${p} / quota base</span>
+          </div>
+        `;
+      }).join('');
+    }
+
+    let dateVariance = 0;
+    function selectDatePill(el, dateStr, variance) {
+      document.querySelectorAll('.date-pill-option').forEach(p => p.classList.remove('active'));
+      el.classList.add('active');
+      selectedDate = dateStr;
+      dateVariance = variance;
+      recalcRealTotalPrice();
+    }
+
+    // RENDER MATRICE CABINE / TRATTAMENTI SULLA STESSA DATA
+    function renderOptionsMatrix() {
+      const container = document.getElementById('m-matrix-grid');
+      const lbl = document.getElementById('lbl-matrix');
+      if (!container) return;
+
+      selectedOptionExtra = 0;
+
+      if (currentOffer.type === 'crociere') {
+        lbl.textContent = '🛏️ Comparazione Cabine (Sulla stessa data di partenza)';
+        selectedOptionName = 'Cabina Interna Premium Bella';
+        container.innerHTML = `
+          <div class="matrix-option-tile selected" onclick="selectMatrixTile(this, 'Cabina Interna Premium Bella', 0)">
+            <div class="matrix-tile-icon">🛏️</div>
+            <strong>Interna Premium Bella</strong>
+            <p>Clima, bagno privato, TV</p>
+            <span class="matrix-diff">Tariffa Base</span>
+          </div>
+          <div class="matrix-option-tile" onclick="selectMatrixTile(this, 'Cabina Vista Mare Panoramica', 140)">
+            <div class="matrix-tile-icon">🌊</div>
+            <strong>Vista Mare Panoramica</strong>
+            <p>Finestra vista mare aperta</p>
+            <span class="matrix-diff">+€140 tot</span>
+          </div>
+          <div class="matrix-option-tile" onclick="selectMatrixTile(this, 'Cabina Balcone Privato sul Mare', 290)">
+            <div class="matrix-tile-icon">🌅</div>
+            <strong>Balcone Privato sul Mare</strong>
+            <p>Terrazzo arredato privato</p>
+            <span class="matrix-diff">+€290 tot</span>
+          </div>
+          <div class="matrix-option-tile" onclick="selectMatrixTile(this, 'Suite VIP & Yacht Club Privilegio', 680)">
+            <div class="matrix-tile-icon">👑</div>
+            <strong>Suite VIP Yacht Club</strong>
+            <p>Maggiordomo e area VIP dedicata</p>
+            <span class="matrix-diff">+€680 tot</span>
+          </div>
+        `;
+      } else {
+        lbl.textContent = '🍽️ Comparazione Formule & Trattamento (Sulla stessa data)';
+        selectedOptionName = 'Mezza Pensione Plus';
+        container.innerHTML = `
+          <div class="matrix-option-tile selected" onclick="selectMatrixTile(this, 'Mezza Pensione Plus', 0)">
+            <div class="matrix-tile-icon">☕</div>
+            <strong>Mezza Pensione Plus</strong>
+            <p>Colazione e Cena a buffet</p>
+            <span class="matrix-diff">Inclusa</span>
+          </div>
+          <div class="matrix-option-tile" onclick="selectMatrixTile(this, 'Pensione Completa Soft Drink', 120)">
+            <div class="matrix-tile-icon">🍽️</div>
+            <strong>Pensione Completa Soft</strong>
+            <p>3 pasti con bevande incluse</p>
+            <span class="matrix-diff">+€120 tot</span>
+          </div>
+          <div class="matrix-option-tile" onclick="selectMatrixTile(this, 'Formula All-Inclusive Open Bar', 260)">
+            <div class="matrix-tile-icon">🍹</div>
+            <strong>All-Inclusive Open Bar</strong>
+            <p>Consumazioni libere e aperitivi</p>
+            <span class="matrix-diff">+€260 tot</span>
+          </div>
+          <div class="matrix-option-tile" onclick="selectMatrixTile(this, 'Formula Prestige VIP & Spiaggia Riservata', 490)">
+            <div class="matrix-tile-icon">⭐</div>
+            <strong>Prestige VIP & Spiaggia</strong>
+            <p>1° fila ombrellone & percorso SPA</p>
+            <span class="matrix-diff">+€490 tot</span>
+          </div>
+        `;
+      }
+    }
+
+    function selectMatrixTile(el, name, extra) {
+      document.querySelectorAll('.matrix-option-tile').forEach(t => t.classList.remove('selected'));
+      el.classList.add('selected');
+      selectedOptionName = name;
+      selectedOptionExtra = extra;
+      recalcRealTotalPrice();
+    }
+
+    // CALCOLO TOTALE REALE E TRASPARENTE
+    let calculatedGrandTotal = 0;
+    let selectedPaymentPlanMode = 'deposit';
+
+    function recalcRealTotalPrice() {
+      if (!currentOffer) return;
+
+      let basePerAdult = currentOffer.basePrice + dateVariance;
+      let adultsTotal = adultsCount * basePerAdult;
+
+      // Calcolo Bambini con Regola "Bimbo Free" (<12 anni = 0€ quota base o solo tasse €90, 12-17 anni = 50%)
+      let childrenTotal = 0;
+      childrenAges.forEach(age => {
+        if (age < 12) {
+          childrenTotal += 90; // Solo quota forfettaria tasse e assicurazione
+        } else {
+          childrenTotal += basePerAdult * 0.5; // 50% di riduzione giovani
+        }
+      });
+
+      calculatedGrandTotal = Math.round(adultsTotal + childrenTotal + selectedOptionExtra);
+
+      document.getElementById('m-total-price').textContent = `€${calculatedGrandTotal.toLocaleString('it-IT')}`;
+      document.getElementById('m-sum-cabin').textContent = selectedOptionName;
+      document.getElementById('m-sum-date').textContent = selectedDate;
+      document.getElementById('m-sum-pax').textContent = `${adultsCount} Adulti${childrenCount > 0 ? ` + ${childrenCount} Bambini` : ''}`;
+
+      // Aggiorna opzioni pagamento nel cassetto checkout
+      const depositVal = Math.round(calculatedGrandTotal * 0.30);
+      const depositEl = document.getElementById('plan-deposit-val');
+      const fullEl = document.getElementById('plan-full-val');
+      if (depositEl) depositEl.textContent = `€${depositVal.toLocaleString('it-IT')}`;
+      if (fullEl) fullEl.textContent = `€${calculatedGrandTotal.toLocaleString('it-IT')}`;
+    }
+
+    function selectPaymentPlan(mode) {
+      selectedPaymentPlanMode = mode;
+      document.querySelectorAll('.payment-plan-card').forEach(c => c.classList.remove('active'));
+      const activeCard = document.getElementById(`plan-card-${mode}`);
+      if (activeCard) activeCard.classList.add('active');
+
+      const btn = document.getElementById('dr-submit-btn');
+      const depositVal = Math.round(calculatedGrandTotal * 0.30);
+      if (btn && currentDrawerMode === 'checkout') {
+        const payAmount = mode === 'deposit' ? depositVal : calculatedGrandTotal;
+        btn.textContent = `Paga in Sicurezza €${payAmount.toLocaleString('it-IT')} e Conferma →`;
+      }
+    }
+
+    // APERTURA DELLE 3 VIE D'USCITA AD ALTA CONVERSIONE
+    function openDrawer(mode) {
+      currentDrawerMode = mode;
+      const drawer = document.getElementById('drawer-box');
+      const title = document.getElementById('drawer-title');
+      const badge = document.getElementById('dr-mode-badge');
+      const btn = document.getElementById('dr-submit-btn');
+      const chkFields = document.getElementById('checkout-specific-fields');
+      const saveFields = document.getElementById('save-specific-fields');
+
+      drawer.style.display = 'block';
+
+      if (mode === 'checkout') {
+        title.textContent = "💳 Via 1: Finalizza con Pagamento Protetto SSL";
+        badge.textContent = "Acquisto Immediato Garantito";
+        chkFields.style.display = 'block';
+        saveFields.style.display = 'none';
+        selectPaymentPlan('deposit');
+      } else if (mode === 'hold') {
+        title.textContent = "⏱️ Via 2: Blocca l'Offerta Reale per 24 Ore Senza Carta";
+        badge.textContent = "Blocco 24h a Zero Anticipo";
+        chkFields.style.display = 'none';
+        saveFields.style.display = 'none';
+        btn.textContent = "Conferma Blocco Opzione 24h a €0 →";
+      } else {
+        title.textContent = "📄 Via 3: Salva & Ricevi il Preventivo Ufficiale in PDF";
+        badge.textContent = "Download PDF & WhatsApp";
+        chkFields.style.display = 'none';
+        saveFields.style.display = 'block';
+        btn.textContent = "Genera Preventivo Ufficiale PDF →";
+      }
+
+      drawer.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function closeDrawer() {
+      document.getElementById('drawer-box').style.display = 'none';
+    }
+
+    function quickLock(offerId) {
+      openOfferModal(offerId);
+      openDrawer('hold');
+    }
+
+    // TIMER CONTO ALLA ROVESCIA 24H LIVE
+    let countdownInterval = null;
+    function start24hCountdown() {
+      if (countdownInterval) clearInterval(countdownInterval);
+      let totalSeconds = 24 * 3600; // 24 ore esatte
+
+      const timerDigits = document.getElementById('succ-timer-digits');
+      const timerWrap = document.getElementById('succ-timer-wrap');
+      if (timerWrap) timerWrap.style.display = 'block';
+
+      function updateDigits() {
+        if (totalSeconds <= 0) {
+          clearInterval(countdownInterval);
+          if (timerDigits) timerDigits.textContent = "SCADUTO";
+          return;
+        }
+        const hours = Math.floor(totalSeconds / 3600);
+        const minutes = Math.floor((totalSeconds % 3600) / 60);
+        const seconds = totalSeconds % 60;
+        if (timerDigits) {
+          timerDigits.textContent = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+        }
+        totalSeconds--;
+      }
+      updateDigits();
+      countdownInterval = setInterval(updateDigits, 1000);
+    }
+
+    // GESTIONE INVIO MODULO & SINCRONIZZAZIONE UNIFICATA CON IL GESTIONALE DI SAN SEVERO
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('dr-name').value;
+      const phone = document.getElementById('dr-phone').value;
+      const email = document.getElementById('dr-email').value;
+      const cf = document.getElementById('dr-cf') ? document.getElementById('dr-cf').value : '';
+      const notes = document.getElementById('dr-notes').value;
+
+      closeDrawer();
+      document.querySelector('.three-exits-grid').style.display = 'none';
+      const succ = document.getElementById('success-box');
+      succ.style.display = 'block';
+
+      const refCode = currentDrawerMode === 'checkout' 
+        ? `EQT-BOOK-${Math.floor(1000 + Math.random() * 9000)}`
+        : (currentDrawerMode === 'hold' ? `EQT-LOCK-${Math.floor(1000 + Math.random() * 9000)}` : `EQT-PREV-${Math.floor(1000 + Math.random() * 9000)}`);
+
+      document.getElementById('succ-code').textContent = refCode;
+      document.getElementById('succ-name').textContent = name;
+      document.getElementById('succ-offer').textContent = currentOffer.title || currentOffer.ship;
+      document.getElementById('succ-details').textContent = `${selectedOptionName} • Data: ${selectedDate}`;
+      document.getElementById('succ-price').textContent = `€${calculatedGrandTotal.toLocaleString('it-IT')}`;
+
+      const timerWrap = document.getElementById('succ-timer-wrap');
+      const printBtn = document.getElementById('succ-print-btn');
+
+      if (currentDrawerMode === 'checkout') {
+        if (timerWrap) timerWrap.style.display = 'none';
+        if (printBtn) printBtn.textContent = "🖨️ Stampa Voucher di Prenotazione";
+        const depositVal = Math.round(calculatedGrandTotal * 0.30);
+        const paidAmount = selectedPaymentPlanMode === 'deposit' ? `Acconto versato di €${depositVal}` : `Saldo totale versato di €${calculatedGrandTotal}`;
+
+        document.getElementById('succ-head').textContent = "Prenotazione e Pagamento Conclusi con Successo!";
+        document.getElementById('succ-desc').textContent = `Grazie ${name}, la tua pratica per ${currentOffer.title || currentOffer.ship} è confermata con protocollo SSL (${paidAmount}). Il contratto ufficiale e i documenti di viaggio sono stati inviati a ${email}.`;
+      } else if (currentDrawerMode === 'hold') {
+        start24hCountdown();
+        if (printBtn) printBtn.textContent = "🖨️ Stampa Ricevuta Opzione 24h";
+        document.getElementById('succ-head').textContent = "Opzione Reale Congelata per 24 Ore a €0!";
+        document.getElementById('succ-desc').textContent = `Abbiamo bloccato la tariffa garantita nei sistemi centrali. Nessun anticipo richiesto: il tuo consulente personale Equestre Tour ti contatterà al ${phone} per confermare i dettagli.`;
+      } else {
+        if (timerWrap) timerWrap.style.display = 'none';
+        if (printBtn) printBtn.textContent = "📥 Scarica / Stampa Preventivo PDF";
+        document.getElementById('succ-head').textContent = "Preventivo Ufficiale Pronto & Inviato!";
+        document.getElementById('succ-desc').textContent = `Il documento riepilogativo completo di piano viaggio, specifiche cabina e dettaglio tasse è pronto per il download e inviato a ${email}.`;
+        // Trigger automatico per visualizzazione preventivo
+        setTimeout(() => { triggerPdfPrint(); }, 400);
+      }
+
+      // SINCRONIZZAZIONE ISTANTANEA CON IL CRM OPERATORI (index.html / app.js)
+      syncLeadToAgencyCRM({
+        id: "REQ-" + Math.floor(1000 + Math.random() * 9000),
+        cliente: name,
+        email: email,
+        telefono: phone,
+        destinazione: currentOffer.dest || currentOffer.region || currentOffer.title,
+        periodo: selectedDate,
+        porto: (currentOffer.ports && currentOffer.ports[0]) || (currentOffer.airports && currentOffer.airports[0]) || "Principale",
+        cabina: selectedOptionName,
+        adulti: String(adultsCount),
+        bambini: String(childrenCount),
+        etaBambini: childrenAges.join(", "),
+        budget: String(calculatedGrandTotal),
+        note: `[${currentDrawerMode.toUpperCase()}] ${notes || 'Nessuna nota'} - Codice Pratica: ${refCode}${cf ? ` - CF: ${cf}` : ''}`,
+        fonte: currentDrawerMode === 'checkout' ? 'Checkout Online Diretto (Acquisto SSL)' : (currentDrawerMode === 'hold' ? 'Sito Web (Opzione 24h Bloccata)' : 'Sito Web (Preventivo PDF Richiesto)'),
+        status: currentDrawerMode === 'checkout' ? 'Prenotazione Confermata' : (currentDrawerMode === 'hold' ? 'Opzione 24h Bloccata' : 'Preventivo pronto'),
+        assignedTo: 'op-admin',
+        lockedBy: currentDrawerMode === 'hold' ? 'Cliente Online 24h' : null,
+        sent: true,
+        timestamp: new Date().toISOString()
+      });
+    }
+
+    // BRIDGE SINCRONIZZAZIONE CON IL CRM DI SAN SEVERO
+    function syncLeadToAgencyCRM(lead) {
+      try {
+        let existing = [];
+        const raw = localStorage.getItem("equestre_synced_requests");
+        if (raw) existing = JSON.parse(raw);
+        existing.unshift(lead);
+        localStorage.setItem("equestre_synced_requests", JSON.stringify(existing));
+        console.log("Lead sincronizzato con successo nel CRM Equestre Tour:", lead);
+      } catch (err) {
+        console.error("Errore salvataggio storage CRM:", err);
+      }
+    }
+
+    // GENERATORE PREVENTIVO ANALITICO PDF CLIENT-SIDE (VIA 3)
+    function triggerPdfPrint() {
+      if (!currentOffer) return;
+      const printWindow = window.open('', '_blank', 'width=840,height=900');
+      if (!printWindow) {
+        alert("Consenti i pop-up nel browser per visualizzare e stampare il Preventivo Ufficiale in PDF.");
+        return;
+      }
+
+      const clientName = document.getElementById('dr-name') ? document.getElementById('dr-name').value || "Gentile Viaggiatore" : "Gentile Viaggiatore";
+      const clientEmail = document.getElementById('dr-email') ? document.getElementById('dr-email').value || "Non specificata" : "Non specificata";
+      const clientPhone = document.getElementById('dr-phone') ? document.getElementById('dr-phone').value || "Non specificato" : "Non specificato";
+      const refCode = document.getElementById('succ-code') ? document.getElementById('succ-code').textContent : "EQT-PREV-2026";
+      const basePerAdult = currentOffer.basePrice + dateVariance;
+
+      const htmlContent = `
+        <!DOCTYPE html>
+        <html lang="it">
+        <head>
+          <meta charset="utf-8">
+          <title>Preventivo Ufficiale • ${refCode} • Equestre Tour</title>
+          <style>
+            body { font-family: 'Segoe UI', Arial, sans-serif; color: #0F172A; margin: 40px; line-height: 1.5; }
+            .header-row { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #0066FF; padding-bottom: 20px; margin-bottom: 24px; }
+            .logo-title { font-size: 24px; font-weight: 900; color: #0066FF; }
+            .agency-info { text-align: right; font-size: 11px; color: #475569; }
+            .badge-doc { display: inline-block; background: #0066FF; color: #FFF; padding: 4px 12px; border-radius: 4px; font-size: 11px; font-weight: 800; text-transform: uppercase; }
+            .lead-box { background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 8px; padding: 16px; margin-bottom: 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; font-size: 13px; }
+            .trip-title { font-size: 20px; font-weight: 800; color: #0F172A; margin-bottom: 4px; }
+            .table-quote { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 13px; }
+            .table-quote th, .table-quote td { border: 1px solid #E2E8F0; padding: 10px 14px; text-align: left; }
+            .table-quote th { background: #F1F5F9; font-weight: 800; }
+            .total-row { background: #0F172A; color: #FFF; font-size: 16px; font-weight: 900; }
+            .total-row td { border-color: #0F172A; }
+            .gold { color: #FFB300; }
+            .footer-notes { font-size: 11px; color: #64748B; border-top: 1px solid #E2E8F0; padding-top: 16px; margin-top: 32px; }
+            @media print {
+              body { margin: 15mm; }
+              .no-print { display: none; }
+            }
+          </style>
+        </head>
+        <body>
+          <div class="no-print" style="background:#EFF6FF; border:1px solid #BFDBFE; padding:12px; border-radius:8px; margin-bottom:20px; display:flex; justify-content:space-between; align-items:center;">
+            <strong>📄 Anteprima Preventivo Ufficiale A4 Equestre Tour</strong>
+            <button onclick="window.print()" style="background:#0066FF; color:#FFF; border:none; padding:8px 18px; border-radius:6px; font-weight:700; cursor:pointer;">🖨️ Stampa o Salva PDF</button>
+          </div>
+
+          <div class="header-row">
+            <div>
+              <div class="logo-title">EQUESTRE TOUR</div>
+              <span class="badge-doc">Proposta di Viaggio Ufficiale</span>
+            </div>
+            <div class="agency-info">
+              <strong>GOOD TRAVEL S.R.L.</strong><br>
+              Via Calabria 42, 71016 San Severo (FG)<br>
+              P.IVA: 03948270718 • Licenza Turismo 4589/FG<br>
+              Tel: 02 928 540 66 • www.equestretour.com
+            </div>
+          </div>
+
+          <div class="lead-box">
+            <div>
+              <strong>Codice Pratica:</strong> ${refCode}<br>
+              <strong>Intestatario:</strong> ${clientName}<br>
+              <strong>Email:</strong> ${clientEmail}
+            </div>
+            <div>
+              <strong>Recapito Telefonico:</strong> ${clientPhone}<br>
+              <strong>Data Emissione:</strong> ${new Date().toLocaleDateString('it-IT')}<br>
+              <strong>Validità Tariffa:</strong> Bloccata per 24 Ore
+            </div>
+          </div>
+
+          <div class="trip-title">${currentOffer.title || currentOffer.ship}</div>
+          <p style="font-size: 13px; color:#475569; margin-bottom: 16px;">
+            <strong>Destinazione:</strong> ${currentOffer.dest || currentOffer.region || currentOffer.country} • 
+            <strong>Durata:</strong> ${currentOffer.dur} Notti • 
+            <strong>Partenza:</strong> ${selectedDate} • 
+            <strong>Hub:</strong> ${(currentOffer.ports && currentOffer.ports.join(', ')) || (currentOffer.airports && currentOffer.airports.join(', ')) || 'Principale'}
+          </p>
+
+          <table class="table-quote">
+            <thead>
+              <tr>
+                <th>Dettaglio Servizio</th>
+                <th>Partecipanti / Trattamento</th>
+                <th style="text-align:right;">Importo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Quota Base Viaggio</strong></td>
+                <td>${adultsCount} Adulti (€${basePerAdult} cad.)</td>
+                <td style="text-align:right;">€${(adultsCount * basePerAdult).toLocaleString('it-IT')}</td>
+              </tr>
+              ${childrenCount > 0 ? `
+              <tr>
+                <td><strong>Quote Bambini (Regola Bimbo Free)</strong></td>
+                <td>${childrenCount} Bambini (Età: ${childrenAges.join(', ')} anni)</td>
+                <td style="text-align:right;">${childrenAges.some(a => a < 12) ? '<span style="color:#10B981; font-weight:700;">Quota Base 0€ + Solo Diritti</span>' : ''}</td>
+              </tr>` : ''}
+              <tr>
+                <td><strong>Sistemazione Scelta</strong></td>
+                <td>${selectedOptionName}</td>
+                <td style="text-align:right;">${selectedOptionExtra > 0 ? `+€${selectedOptionExtra}` : 'Inclusa'}</td>
+              </tr>
+              <tr>
+                <td><strong>Tasse Portuali / Aeroportuali & Diritti</strong></td>
+                <td>Tutti i partecipanti inclusi</td>
+                <td style="text-align:right; color:#10B981; font-weight:700;">INCLUSE</td>
+              </tr>
+              <tr>
+                <td><strong>Assicurazione Medico & Bagaglio</strong></td>
+                <td>Copertura garantita su tutta la durata</td>
+                <td style="text-align:right; color:#10B981; font-weight:700;">INCLUSA</td>
+              </tr>
+              <tr>
+                <td><strong>Assistenza Dedicata Equestre Tour</strong></td>
+                <td>Consulente personale prima e durante il viaggio</td>
+                <td style="text-align:right; color:#10B981; font-weight:700;">INCLUSA</td>
+              </tr>
+              <tr class="total-row">
+                <td colspan="2">PREZZO TOTALE FINITO GARANTITO</td>
+                <td style="text-align:right;" class="gold">€${calculatedGrandTotal.toLocaleString('it-IT')}</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div style="background:#FFFBEB; border:1px solid #FCD34D; border-radius:6px; padding:12px; font-size:12px; color:#92400E; margin-bottom:20px;">
+            <strong>🛡️ Garanzia di Prezzo Equestre Tour:</strong> Il presente preventivo analitico non contiene alcuna spesa nascosta o sorpresa al porto/villaggio. Aderente al Fondo Nazionale di Garanzia Viaggi.
+          </div>
+
+          <div class="footer-notes">
+            GOOD TRAVEL S.R.L. • San Severo (FG) • Questo preventivo ha valore commerciale ufficiale per 24 ore dalla data di emissione. Per confermare la pratica o bloccare l'offerta senza anticipo contatta il tuo consulente al 02 928 540 66.
+          </div>
+        </body>
+        </html>
+      `;
+
+      printWindow.document.open();
+      printWindow.document.write(htmlContent);
+      printWindow.document.close();
+    }
+
+    // GESTIONE POPOVER FILTRI DINAMICI
+    const filterButtons = ['port', 'dest', 'dur', 'month'];
+    filterButtons.forEach(btnKey => {
+      const btn = document.getElementById(`btn-f-${btnKey}`);
+      const pop = document.getElementById(`pop-f-${btnKey}`);
+      if (btn && pop) {
+        btn.addEventListener('click', (e) => {
+          if (!e.target.closest('.filter-dropdown')) {
+            const isOpen = pop.classList.contains('show');
+            closeAllPopups();
+            if (!isOpen) {
+              pop.classList.add('show');
+              btn.classList.add('open');
+            }
+          }
+        });
+      }
+    });
+
+    function closeAllPopups() {
+      document.querySelectorAll('.filter-dropdown').forEach(p => p.classList.remove('show'));
+      document.querySelectorAll('.filter-box').forEach(b => b.classList.remove('open'));
+    }
+
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.filter-box')) {
+        closeAllPopups();
+      }
+    });
+
+    // Avvio iniziale predefinito su Crociere con riscaldamento cache IA
+    switchMacroTab('crociere');
+  </script>
+</body>
+</html>

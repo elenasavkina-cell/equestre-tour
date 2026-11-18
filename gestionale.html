@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Equestre Tour - Area Preventivi & Robot Invio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Schermata Login -->
+  <div class="login-screen" id="loginScreen">
+    <form class="login-panel" id="loginForm">
+      <div class="brand login-brand">
+        <div class="brand-mark">ET</div>
+        <div>
+          <strong>Equestre Tour</strong>
+          <span>Accesso area preventivi</span>
+        </div>
+      </div>
+      <label>Account operatore
+        <select id="loginOperator">
+          <option value="op-admin">Amministratore (Amministratore)</option>
+          <option value="op-anna">Anna Rossi (Operatore)</option>
+          <option value="op-luca">Luca Bianchi (Operatore)</option>
+        </select>
+      </label>
+      <label>Password
+        <input id="loginPassword" type="password" inputmode="numeric" autocomplete="current-password" placeholder="Password (es: 0000)" required>
+      </label>
+      <p class="login-error" id="loginError"></p>
+      <button class="primary" type="submit">Accedi al gestionale</button>
+    </form>
+  </div>
+
+  <div class="app-layout">
+    <!-- Sidebar di Navigazione -->
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">ET</div>
+        <div>
+          <strong>Equestre Tour</strong>
+          <span>Area Preventivi & Bot</span>
+        </div>
+      </div>
+      <nav>
+        <a class="active" href="#dashboard">📊 Dashboard</a>
+        <a href="#fonti">🌐 Gestione Link & Fonti</a>
+        <a href="#richieste">📋 Elenco Richieste</a>
+        <a href="#alternative">🚢 Offerte e Crociere</a>
+        <a href="#robotino">🤖 Robotino di Invio</a>
+        <a href="#importa">📥 Carica File (Excel/CSV)</a>
+        <a href="#invii">📤 Registro Invii</a>
+        <a href="#crm">👥 Archivio CRM</a>
+        <a href="#sicurezza">🛡️ Sicurezza</a>
+      </nav>
+      <div class="session">
+        <label for="operatorSelect">Operatore attivo</label>
+        <select id="operatorSelect"></select>
+        <small id="roleHint"></small>
+      </div>
+    </aside>
+
+    <!-- Contenuto Principale -->
+    <main>
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Hub Unificato Richieste & Automazione</p>
+          <h1>Gestione Preventivi Equestre Tour</h1>
+        </div>
+        <div class="top-actions">
+          <button class="success" id="exportUnifiedCsv">💾 Esporta Database Unificato (CSV)</button>
+          <button class="ghost" id="downloadTemplate">📄 Template CSV</button>
+          <button class="primary" id="openManual">+ Nuova richiesta manuale</button>
+        </div>
+      </header>
+
+      <!-- Dashboard Indicatori -->
+      <section id="dashboard" class="metrics" aria-label="Indicatori principali">
+        <article class="metric-card">
+          <span>Richieste totali caricate</span>
+          <strong id="mTotal">0</strong>
+        </article>
+        <article class="metric-card warning">
+          <span>Dati mancanti (Incomplete)</span>
+          <strong id="mIncomplete">0</strong>
+        </article>
+        <article class="metric-card success">
+          <span>Complete / Pronte all'invio</span>
+          <strong id="mComplete">0</strong>
+        </article>
+        <article class="metric-card alert">
+          <span>Da controllare (Anomalie)</span>
+          <strong id="mReview">0</strong>
+        </article>
+        <article class="metric-card info">
+          <span>Preventivi inviati</span>
+          <strong id="mSent">0</strong>
+        </article>
+      </section>
+
+      <!-- SEZIONE LINK FONTI & TRACCIABILITÀ COMPLETA -->
+      <section id="fonti" class="band highlight-band">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Connessioni Esterne & Sincronizzazione</p>
+            <h2>🌐 Gestione Link di Scarico & Importazione Diretta</h2>
+          </div>
+          <div class="top-actions">
+            <button class="primary" id="openAddSourceModal">+ Aggiungi Nuovo Link Campagna</button>
+            <button class="ghost" id="syncAllSources">⚡ Scarica & Importa da tutti i link</button>
+          </div>
+        </div>
+
+        <!-- Guida Esempi Link -->
+        <div class="link-helper-box">
+          <div class="helper-title">💡 <strong>Come aggiungere i tuoi link per scaricare e importare i clienti:</strong></div>
+          <div class="helper-grid">
+            <div>
+              <strong>1. Google Sheet (Facebook Lead Ads / Instagram / Form):</strong>
+              <p>Incolla il link del foglio Google (impostato su <em>"Chiunque abbia il link può visualizzare"</em>):<br>
+              <code>https://docs.google.com/spreadsheets/d/1DaPQRuq.../edit?usp=sharing</code><br>
+              <em>Il sistema scarica i contatti e li inserisce istantaneamente nella piattaforma per generare i preventivi.</em></p>
+            </div>
+            <div>
+              <strong>2. Tracciabilità automatica:</strong>
+              <p>Ogni volta che clicchi su <strong>"Scarica & Importa"</strong>, il sistema tiene traccia della data, ora e del numero di lead importati da quel canale.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tabella Link con Tracciamento -->
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Nome Canale / Campagna</th>
+                <th>Tipo Fonte</th>
+                <th>Link / URL di Scarico</th>
+                <th>Totale Lead Importati</th>
+                <th>Ultimo Scarico (Traccia)</th>
+                <th>Stato</th>
+                <th style="width: 250px;">Azioni</th>
+              </tr>
+            </thead>
+            <tbody id="sourceTableRows"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Sezione Richieste e Lavorazione -->
+      <section id="richieste" class="band">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Piattaforma Operativa</p>
+            <h2>📋 Elenco Richieste & Scheda Preventivo Cliente</h2>
+          </div>
+          <div class="filter-bar">
+            <div class="filters">
+              <button class="chip active" data-filter="all">Tutte</button>
+              <button class="chip" data-filter="Dati mancanti">Dati mancanti</button>
+              <button class="chip" data-filter="Completa">Complete</button>
+              <button class="chip" data-filter="Da controllare">Da controllare</button>
+              <button class="chip" data-filter="Inviato">Inviati</button>
+            </div>
+            <div class="bulk-actions">
+              <button class="danger" id="deleteSelected">Elimina selezionate</button>
+              <button class="danger ghost-danger" id="deleteVisible">Elimina visibili</button>
+            </div>
+          </div>
+        </div>
+        <div class="requests-layout">
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th style="width: 36px;"><input type="checkbox" id="selectAllRequests" title="Seleziona tutte"></th>
+                  <th>Cliente</th>
+                  <th>Contatti</th>
+                  <th>Richiesta</th>
+                  <th>Stato</th>
+                  <th>Operatore</th>
+                  <th style="width: 140px;">Azioni</th>
+                </tr>
+              </thead>
+              <tbody id="requestRows"></tbody>
+            </table>
+          </div>
+
+          <!-- Dettaglio Richiesta e Messaggio Pronto -->
+          <aside class="detail" id="requestDetail">
+            <p class="empty">Seleziona una richiesta per vedere dati presenti, dati mancanti e messaggio preventivo pronto.</p>
+          </aside>
+        </div>
+      </section>
+
+      <!-- Modulo Robotino di Invio Automatico -->
+      <section id="robotino" class="band robot-band">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Automazione & Bot</p>
+            <h2>🤖 Robotino di Invio Automatico</h2>
+          </div>
+          <div class="send-actions">
+            <button class="primary bot-btn" id="runBotNow">🚀 Avvia Robotino (Processa tutta la coda)</button>
+          </div>
+        </div>
+        <div class="bot-info-card">
+          <div class="bot-status-header">
+            <strong>Stato del Robotino:</strong> <span class="status s-complete" id="botStatus">Pronto all'esecuzione</span>
+          </div>
+          <p>Il robotino legge automaticamente il database unificato ed esegue due azioni intelligenti:</p>
+          <div class="bot-actions-grid">
+            <div class="bot-action-box success-box">
+              <h4>✅ Per le richieste COMPLETE</h4>
+              <p>Genera e invia il <strong>preventivo ufficiale</strong> con le rotte, navi, prezzi aggiornati e link Equestre Tour.</p>
+            </div>
+            <div class="bot-action-box warning-box">
+              <h4>⚠️ Per le richieste con DATI MANCANTI</h4>
+              <p>Invia un messaggio personalizzato richiedendo <strong>esclusivamente i campi mancanti</strong> (es. periodo o cabina) senza richiedere i dati già forniti.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Alternative Crociere -->
+      <section id="alternative" class="band">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Preventivatore Dinamico</p>
+            <h2>🚢 Alternative di crociera compatibili (Equestre Tour)</h2>
+          </div>
+          <div class="alt-settings">
+            <label>Min proposte: <input id="minAlt" type="number" min="1" max="6" value="1"></label>
+            <label>Max proposte: <input id="maxAlt" type="number" min="1" max="6" value="6"></label>
+            <select id="sortMode">
+              <option value="price">Prezzo più basso</option>
+              <option value="value">Rapporto qualità / prezzo</option>
+            </select>
+          </div>
+        </div>
+        <div id="alternativesList" class="alternatives">
+          <p class="empty">Apri una richiesta completa per visualizzare le crociere compatibili estratte dal sistema.</p>
+        </div>
+      </section>
+
+      <!-- Caricamento File Locale -->
+      <section id="importa" class="band">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Caricamento Manuale Alternativo</p>
+            <h2>📥 Carica File Locale (Excel o CSV)</h2>
+          </div>
+        </div>
+        <div class="import-grid">
+          <div class="dropzone">
+            <input id="fileInput" type="file" accept=".csv,.xlsx,.xls">
+            <div class="dropzone-icon">📁</div>
+            <p><strong>Trascina o seleziona un file Excel (.xlsx) o CSV dal computer</strong></p>
+            <small>I dati verranno normalizzati e aggiunti al Database Unificato.</small>
+          </div>
+          <div class="rules">
+            <h3>⚙️ Normalizzazione automatica:</h3>
+            <ul>
+              <li><strong>Riconoscimento intelligente:</strong> estrae numeri WhatsApp, nomi e passeggeri.</li>
+              <li><strong>Dati mancanti:</strong> classifica in automatico le richieste che necessitano dettagli.</li>
+              <li><strong>Preventivazione immediata:</strong> genera preventivo e link offerta per le richieste complete.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Registro Invii -->
+      <section id="invii" class="band">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Audit & Registro</p>
+            <h2>📤 Registro preventivi inviati</h2>
+          </div>
+        </div>
+        <div class="log-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Cliente</th>
+                <th>Destinatario</th>
+                <th>Operatore</th>
+                <th>Canale</th>
+                <th>Esito</th>
+                <th>Preventivo</th>
+                <th>Data e ora</th>
+              </tr>
+            </thead>
+            <tbody id="sendLog"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Archivio CRM -->
+      <section id="crm" class="band">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Archivio Clienti</p>
+            <h2>👥 CRM Contatti & Storico Richieste</h2>
+          </div>
+          <div class="crm-controls">
+            <input id="crmSearch" type="search" placeholder="Cerca cliente per nome, email o telefono...">
+          </div>
+        </div>
+        <p class="admin-notice hidden" id="adminOnlyNotice">La visualizzazione completa del CRM è riservata all'account Amministratore.</p>
+        <div class="log-wrap" id="crmWrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Cliente</th>
+                <th>Contatti</th>
+                <th>Tot. Richieste</th>
+                <th>Ultimo stato</th>
+                <th>Ultimo invio</th>
+                <th>Azioni</th>
+              </tr>
+            </thead>
+            <tbody id="crmRows"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Parametri di Sicurezza -->
+      <section id="sicurezza" class="band safety">
+        <div>
+          <p class="eyebrow">Regole di Protezione</p>
+          <h2>🛡️ Parametri di sicurezza e conformità</h2>
+        </div>
+        <div class="safety-grid">
+          <label><input type="checkbox" checked disabled> Blocca invio senza disponibilità reale verificata</label>
+          <label><input type="checkbox" checked disabled> Blocca invio senza prezzo aggiornato nel listino</label>
+          <label><input type="checkbox" checked disabled> Blocca invio senza recapito valido (Telefono o Email)</label>
+          <label><input type="checkbox" checked disabled> Blocca invio senza link ufficiale Equestre Tour</label>
+          <label><input type="checkbox" checked disabled> Rilevamento e blocco automatico duplicati</label>
+          <label><input type="checkbox" checked disabled> Tracciamento completo operatore, data e canale</label>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Modal Aggiungi / Modifica Link Fonte -->
+  <dialog id="sourceModal">
+    <form id="sourceModalForm">
+      <div class="dialog-head">
+        <h2 id="modalTitle">🔗 Aggiungi Nuovo Link Campagna</h2>
+        <button type="button" id="closeSourceModal" class="icon-button" aria-label="Chiudi">&times;</button>
+      </div>
+      <input type="hidden" id="editSourceId" value="">
+      <div style="display: flex; flex-direction: column; gap: 14px;">
+        <label>Nome identificativo della Campagna o Compagnia
+          <input id="newSourceName" placeholder="Es: Campagna Facebook Crociere 2026 / Modulo Instagram / Costa Crociere" required>
+        </label>
+        <label>Tipo di canale / fonte
+          <select id="newSourceType">
+            <option value="Facebook Lead Ads">Facebook Lead Ads</option>
+            <option value="Instagram">Instagram Direct / Form</option>
+            <option value="Google Form">Modulo Google / Form</option>
+            <option value="Google Sheet">Google Sheet Condiviso</option>
+            <option value="WhatsApp">Campagna WhatsApp</option>
+            <option value="Landing Page">Landing Page / Altro</option>
+          </select>
+        </label>
+        <label>Link / URL del Google Sheet o CSV
+          <input id="newSourceUrl" placeholder="https://docs.google.com/spreadsheets/d/... o URL file CSV" required>
+        </label>
+        <small style="color: var(--text-muted);">Questo link verrà salvato nella piattaforma. Cliccando su "Scarica & Importa", i clienti verranno inseriti istantaneamente nell'elenco richieste per fare i preventivi.</small>
+      </div>
+      <menu>
+        <button type="button" id="cancelSourceModal">Annulla</button>
+        <button class="primary" type="submit" id="saveSourceBtn">Salva Link e Fonte</button>
+      </menu>
+    </form>
+  </dialog>
+
+  <!-- Dialog Inserimento Manuale -->
+  <dialog id="manualDialog">
+    <form method="dialog" id="manualForm">
+      <div class="dialog-head">
+        <h2>Nuova richiesta cliente manuale</h2>
+        <button type="button" id="closeManual" class="icon-button" aria-label="Chiudi">&times;</button>
+      </div>
+      <div class="form-grid">
+        <label>Nome cliente <input name="cliente" placeholder="Es: Mario Rossi" required></label>
+        <label>Email <input name="email" type="email" placeholder="mario.rossi@example.com"></label>
+        <label>Telefono / WhatsApp <input name="telefono" placeholder="+39 333 1234567"></label>
+        <label>Destinazione <input name="destinazione" placeholder="Es: Grecia / Mediterraneo"></label>
+        <label>Periodo <input name="periodo" placeholder="Es: Agosto 2026"></label>
+        <label>Porto di partenza <input name="porto" placeholder="Es: Venezia / Genova"></label>
+        <label>Tipologia cabina <input name="cabina" placeholder="Interna / Esterna / Balcone"></label>
+        <label>Numero adulti <input name="adulti" type="number" min="0" value="2"></label>
+        <label>Numero minori <input name="bambini" type="number" min="0" value="0"></label>
+        <label>Età minori <input name="eta_bambini" placeholder="Es: 6, 10"></label>
+        <label>Budget (€) <input name="budget" placeholder="Es: 3500"></label>
+      </div>
+      <label>Note e preferenze <textarea name="note" rows="3" placeholder="Es: Richiesta da Instagram, preferisce nave con piscina..."></textarea></label>
+      <menu>
+        <button type="button" id="cancelManual">Annulla</button>
+        <button class="primary" type="submit">Salva richiesta</button>
+      </menu>
+    </form>
+  </dialog>
+
+  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
