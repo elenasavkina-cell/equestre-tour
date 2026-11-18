@@ -411,6 +411,455 @@
       letter-spacing: 0.3px;
     }
 
+    
+    /* ========================================================
+       3 LAYOUT STRUTTURALMENTE DIVERSI ED IN PERFETTA ARMONIA
+       ======================================================== */
+
+    .showcase-carousel-wrapper {
+      position: relative;
+    }
+    .carousel-nav-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: #FFFFFF;
+      border: 1.5px solid var(--border-soft);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      color: var(--text-main);
+      cursor: pointer;
+      z-index: 30;
+      transition: all 0.2s ease;
+    }
+    .carousel-nav-btn:hover {
+      background: var(--primary-blue-light);
+      color: var(--primary-blue);
+      border-color: var(--primary-blue);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+    }
+    .carousel-nav-btn.prev-btn { left: -22px; }
+    .carousel-nav-btn.next-btn { right: -22px; }
+
+    @media (max-width: 1024px) {
+      .carousel-nav-btn { display: none; }
+    }
+
+    /* --------------------------------------------------------
+       1. STRUTTURA CARD CROCIERE: NAUTICO & ROTTE MARITTIME
+       -------------------------------------------------------- */
+    .card-style-crociere {
+      background: #FFFFFF;
+      border-radius: 14px;
+      border: 1.5px solid #BFDBFE;
+      box-shadow: 0 4px 18px rgba(0, 85, 177, 0.08);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .card-style-crociere:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 16px 32px rgba(0, 102, 255, 0.18);
+      border-color: #0066FF;
+    }
+    .crociera-card-body {
+      padding: 16px 18px 14px 18px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .nautical-route-timeline {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: #EFF6FF;
+      border: 1px solid #DBEAFE;
+      border-radius: 8px;
+      padding: 8px 10px;
+      margin-bottom: 12px;
+      font-size: 12px;
+      color: #1E40AF;
+      font-weight: 700;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .route-node {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .route-arrow {
+      color: #93C5FD;
+      font-size: 11px;
+    }
+    .crociera-specs {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      font-size: 13px;
+      color: #334155;
+      margin-bottom: 16px;
+    }
+    .crociera-spec-line {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .crociera-spec-line strong {
+      color: #0055B1;
+    }
+    .crociera-price-bar {
+      background: #F8FAFC;
+      border-top: 1px solid #E2E8F0;
+      padding: 12px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: auto;
+    }
+    .crociera-actions-row {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 8px;
+      padding: 0 18px 16px 18px;
+      background: #F8FAFC;
+    }
+    .btn-crociera-primary {
+      background: linear-gradient(135deg, #0055B1 0%, #0066FF 100%);
+      color: #FFFFFF;
+      font-size: 13px;
+      font-weight: 800;
+      padding: 11px 10px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+    .btn-crociera-primary:hover {
+      background: #004ECC;
+    }
+    .btn-crociera-lock {
+      background: #FFFFFF;
+      border: 1.5px solid #CBD5E1;
+      color: #475569;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 11px 8px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .btn-crociera-lock:hover {
+      border-color: #0066FF;
+      color: #0066FF;
+    }
+
+    /* --------------------------------------------------------
+       2. STRUTTURA CARD MARE ITALIA: RESORT & OTA (COME SCREENSHOT)
+       -------------------------------------------------------- */
+    .card-style-mare {
+      background: #FFFFFF;
+      border-radius: 14px;
+      border: 1px solid #E2E8F0;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .card-style-mare:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 16px 32px rgba(15, 23, 42, 0.12);
+      border-color: #CBD5E1;
+    }
+
+    /* Ribbon BEST SELLER pendente dall'alto con spacco */
+    .ribbon-bestseller {
+      position: absolute;
+      top: 0;
+      left: 14px;
+      background: #FACC15;
+      color: #0F172A;
+      font-size: 10px;
+      font-weight: 900;
+      padding: 6px 8px 10px 8px;
+      text-align: center;
+      line-height: 1.1;
+      text-transform: uppercase;
+      z-index: 10;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+      letter-spacing: 0.5px;
+    }
+    .ribbon-bestseller-icon {
+      font-size: 14px;
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    /* Slider dots bianchi centrati in basso sulla foto */
+    .photo-slider-dots {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 6px;
+      z-index: 5;
+    }
+    .photo-slider-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.6);
+    }
+    .photo-slider-dot.active {
+      background: #FFFFFF;
+      width: 14px;
+      border-radius: 3px;
+    }
+
+    /* Mare Card Body */
+    .mare-card-body {
+      padding: 16px 18px 0 18px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .mare-meta-top {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 6px;
+    }
+    .mare-stars {
+      font-size: 13px;
+      font-weight: 700;
+      color: #334155;
+    }
+    .mare-badge-exclusive {
+      background: #FEF08A;
+      color: #854D0E;
+      font-size: 10px;
+      font-weight: 900;
+      padding: 2px 7px;
+      border-radius: 4px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+    .mare-title-row {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 4px;
+    }
+    .mare-hotel-title {
+      font-size: 17px;
+      font-weight: 800;
+      color: #0F172A;
+      line-height: 1.25;
+      margin: 0;
+    }
+    .mare-heart-btn {
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      font-size: 20px;
+      color: #94A3B8;
+      line-height: 1;
+      padding: 0;
+      transition: color 0.15s, transform 0.15s;
+    }
+    .mare-heart-btn:hover {
+      color: #EF4444;
+      transform: scale(1.15);
+    }
+    .mare-heart-btn.liked {
+      color: #EF4444;
+    }
+    .mare-location-subtitle {
+      font-size: 13px;
+      color: #64748B;
+      margin-bottom: 12px;
+    }
+    .mare-specs-box {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      font-size: 13px;
+      color: #334155;
+      margin-bottom: 16px;
+    }
+    .mare-spec-line {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .mare-spec-line strong {
+      color: #006568;
+    }
+
+    /* Mare Bottom Pricing Bar: fascia chiara con totale e quota persona */
+    .mare-price-bar {
+      background: #EDF7F6;
+      border-top: 1px solid #D1EBE8;
+      padding: 12px 18px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-top: auto;
+    }
+    .mare-total-price {
+      font-size: 13px;
+      color: #64748B;
+      font-weight: 600;
+    }
+    .mare-person-price {
+      text-align: right;
+    }
+    .mare-person-val {
+      font-size: 24px;
+      font-weight: 900;
+      color: #006568;
+      letter-spacing: -0.5px;
+    }
+    .mare-person-unit {
+      font-size: 12px;
+      color: #64748B;
+      font-weight: 500;
+    }
+    .mare-info-icon {
+      font-size: 12px;
+      color: #64748B;
+      margin-left: 2px;
+    }
+
+    /* Mare Full Width Button CONTINUA */
+    .btn-mare-continua {
+      display: block;
+      width: 100%;
+      background: #006568;
+      color: #FFFFFF;
+      font-size: 14px;
+      font-weight: 900;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 14px;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .btn-mare-continua:hover {
+      background: #004D50;
+    }
+
+    /* --------------------------------------------------------
+       3. STRUTTURA CARD PACCHETTI: TICKET BOARDING PASS
+       -------------------------------------------------------- */
+    .card-style-pacchetti {
+      background: #FFFFFF;
+      border-radius: 14px;
+      border: 1.5px solid #C7D2FE;
+      box-shadow: 0 4px 18px rgba(79, 70, 229, 0.08);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .card-style-pacchetti:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 16px 32px rgba(79, 70, 229, 0.18);
+      border-color: #6366F1;
+    }
+    /* Ticket Flight Strip stile carta d'imbarco */
+    .flight-ticket-strip {
+      background: #312E81;
+      color: #FFFFFF;
+      padding: 9px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+    }
+    .flight-strip-nodes {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .flight-strip-baggage {
+      background: rgba(255, 255, 255, 0.2);
+      padding: 2px 7px;
+      border-radius: 4px;
+      font-size: 11px;
+    }
+    .pacchetti-card-body {
+      padding: 16px 18px 0 18px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .pacchetti-specs {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      font-size: 13px;
+      color: #334155;
+      margin-bottom: 16px;
+    }
+    .pacchetti-spec-line {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .pacchetti-spec-line strong {
+      color: #4338CA;
+    }
+    .pacchetti-price-bar {
+      background: #EEF2FF;
+      border-top: 1px solid #E0E7FF;
+      padding: 12px 18px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-top: auto;
+    }
+    .btn-pacchetti-prenota {
+      display: block;
+      width: 100%;
+      background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%);
+      color: #FFFFFF;
+      font-size: 14px;
+      font-weight: 900;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 14px;
+      border: none;
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
+    .btn-pacchetti-prenota:hover {
+      opacity: 0.92;
+    }
+
     /* Temi Spotlight */
     .theme-spotlight-crociere {
       background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
@@ -1946,8 +2395,13 @@
       </div>
     </div>
 
-    <div class="showcase-grid" id="cards-container">
-      <!-- Generato dinamicamente -->
+    <!-- CAROUSEL WRAPPER CON FRECCE NAVIGAZIONE -->
+    <div class="showcase-carousel-wrapper">
+      <button type="button" class="carousel-nav-btn prev-btn" onclick="scrollCarousel(-1)" aria-label="Precedente">‹</button>
+      <div class="showcase-grid" id="cards-container">
+        <!-- Generato dinamicamente -->
+      </div>
+      <button type="button" class="carousel-nav-btn next-btn" onclick="scrollCarousel(1)" aria-label="Successivo">›</button>
     </div>
   </section>
 
@@ -2529,6 +2983,25 @@
       }
     }
 
+    
+    // SCROLL CAROUSEL
+    function scrollCarousel(dir) {
+      const container = document.getElementById('cards-container');
+      if (!container) return;
+      container.scrollBy({ left: dir * 360, behavior: 'smooth' });
+    }
+
+    // TOGGLE WISHLIST HEART
+    function toggleHeart(btn, event) {
+      if (event) event.stopPropagation();
+      btn.classList.toggle('liked');
+      if (btn.classList.contains('liked')) {
+        btn.textContent = '❤️';
+      } else {
+        btn.textContent = '♡';
+      }
+    }
+
     function renderCards(items) {
       const container = document.getElementById('cards-container');
       if (!container) return;
@@ -2539,7 +3012,7 @@
             <div style="font-size:40px; margin-bottom:12px;">🔍</div>
             <h3 style="font-size:20px; font-weight:800; margin-bottom:8px;">Nessuna proposta trovata con i filtri attuali</h3>
             <p style="color:var(--text-muted); font-size:14px; max-width:480px; margin:0 auto 16px auto;">
-              Nessun problema: il nostro centro prenotazioni ha accesso a migliaia di combinazioni in tempo reale.
+              Nessun problema: il nostro centro prenotazioni ha accesso diretto all'inventario completo.
             </p>
             <button type="button" class="btn-search-trigger" style="display:inline-block; max-width:240px;" onclick="selectAllFilter('port', true); selectAllFilter('dest', true); applyFilters();">
               Ripristina Tutte le Proposte
@@ -2550,168 +3023,191 @@
       }
 
       const displayList = items.slice(0, 18);
-      container.innerHTML = displayList.map(item => {
+      container.innerHTML = displayList.map((item, idx) => {
         const originList = (item.ports || item.airports || []).slice(0, 3).join(', ');
 
-        // === 1. CARD PER CROCIERE ===
+        // ==========================================================
+        // 1. CROCIERE: STRUTTURA NAUTICA CON ROTTE, TIMELINE E CABINE
+        // ==========================================================
         if (currentMacroTab === 'crociere') {
+          const portsArr = item.ports || ['Pireo'];
           return `
             <div class="boutique-card card-style-crociere" onmouseenter="AIPredictiveCache.warmupOffer('${item.id}')">
-              <div>
-                <div class="card-photo-wrapper" style="background-image: url('${item.image}');">
-                  <div class="card-top-badges">
-                    <span class="badge-nautico">⚓ ${item.company || 'Costa'} Ufficiale</span>
-                    <span class="badge-accent-crociera">Rotta 2026</span>
-                  </div>
-                  <div class="card-bottom-tags">
-                    <span class="pill-departure-code">⚓ Scalo d'imbarco: ${originList}</span>
-                  </div>
-                </div>
-
-                <div class="card-body">
-                  <div>
-                    <div class="card-category-indicator category-crociere">
-                      <span>🚢 Crociera Mediterraneo</span>
-                      <span class="dur-pill">🌙 ${item.dur} Notti</span>
-                    </div>
-                    <h3 class="card-ship-title">${item.title || item.ship}</h3>
-                    <p class="card-destination-desc">🗺️ ${item.dest || item.region}</p>
-                    
-                    <div class="card-agency-perks perks-crociere">
-                      <div class="agency-perk-row"><span>⚓</span> <strong>Imbarco:</strong> ${originList || 'Principali porti'}</div>
-                      <div class="agency-perk-row"><span>🍽️</span> <strong>Trattamento:</strong> Pensione Completa & Spettacoli</div>
-                      <div class="agency-perk-row"><span>🛡️</span> <strong>Garanzia:</strong> Tasse Portuali & Assistenza Incluse</div>
-                    </div>
-                  </div>
-
-                  <div>
-                    <div class="card-pricing-block">
-                      <div>
-                        <div class="price-sub-label">A Partire Da</div>
-                        <span class="price-note">a persona • Tasse portuali incluse</span>
-                      </div>
-                      <div class="price-main-val val-crociere">€${item.basePrice}</div>
-                    </div>
-
-                    <div class="card-action-buttons">
-                      <button type="button" class="btn-card-personalize btn-action-crociere" onclick="openOfferModal('${item.id}')">
-                        <span>🚢</span> Scegli Cabina & Data
-                      </button>
-                      <button type="button" class="btn-card-lock" onclick="quickLock('${item.id}')">
-                        Blocca 24h a €0
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          `;
-        }
-
-        // === 2. CARD PER MARE ITALIA ===
-        if (currentMacroTab === 'mare_italia') {
-          return `
-            <div class="boutique-card card-style-mare" onmouseenter="AIPredictiveCache.warmupOffer('${item.id}')">
-              <div>
-                <div class="card-photo-wrapper" style="background-image: url('${item.image}');">
-                  <div class="card-top-badges">
-                    <span class="badge-resort">🏖️ ${item.operator || 'Villaggi Club'}</span>
-                    <span class="badge-bimbo-free">👶 BIMBO FREE 0-12 ANNI</span>
-                  </div>
-                  <div class="card-bottom-tags">
-                    <span class="pill-departure-code">🏖️ ${item.dest || item.region}</span>
-                  </div>
-                </div>
-
-                <div class="card-body">
-                  <div>
-                    <div class="card-category-indicator category-mare">
-                      <span>🏖️ Villaggio & Resort</span>
-                      <span class="dur-pill">☀️ 7 Notti Relax</span>
-                    </div>
-                    <h3 class="card-ship-title title-mare">${item.title}</h3>
-                    <p class="card-destination-desc">📍 ${item.dest || item.region}</p>
-                    
-                    <div class="card-agency-perks perks-mare">
-                      <div class="agency-perk-row"><span>🌊</span> <strong>Spiaggia:</strong> Ombrellone & Lettini Inclusi</div>
-                      <div class="agency-perk-row"><span>🍹</span> <strong>Formula:</strong> All-Inclusive & Open Bar Resort</div>
-                      <div class="agency-perk-row"><span>👶</span> <strong>Famiglie:</strong> 1° Bambino 0€ & Mini Club</div>
-                    </div>
-                  </div>
-
-                  <div>
-                    <div class="card-pricing-block">
-                      <div>
-                        <div class="price-sub-label">A Partire Da</div>
-                        <span class="price-note">a persona • Tessera Club Inclusa</span>
-                      </div>
-                      <div class="price-main-val val-mare">€${item.basePrice}</div>
-                    </div>
-
-                    <div class="card-action-buttons">
-                      <button type="button" class="btn-card-personalize btn-action-mare" onclick="openOfferModal('${item.id}')">
-                        <span>🏖️</span> Preventivo Famiglia
-                      </button>
-                      <button type="button" class="btn-card-lock" onclick="quickLock('${item.id}')">
-                        Blocca 24h a €0
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          `;
-        }
-
-        // === 3. CARD PER PACCHETTI VIAGGIO ===
-        return `
-          <div class="boutique-card card-style-pacchetti" onmouseenter="AIPredictiveCache.warmupOffer('${item.id}')">
-            <div>
               <div class="card-photo-wrapper" style="background-image: url('${item.image}');">
                 <div class="card-top-badges">
-                  <span class="badge-volo">✈️ VOLO + RESORT INCLUSO</span>
-                  <span class="badge-esotico">🌍 ${item.country || 'Mondo'}</span>
+                  <span class="badge-nautico">⚓ ${item.company || 'Costa'} Ufficiale</span>
+                  <span class="badge-accent-crociera">Rotta 2026</span>
                 </div>
                 <div class="card-bottom-tags">
-                  <span class="pill-departure-code">🛫 Voli da: ${originList}</span>
+                  <span class="pill-departure-code">⚓ Scalo Imbarco: ${portsArr[0] || 'Principale'}</span>
                 </div>
               </div>
 
-              <div class="card-body">
-                <div>
-                  <div class="card-category-indicator category-pacchetti">
-                    <span>✈️ Pacchetto Completo</span>
-                    <span class="dur-pill">🌍 ${item.dur} Notti</span>
-                  </div>
-                  <h3 class="card-ship-title title-pacchetti">${item.title}</h3>
-                  <p class="card-destination-desc">📍 ${item.dest || item.country}</p>
-                  
-                  <div class="card-agency-perks perks-pacchetti">
-                    <div class="agency-perk-row"><span>🛫</span> <strong>Volo & Bagaglio:</strong> Volo a/r + Bagaglio in stiva</div>
-                    <div class="agency-perk-row"><span>🌴</span> <strong>Soggiorno:</strong> Transfer + Resort Selezionato</div>
-                    <div class="agency-perk-row"><span>🛡️</span> <strong>Protezione:</strong> Assicurazione Medico-Bagaglio Inclusa</div>
-                  </div>
+              <div class="crociera-card-body">
+                <div class="card-category-indicator category-crociere">
+                  <span>🚢 Crociera nel Mediterraneo</span>
+                  <span class="dur-pill">🌙 ${item.dur} Notti</span>
+                </div>
+                <h3 class="card-ship-title" style="margin-bottom:8px;">${item.title || item.ship}</h3>
+                
+                <!-- TIMELINE ROTTA NAUTICA -->
+                <div class="nautical-route-timeline">
+                  <span class="route-node">⚓ ${portsArr[0] || 'Imbarco'}</span>
+                  <span class="route-arrow">➔</span>
+                  <span class="route-node">🏛️ Scali Isole</span>
+                  <span class="route-arrow">➔</span>
+                  <span class="route-node">⚓ Rientro</span>
                 </div>
 
-                <div>
-                  <div class="card-pricing-block">
-                    <div>
-                      <div class="price-sub-label">Pacchetto Completo Da</div>
-                      <span class="price-note">volo + hotel + tasse incluse</span>
-                    </div>
-                    <div class="price-main-val val-pacchetti">€${item.basePrice}</div>
-                  </div>
+                <div class="crociera-specs">
+                  <div class="crociera-spec-line"><span>🚢</span> <strong>Nave:</strong> ${item.ship || 'Classe Premium'}</div>
+                  <div class="crociera-spec-line"><span>🍽️</span> <strong>Trattamento:</strong> Pensione Completa & Spettacoli Inclusi</div>
+                  <div class="crociera-spec-line"><span>🛡️</span> <strong>Assistenza:</strong> Tasse Portuali & Servizi Inclusi</div>
+                </div>
 
-                  <div class="card-action-buttons">
-                    <button type="button" class="btn-card-personalize btn-action-pacchetti" onclick="openOfferModal('${item.id}')">
-                      <span>✈️</span> Configura Volo & Hotel
-                    </button>
-                    <button type="button" class="btn-card-lock" onclick="quickLock('${item.id}')">
-                      Blocca 24h a €0
-                    </button>
+                <div class="crociera-price-bar">
+                  <div>
+                    <div class="price-sub-label">Quota a Persona da</div>
+                    <span class="price-note">tasse portuali incluse</span>
                   </div>
+                  <div class="val-crociere">€${item.basePrice}</div>
+                </div>
+
+                <div class="crociera-actions-row">
+                  <button type="button" class="btn-crociera-primary" onclick="openOfferModal('${item.id}')">
+                    <span>🚢</span> Scegli Cabina
+                  </button>
+                  <button type="button" class="btn-crociera-lock" onclick="quickLock('${item.id}')">
+                    Blocca 24h
+                  </button>
                 </div>
               </div>
+            </div>
+          `;
+        }
+
+        // ==========================================================
+        // 2. MARE ITALIA: STRUTTURA HOTEL/RESORT OTA (COME SCREENSHOT)
+        // ==========================================================
+        if (currentMacroTab === 'mare_italia') {
+          const dateStr = item.dates && item.dates[0] ? item.dates[0] : '15 Giu 2026';
+          const calcTotal = item.basePrice * 2; // Simula totale soggiorno 2 adulti
+          return `
+            <div class="boutique-card card-style-mare" onmouseenter="AIPredictiveCache.warmupOffer('${item.id}')">
+              <!-- HANGING RIBBON BEST SELLER -->
+              <div class="ribbon-bestseller">
+                <span class="ribbon-bestseller-icon">🎖️</span>
+                BEST<br>SELLER
+              </div>
+
+              <!-- FOTO CON SLIDER DOTS BIANCHI IN BASSO -->
+              <div class="card-photo-wrapper" style="background-image: url('${item.image}'); position:relative;">
+                <div class="photo-slider-dots">
+                  <div class="photo-slider-dot active"></div>
+                  <div class="photo-slider-dot"></div>
+                  <div class="photo-slider-dot"></div>
+                </div>
+              </div>
+
+              <!-- CORPO SCHEDA RESORT -->
+              <div class="mare-card-body">
+                <div class="mare-meta-top">
+                  <span class="mare-stars">Hotel ★★★★</span>
+                  <span class="mare-badge-exclusive">ESCLUSIVA BIMBO FREE</span>
+                </div>
+
+                <div class="mare-title-row">
+                  <h3 class="mare-hotel-title">${item.title}</h3>
+                  <button type="button" class="mare-heart-btn" onclick="toggleHeart(this, event)" title="Aggiungi ai preferiti">♡</button>
+                </div>
+
+                <div class="mare-location-subtitle">${item.dest || item.region}</div>
+
+                <div class="mare-specs-box">
+                  <div class="mare-spec-line">
+                    <span>📅</span>
+                    <span><strong>${dateStr}</strong> (7 Notti)</span>
+                  </div>
+                  <div class="mare-spec-line">
+                    <span>🚢</span>
+                    <span><strong>Miglior prezzo con:</strong> Traghetto + Auto o Volo</span>
+                  </div>
+                </div>
+
+                <!-- FASCIA PREZZO BICOLORE CON TOTALE E PERSONA -->
+                <div class="mare-price-bar">
+                  <div class="mare-total-price">
+                    €${calcTotal}/totale
+                  </div>
+                  <div class="mare-person-price">
+                    <span class="mare-person-val">€ ${item.basePrice}</span>
+                    <span class="mare-person-unit">/ persona</span>
+                    <span class="mare-info-icon" title="Tasse e tessera club incluse">ⓘ</span>
+                  </div>
+                </div>
+
+                <!-- BOTTONE CONTINUA A TUTTA LARGHEZZA IN BASSO -->
+                <button type="button" class="btn-mare-continua" onclick="openOfferModal('${item.id}')">
+                  CONTINUA
+                </button>
+              </div>
+            </div>
+          `;
+        }
+
+        // ==========================================================
+        // 3. PACCHETTI VACANZA: STRUTTURA TICKET & BOARDING PASS
+        // ==========================================================
+        const airCode = (item.airports && item.airports[0]) ? item.airports[0] : 'Milano Malpensa';
+        return `
+          <div class="boutique-card card-style-pacchetti" onmouseenter="AIPredictiveCache.warmupOffer('${item.id}')">
+            <!-- STRIP VOLO STILE CARTA D'IMBARCO -->
+            <div class="flight-ticket-strip">
+              <div class="flight-strip-nodes">
+                <span>🛫 ${airCode.split(' ')[0]}</span>
+                <span>➔</span>
+                <span>🌴 ${item.country ? item.country.split('/')[0].trim() : 'Mondo'}</span>
+              </div>
+              <div class="flight-strip-baggage">Bagaglio 23kg Incluso</div>
+            </div>
+
+            <!-- FOTO RESORT INTERNAZIONALE -->
+            <div class="card-photo-wrapper" style="background-image: url('${item.image}');">
+              <div class="card-top-badges">
+                <span class="badge-volo">✈️ VOLO + RESORT INCLUSO</span>
+                <span class="badge-esotico">🌍 5 Stelle</span>
+              </div>
+              <div class="card-bottom-tags">
+                <span class="pill-departure-code">Partenza: ${originList}</span>
+              </div>
+            </div>
+
+            <div class="pacchetti-card-body">
+              <div class="card-category-indicator category-pacchetti">
+                <span>✈️ Grandi Viaggi & Mondo</span>
+                <span class="dur-pill">🌍 ${item.dur} Notti</span>
+              </div>
+
+              <h3 class="card-ship-title title-pacchetti" style="margin-bottom:6px;">${item.title}</h3>
+              <p class="card-destination-desc" style="margin-bottom:12px;">📍 ${item.dest || item.country}</p>
+
+              <div class="pacchetti-specs">
+                <div class="pacchetti-spec-line"><span>🛫</span> <strong>Volo:</strong> Andata e Ritorno con Tasse Incluse</div>
+                <div class="pacchetti-spec-line"><span>🌴</span> <strong>Soggiorno:</strong> Transfer Aeroporto + Resort All-Inclusive</div>
+                <div class="pacchetti-spec-line"><span>🛡️</span> <strong>Protezione:</strong> Polizza Medico-Bagaglio & Annullamento</div>
+              </div>
+
+              <div class="pacchetti-price-bar">
+                <div>
+                  <div class="price-sub-label">Pacchetto Completo da</div>
+                  <span class="price-note">volo + hotel + transfer</span>
+                </div>
+                <div class="val-pacchetti">€${item.basePrice}</div>
+              </div>
+
+              <button type="button" class="btn-pacchetti-prenota" onclick="openOfferModal('${item.id}')">
+                CONFIGURA PACCHETTO VOLO
+              </button>
             </div>
           </div>
         `;
