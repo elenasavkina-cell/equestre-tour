@@ -367,6 +367,275 @@
       box-shadow: 0 4px 14px rgba(99, 102, 241, 0.35);
     }
 
+    
+    /* ========================================================
+       DESIGN DIFFERENZIATO ED ARMONIOSO PER LE 3 MACRO-AREE
+       ======================================================== */
+
+    /* Spotlight Banner */
+    .category-spotlight-bar {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      padding: 18px 24px;
+      border-radius: var(--radius-md);
+      margin-bottom: 28px;
+      transition: all 0.3s ease;
+      border: 1px solid transparent;
+    }
+    .spotlight-icon {
+      font-size: 32px;
+      line-height: 1;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+    }
+    .spotlight-content {
+      flex: 1;
+    }
+    .spotlight-content strong {
+      font-size: 16px;
+      font-weight: 800;
+      display: block;
+      margin-bottom: 4px;
+    }
+    .spotlight-content p {
+      font-size: 13px;
+      margin: 0;
+      line-height: 1.4;
+    }
+    .spotlight-badge {
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+      font-size: 12px;
+      font-weight: 800;
+      white-space: nowrap;
+      letter-spacing: 0.3px;
+    }
+
+    /* Temi Spotlight */
+    .theme-spotlight-crociere {
+      background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
+      border-color: #BFDBFE;
+      color: #1E3A8A;
+    }
+    .theme-spotlight-crociere .spotlight-badge {
+      background: #0066FF;
+      color: #FFFFFF;
+    }
+
+    .theme-spotlight-mare_italia {
+      background: linear-gradient(135deg, #F0FDFA 0%, #CCFBF1 100%);
+      border-color: #99F6E4;
+      color: #115E59;
+    }
+    .theme-spotlight-mare_italia .spotlight-badge {
+      background: #0D9488;
+      color: #FFFFFF;
+    }
+
+    .theme-spotlight-pacchetti {
+      background: linear-gradient(135deg, #EEF2FF 0%, #E0E7FF 100%);
+      border-color: #C7D2FE;
+      color: #312E81;
+    }
+    .theme-spotlight-pacchetti .spotlight-badge {
+      background: #4F46E5;
+      color: #FFFFFF;
+    }
+
+    /* Stili Card Indicator Category */
+    .card-category-indicator {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 8px;
+    }
+    .card-category-indicator span:first-child {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+    .dur-pill {
+      font-size: 11px;
+      font-weight: 800;
+      padding: 3px 8px;
+      border-radius: var(--radius-full);
+    }
+
+    /* ================= 1. CROCIERE (Stile Nautico Reale) ================= */
+    .card-style-crociere {
+      border: 1.5px solid #BFDBFE !important;
+      border-top: 5px solid #0055B1 !important;
+      box-shadow: 0 10px 25px -8px rgba(0, 85, 177, 0.12) !important;
+    }
+    .card-style-crociere:hover {
+      border-color: #0066FF !important;
+      box-shadow: 0 18px 35px -8px rgba(0, 102, 255, 0.22) !important;
+      transform: translateY(-4px);
+    }
+    .badge-nautico {
+      background: rgba(0, 56, 130, 0.95);
+      color: #FFFFFF;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 5px 12px;
+      border-radius: var(--radius-sm);
+      backdrop-filter: blur(4px);
+      letter-spacing: 0.5px;
+    }
+    .badge-accent-crociera {
+      background: rgba(255, 179, 0, 0.95);
+      color: #0F172A;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 5px 10px;
+      border-radius: var(--radius-sm);
+    }
+    .category-crociere span:first-child { color: #0055B1; }
+    .category-crociere .dur-pill { background: #EFF6FF; color: #0055B1; }
+    .perks-crociere {
+      background: #F8FAFC;
+      border-left: 3px solid #0066FF;
+      border-radius: 8px;
+      padding: 10px 12px;
+      margin-bottom: 16px;
+    }
+    .val-crociere {
+      color: #0047AB;
+      font-size: 26px;
+      font-weight: 900;
+    }
+    .btn-action-crociere {
+      background: linear-gradient(135deg, #0055B1 0%, #0077FF 100%) !important;
+      color: #FFFFFF !important;
+      border: none !important;
+      font-weight: 800 !important;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 102, 255, 0.3) !important;
+    }
+    .btn-action-crociere:hover {
+      background: linear-gradient(135deg, #0047AB 0%, #0066FF 100%) !important;
+      transform: translateY(-1px);
+    }
+
+    /* ================= 2. MARE ITALIA (Stile Solare Turchese & Corallo) ================= */
+    .card-style-mare {
+      border: 1.5px solid #99F6E4 !important;
+      border-top: 5px solid #0D9488 !important;
+      box-shadow: 0 10px 25px -8px rgba(13, 148, 136, 0.12) !important;
+    }
+    .card-style-mare:hover {
+      border-color: #0D9488 !important;
+      box-shadow: 0 18px 35px -8px rgba(13, 148, 136, 0.22) !important;
+      transform: translateY(-4px);
+    }
+    .badge-resort {
+      background: rgba(15, 118, 110, 0.95);
+      color: #FFFFFF;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 5px 12px;
+      border-radius: var(--radius-sm);
+      backdrop-filter: blur(4px);
+    }
+    .badge-bimbo-free {
+      background: linear-gradient(135deg, #F59E0B 0%, #EA580C 100%);
+      color: #FFFFFF;
+      font-size: 11px;
+      font-weight: 900;
+      padding: 5px 10px;
+      border-radius: var(--radius-sm);
+      box-shadow: 0 2px 8px rgba(234, 88, 12, 0.4);
+      animation: pulseBimbo 2s infinite ease-in-out;
+    }
+    @keyframes pulseBimbo {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.03); }
+    }
+    .category-mare span:first-child { color: #0D9488; }
+    .category-mare .dur-pill { background: #F0FDFA; color: #0D9488; }
+    .title-mare { color: #0F172A; }
+    .perks-mare {
+      background: #F0FDFA;
+      border-left: 3px solid #0D9488;
+      border-radius: 8px;
+      padding: 10px 12px;
+      margin-bottom: 16px;
+    }
+    .val-mare {
+      color: #0F766E;
+      font-size: 26px;
+      font-weight: 900;
+    }
+    .btn-action-mare {
+      background: linear-gradient(135deg, #0284C7 0%, #0D9488 100%) !important;
+      color: #FFFFFF !important;
+      border: none !important;
+      font-weight: 800 !important;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(13, 148, 136, 0.3) !important;
+    }
+    .btn-action-mare:hover {
+      background: linear-gradient(135deg, #0369A1 0%, #0F766E 100%) !important;
+      transform: translateY(-1px);
+    }
+
+    /* ================= 3. PACCHETTI VIAGGIO (Stile Cosmopolita Indaco & Oro) ================= */
+    .card-style-pacchetti {
+      border: 1.5px solid #C7D2FE !important;
+      border-top: 5px solid #4F46E5 !important;
+      box-shadow: 0 10px 25px -8px rgba(79, 70, 229, 0.12) !important;
+    }
+    .card-style-pacchetti:hover {
+      border-color: #6366F1 !important;
+      box-shadow: 0 18px 35px -8px rgba(99, 102, 241, 0.22) !important;
+      transform: translateY(-4px);
+    }
+    .badge-volo {
+      background: rgba(55, 48, 163, 0.95);
+      color: #FFFFFF;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 5px 12px;
+      border-radius: var(--radius-sm);
+      backdrop-filter: blur(4px);
+    }
+    .badge-esotico {
+      background: linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%);
+      color: #FFFFFF;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 5px 10px;
+      border-radius: var(--radius-sm);
+    }
+    .category-pacchetti span:first-child { color: #4F46E5; }
+    .category-pacchetti .dur-pill { background: #EEF2FF; color: #4F46E5; }
+    .title-pacchetti { color: #0F172A; }
+    .perks-pacchetti {
+      background: #EEF2FF;
+      border-left: 3px solid #6366F1;
+      border-radius: 8px;
+      padding: 10px 12px;
+      margin-bottom: 16px;
+    }
+    .val-pacchetti {
+      color: #4338CA;
+      font-size: 26px;
+      font-weight: 900;
+    }
+    .btn-action-pacchetti {
+      background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%) !important;
+      color: #FFFFFF !important;
+      border: none !important;
+      font-weight: 800 !important;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3) !important;
+    }
+    .btn-action-pacchetti:hover {
+      background: linear-gradient(135deg, #3730A3 0%, #6D28D9 100%) !important;
+      transform: translateY(-1px);
+    }
+
     /* CARD THEMES */
     .card-theme-crociere {
       border-top: 4px solid #0066FF !important;
@@ -1609,6 +1878,16 @@
       </div>
     </div>
 
+    <!-- SPOTLIGHT CATEGORIA DIFFERENZIATA -->
+    <div class="category-spotlight-bar theme-spotlight-crociere" id="category-spotlight">
+      <div class="spotlight-icon" id="spotlight-icon">🚢</div>
+      <div class="spotlight-content">
+        <strong id="spotlight-title">Area Ufficiale Crociere nel Mediterraneo & Fiordi</strong>
+        <p id="spotlight-desc">Tutte le partenze includono: tasse portuali, cabina garantita, pensione completa a bordo e assistenza per check-in e pratiche d'imbarco.</p>
+      </div>
+      <div class="spotlight-badge" id="spotlight-badge">Blocco Reale 24h a €0</div>
+    </div>
+
     <!-- SKELETON LOADER ANIMATO IN BLU ELETTRICO (Zero blocchi 'Attendi qualche istante') -->
     <div class="skeleton-loader-grid" id="cards-skeleton" style="display:none;">
       <div class="skeleton-card">
@@ -1973,7 +2252,7 @@
   <script>
     const DATA_CRUISES = [{"id": "CR-1244", "type": "crociere", "company": "Costa", "title": "Costa Deliziosa • Grecia, Montenegro", "ship": "Costa Deliziosa", "dest": "Grecia, Montenegro", "dur": 7, "ports": ["Pireo"], "dates": ["08/05/2027"], "basePrice": 1061, "eqtRef": "EQT-CR2027-2244", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DE07270508"}, {"id": "CR-1237", "type": "crociere", "company": "Costa", "title": "Costa Deliziosa • Grecia, Montenegro, Croazia", "ship": "Costa Deliziosa", "dest": "Grecia, Montenegro, Croazia", "dur": 7, "ports": ["Pireo"], "dates": ["24/04/2027"], "basePrice": 714, "eqtRef": "EQT-CR2026-2237", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DE07270424"}, {"id": "CR-1236", "type": "crociere", "company": "Costa", "title": "Costa Deliziosa • Grecia, Montenegro, Croazia, Italia", "ship": "Costa Deliziosa", "dest": "Grecia, Montenegro, Croazia, Italia", "dur": 14, "ports": ["Pireo"], "dates": ["24/04/2027"], "basePrice": 1247, "eqtRef": "EQT-CR2027-2236", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DE14270424"}, {"id": "CR-1243", "type": "crociere", "company": "Costa", "title": "Costa Deliziosa • Grecia, Montenegro, Italia", "ship": "Costa Deliziosa", "dest": "Grecia, Montenegro, Italia", "dur": 14, "ports": ["Pireo"], "dates": ["08/05/2027"], "basePrice": 994, "eqtRef": "EQT-CR2026-2243", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DE14270508"}, {"id": "CR-1268", "type": "crociere", "company": "Costa", "title": "Costa Deliziosa • Italia, Croazia, Grecia, Montenegro", "ship": "Costa Deliziosa", "dest": "Italia, Croazia, Grecia, Montenegro", "dur": 14, "ports": ["Marghera"], "dates": ["05/06/2027"], "basePrice": 1024, "eqtRef": "EQT-CR2026-2268", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DE14270605"}, {"id": "CR-1269", "type": "crociere", "company": "Costa", "title": "Costa Deliziosa • Italia, Croazia, Grecia, Montenegro", "ship": "Costa Deliziosa", "dest": "Italia, Croazia, Grecia, Montenegro", "dur": 7, "ports": ["Bari", "Marghera"], "dates": ["05/06/2027", "06/06/2027"], "basePrice": 1091, "eqtRef": "EQT-CR2027-2269", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DE07270605"}, {"id": "CR-1055", "type": "crociere", "company": "Costa", "title": "Costa Deliziosa • Italia, Grecia", "ship": "Costa Deliziosa", "dest": "Italia, Grecia", "dur": 7, "ports": ["Bari", "Marghera"], "dates": ["08/08/2026", "09/08/2026", "29/08/2026", "30/08/2026", "19/09/2026", "20/09/2026", "17/04/2027", "01/05/2027", "15/05/2027", "16/05/2027"], "basePrice": 906, "eqtRef": "EQT-CR2026-2055", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DE07260808"}, {"id": "CR-1149", "type": "crociere", "company": "Costa", "title": "Costa Deliziosa • Italia, Grecia", "ship": "Costa Deliziosa", "dest": "Italia, Grecia", "dur": 4, "ports": ["Bari", "Civitavecchia", "Trieste"], "dates": ["20/11/2026", "21/11/2026", "13/04/2027"], "basePrice": 807, "eqtRef": "EQT-CR2027-2149", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DE04261120"}, {"id": "CR-1150", "type": "crociere", "company": "Costa", "title": "Costa Deliziosa • Italia, Grecia", "ship": "Costa Deliziosa", "dest": "Italia, Grecia", "dur": 5, "ports": ["Savona", "Trieste"], "dates": ["20/11/2026", "12/04/2027"], "basePrice": 874, "eqtRef": "EQT-CR2026-2150", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DE05261120"}, {"id": "CR-1151", "type": "crociere", "company": "Costa", "title": "Costa Deliziosa • Italia, Grecia", "ship": "Costa Deliziosa", "dest": "Italia, Grecia", "dur": 3, "ports": ["Bari", "Civitavecchia"], "dates": ["21/11/2026", "13/04/2027"], "basePrice": 941, "eqtRef": "EQT-CR2027-2151", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DE03261121"}, {"id": "CR-1047", "type": "crociere", "company": "Costa", "title": "Costa Deliziosa • Italia, Grecia, Croazia", "ship": "Costa Deliziosa", "dest": "Italia, Grecia, Croazia", "dur": 14, "ports": ["Marghera"], "dates": ["01/08/2026", "08/08/2026", "12/09/2026", "19/09/2026"], "basePrice": 1031, "eqtRef": "EQT-CR2027-2047", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DE14260801"}, {"id": "CR-1048", "type": "crociere", "company": "Costa", "title": "Costa Deliziosa • Italia, Grecia, Croazia", "ship": "Costa Deliziosa", "dest": "Italia, Grecia, Croazia", "dur": 7, "ports": ["Bari", "Marghera"], "dates": ["01/08/2026", "02/08/2026", "15/08/2026", "16/08/2026", "12/09/2026", "13/09/2026", "26/09/2026", "27/09/2026"], "basePrice": 1098, "eqtRef": "EQT-CR2026-2048", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DE07260801"}, {"id": "CR-1077", "type": "crociere", "company": "Costa", "title": "Costa Deliziosa • Italia, Grecia, Croazia", "ship": "Costa Deliziosa", "dest": "Italia, Grecia, Croazia", "dur": 6, "ports": ["Bari"], "dates": ["13/09/2026"], "basePrice": 1079, "eqtRef": "EQT-CR2027-2077", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DE06260913"}, {"id": "CR-1059", "type": "crociere", "company": "Costa", "title": "Costa Deliziosa • Italia, Grecia, Croazia, Montenegro", "ship": "Costa Deliziosa", "dest": "Italia, Grecia, Croazia, Montenegro", "dur": 14, "ports": ["Marghera"], "dates": ["22/08/2026", "29/08/2026", "29/05/2027"], "basePrice": 1253, "eqtRef": "EQT-CR2027-2059", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DE14260822"}, {"id": "CR-1060", "type": "crociere", "company": "Costa", "title": "Costa Deliziosa • Italia, Grecia, Croazia, Montenegro", "ship": "Costa Deliziosa", "dest": "Italia, Grecia, Croazia, Montenegro", "dur": 7, "ports": ["Bari", "Marghera"], "dates": ["22/08/2026", "23/08/2026", "05/09/2026", "06/09/2026"], "basePrice": 720, "eqtRef": "EQT-CR2026-2060", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DE07260822"}, {"id": "CR-1142", "type": "crociere", "company": "Costa", "title": "Costa Deliziosa • Italia, Grecia, Malta", "ship": "Costa Deliziosa", "dest": "Italia, Grecia, Malta", "dur": 6, "ports": ["Bari", "Trieste"], "dates": ["14/11/2026", "15/11/2026"], "basePrice": 737, "eqtRef": "EQT-CR2027-2142", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DE06261114"}, {"id": "CR-1092", "type": "crociere", "company": "Costa", "title": "Costa Deliziosa • Italia, Grecia, Malta, Croazia", "ship": "Costa Deliziosa", "dest": "Italia, Grecia, Malta, Croazia", "dur": 7, "ports": ["Bari", "Trieste"], "dates": ["03/10/2026", "04/10/2026", "17/10/2026", "18/10/2026", "31/10/2026", "01/11/2026"], "basePrice": 762, "eqtRef": "EQT-CR2026-2092", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DE07261003"}, {"id": "CR-1093", "type": "crociere", "company": "Costa", "title": "Costa Deliziosa • Italia, Grecia, Malta, Croazia", "ship": "Costa Deliziosa", "dest": "Italia, Grecia, Malta, Croazia", "dur": 6, "ports": ["Bari"], "dates": ["04/10/2026"], "basePrice": 963, "eqtRef": "EQT-CR2027-2093", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DE06261004"}, {"id": "CR-1239", "type": "crociere", "company": "Costa", "title": "Costa Deliziosa • Italia, Grecia, Montenegro", "ship": "Costa Deliziosa", "dest": "Italia, Grecia, Montenegro", "dur": 14, "ports": ["Bari", "Marghera"], "dates": ["01/05/2027", "02/05/2027", "07/08/2027", "21/08/2027", "28/08/2027", "18/09/2027"], "basePrice": 720, "eqtRef": "EQT-CR2026-2239", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DE14270501"}, {"id": "CR-1282", "type": "crociere", "company": "Costa", "title": "Costa Deliziosa • Italia, Grecia, Montenegro", "ship": "Costa Deliziosa", "dest": "Italia, Grecia, Montenegro", "dur": 7, "ports": ["Bari", "Marghera"], "dates": ["28/08/2027", "29/08/2027", "25/09/2027", "26/09/2027"], "basePrice": 703, "eqtRef": "EQT-CR2027-2282", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DE07270828"}, {"id": "CR-1233", "type": "crociere", "company": "Costa", "title": "Costa Deliziosa • Italia, Grecia, Montenegro, Croazia", "ship": "Costa Deliziosa", "dest": "Italia, Grecia, Montenegro, Croazia", "dur": 14, "ports": ["Bari", "Marghera"], "dates": ["17/04/2027", "18/04/2027", "15/05/2027", "22/05/2027", "12/06/2027", "26/06/2027", "03/07/2027", "10/07/2027", "17/07/2027", "24/07/2027"], "basePrice": 1107, "eqtRef": "EQT-CR2027-2233", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DE14270417"}, {"id": "CR-1257", "type": "crociere", "company": "Costa", "title": "Costa Deliziosa • Italia, Grecia, Montenegro, Croazia", "ship": "Costa Deliziosa", "dest": "Italia, Grecia, Montenegro, Croazia", "dur": 7, "ports": ["Bari", "Marghera"], "dates": ["22/05/2027", "23/05/2027", "03/07/2027", "04/07/2027", "17/07/2027", "18/07/2027", "31/07/2027", "01/08/2027", "11/09/2027", "12/09/2027"], "basePrice": 1143, "eqtRef": "EQT-CR2027-2257", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DE07270522"}, {"id": "CR-1319", "type": "crociere", "company": "Costa", "title": "Costa Deliziosa • Italia, Montenegro, Croazia", "ship": "Costa Deliziosa", "dest": "Italia, Montenegro, Croazia", "dur": 4, "ports": ["Bari", "Trieste"], "dates": ["30/10/2027", "31/10/2027"], "basePrice": 699, "eqtRef": "EQT-CR2027-2319", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DE04271030"}, {"id": "CR-1279", "type": "crociere", "company": "Costa", "title": "Costa Deliziosa • Italia, Montenegro, Grecia", "ship": "Costa Deliziosa", "dest": "Italia, Montenegro, Grecia", "dur": 14, "ports": ["Marghera"], "dates": ["14/08/2027"], "basePrice": 1023, "eqtRef": "EQT-CR2027-2279", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DE14270814"}, {"id": "CR-1280", "type": "crociere", "company": "Costa", "title": "Costa Deliziosa • Italia, Montenegro, Grecia", "ship": "Costa Deliziosa", "dest": "Italia, Montenegro, Grecia", "dur": 7, "ports": ["Bari", "Marghera"], "dates": ["14/08/2027", "15/08/2027"], "basePrice": 1090, "eqtRef": "EQT-CR2026-2280", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DE07270814"}, {"id": "CR-1101", "type": "crociere", "company": "Costa", "title": "Costa Deliziosa • Italia, Montenegro, Grecia, Croazia", "ship": "Costa Deliziosa", "dest": "Italia, Montenegro, Grecia, Croazia", "dur": 7, "ports": ["Bari", "Marghera", "Trieste"], "dates": ["11/10/2026", "24/10/2026", "25/10/2026", "07/11/2026", "08/11/2026", "19/06/2027", "20/06/2027", "16/10/2027", "17/10/2027", "23/10/2027"], "basePrice": 1036, "eqtRef": "EQT-CR2026-2101", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DE07261011"}, {"id": "CR-1273", "type": "crociere", "company": "Costa", "title": "Costa Deliziosa • Italia, Montenegro, Grecia, Croazia", "ship": "Costa Deliziosa", "dest": "Italia, Montenegro, Grecia, Croazia", "dur": 14, "ports": ["Marghera"], "dates": ["19/06/2027"], "basePrice": 1237, "eqtRef": "EQT-CR2027-2273", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DE14270619"}, {"id": "CR-1145", "type": "crociere", "company": "Costa", "title": "Costa Diadema • Brasile", "ship": "Costa Diadema", "dest": "Brasile", "dur": 4, "ports": ["Maceio"], "dates": ["19/11/2026"], "basePrice": 1072, "eqtRef": "EQT-CR2026-2145", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DI04261119"}, {"id": "CR-1148", "type": "crociere", "company": "Costa", "title": "Costa Diadema • Brasile", "ship": "Costa Diadema", "dest": "Brasile", "dur": 3, "ports": ["Salvador Da Bahia"], "dates": ["20/11/2026"], "basePrice": 740, "eqtRef": "EQT-CR2026-2148", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DI03261120"}, {"id": "CR-1221", "type": "crociere", "company": "Costa", "title": "Costa Diadema • Brasile, Isole Canarie, Marocco, Spagna, Portogallo", "ship": "Costa Diadema", "dest": "Brasile, Isole Canarie, Marocco, Spagna, Portogallo", "dur": 17, "ports": ["Rio De Janeiro"], "dates": ["05/04/2027"], "basePrice": 1095, "eqtRef": "EQT-CR2027-2221", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DI17270405"}, {"id": "CR-1220", "type": "crociere", "company": "Costa", "title": "Costa Diadema • Brasile, Isole Canarie, Marocco, Spagna, Portogallo, Francia, Gran Bretagna", "ship": "Costa Diadema", "dest": "Brasile, Isole Canarie, Marocco, Spagna, Portogallo, Francia, Gran Bretagna", "dur": 22, "ports": ["Santos | San Paolo"], "dates": ["04/04/2027"], "basePrice": 894, "eqtRef": "EQT-CR2026-2220", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DI22270404"}, {"id": "CR-1217", "type": "crociere", "company": "Costa", "title": "Costa Diadema • Brasile, Isole Canarie, Marocco, Spagna, Portogallo, Francia, Gran Bretagna, Danimarca, Germania", "ship": "Costa Diadema", "dest": "Brasile, Isole Canarie, Marocco, Spagna, Portogallo, Francia, Gran Bretagna, Danimarca, Germania", "dur": 27, "ports": ["Itajai", "Santos | San Paolo"], "dates": ["03/04/2027", "04/04/2027"], "basePrice": 1092, "eqtRef": "EQT-CR2026-2217", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DI27270403"}, {"id": "CR-1219", "type": "crociere", "company": "Costa", "title": "Costa Diadema • Brasile, Isole Canarie, Marocco, Spagna, Portogallo, Francia, Gran Bretagna, Danimarca, Germania", "ship": "Costa Diadema", "dest": "Brasile, Isole Canarie, Marocco, Spagna, Portogallo, Francia, Gran Bretagna, Danimarca, Germania", "dur": 26, "ports": ["Santos | San Paolo"], "dates": ["04/04/2027"], "basePrice": 760, "eqtRef": "EQT-CR2026-2219", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DI26270404"}, {"id": "CR-1222", "type": "crociere", "company": "Costa", "title": "Costa Diadema • Brasile, Isole Canarie, Marocco, Spagna, Portogallo, Francia, Gran Bretagna, Danimarca, Germania", "ship": "Costa Diadema", "dest": "Brasile, Isole Canarie, Marocco, Spagna, Portogallo, Francia, Gran Bretagna, Danimarca, Germania", "dur": 25, "ports": ["Rio De Janeiro"], "dates": ["05/04/2027"], "basePrice": 1162, "eqtRef": "EQT-CR2026-2222", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DI25270405"}, {"id": "CR-1288", "type": "crociere", "company": "Costa", "title": "Costa Diadema • Danimarca, Francia, Spagna, Portogallo, Italia", "ship": "Costa Diadema", "dest": "Danimarca, Francia, Spagna, Portogallo, Italia", "dur": 11, "ports": ["Copenhagen"], "dates": ["11/09/2027"], "basePrice": 983, "eqtRef": "EQT-CR2027-2288", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DI11270911"}, {"id": "CR-1070", "type": "crociere", "company": "Costa", "title": "Costa Diadema • Danimarca, Norvegia, Francia, Spagna", "ship": "Costa Diadema", "dest": "Danimarca, Norvegia, Francia, Spagna", "dur": 9, "ports": ["Copenhagen"], "dates": ["12/09/2026"], "basePrice": 875, "eqtRef": "EQT-CR2027-2070", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DI09260912"}, {"id": "CR-1069", "type": "crociere", "company": "Costa", "title": "Costa Diadema • Danimarca, Norvegia, Francia, Spagna, Italia", "ship": "Costa Diadema", "dest": "Danimarca, Norvegia, Francia, Spagna, Italia", "dur": 11, "ports": ["Copenhagen"], "dates": ["12/09/2026"], "basePrice": 808, "eqtRef": "EQT-CR2026-2069", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DI11260912"}, {"id": "CR-1046", "type": "crociere", "company": "Costa", "title": "Costa Diadema • Danimarca, Norvegia, Germania", "ship": "Costa Diadema", "dest": "Danimarca, Norvegia, Germania", "dur": 7, "ports": ["Copenhagen"], "dates": ["01/08/2026", "08/08/2026", "15/08/2026", "22/08/2026", "29/08/2026", "05/09/2026", "01/05/2027", "08/05/2027", "22/05/2027", "29/05/2027"], "basePrice": 964, "eqtRef": "EQT-CR2026-2046", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DI07260801"}, {"id": "CR-1062", "type": "crociere", "company": "Costa", "title": "Costa Diadema • Danimarca, Norvegia, Germania", "ship": "Costa Diadema", "dest": "Danimarca, Norvegia, Germania", "dur": 6, "ports": ["Copenhagen"], "dates": ["29/08/2026"], "basePrice": 994, "eqtRef": "EQT-CR2026-2062", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DI06260829"}, {"id": "CR-1250", "type": "crociere", "company": "Costa", "title": "Costa Diadema • Danimarca, Polonia, Svezia, Germania", "ship": "Costa Diadema", "dest": "Danimarca, Polonia, Svezia, Germania", "dur": 7, "ports": ["Copenhagen"], "dates": ["15/05/2027"], "basePrice": 1134, "eqtRef": "EQT-CR2026-2250", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DI07270515"}, {"id": "CR-1109", "type": "crociere", "company": "Costa", "title": "Costa Diadema • Francia, Italia, Spagna", "ship": "Costa Diadema", "dest": "Francia, Italia, Spagna", "dur": 2, "ports": ["Marsiglia"], "dates": ["01/11/2026"], "basePrice": 1054, "eqtRef": "EQT-CR2026-2109", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DI02261101"}, {"id": "CR-1287", "type": "crociere", "company": "Costa", "title": "Costa Diadema • Germania, Danimarca, Francia", "ship": "Costa Diadema", "dest": "Germania, Danimarca, Francia", "dur": 4, "ports": ["Kiel"], "dates": ["10/09/2027"], "basePrice": 916, "eqtRef": "EQT-CR2026-2287", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DI04270910"}, {"id": "CR-1286", "type": "crociere", "company": "Costa", "title": "Costa Diadema • Germania, Danimarca, Francia, Spagna, Portogallo, Italia", "ship": "Costa Diadema", "dest": "Germania, Danimarca, Francia, Spagna, Portogallo, Italia", "dur": 12, "ports": ["Kiel"], "dates": ["10/09/2027"], "basePrice": 849, "eqtRef": "EQT-CR2027-2286", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DI12270910"}, {"id": "CR-1045", "type": "crociere", "company": "Costa", "title": "Costa Diadema • Germania, Danimarca, Norvegia", "ship": "Costa Diadema", "dest": "Germania, Danimarca, Norvegia", "dur": 7, "ports": ["Kiel"], "dates": ["31/07/2026", "07/08/2026", "14/08/2026", "21/08/2026", "28/08/2026", "04/09/2026", "30/04/2027", "07/05/2027", "21/05/2027", "28/05/2027"], "basePrice": 897, "eqtRef": "EQT-CR2027-2045", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DI07260731"}, {"id": "CR-1068", "type": "crociere", "company": "Costa", "title": "Costa Diadema • Germania, Danimarca, Norvegia, Francia, Spagna, Italia", "ship": "Costa Diadema", "dest": "Germania, Danimarca, Norvegia, Francia, Spagna, Italia", "dur": 12, "ports": ["Kiel"], "dates": ["11/09/2026"], "basePrice": 741, "eqtRef": "EQT-CR2027-2068", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DI12260911"}, {"id": "CR-1242", "type": "crociere", "company": "Costa", "title": "Costa Diadema • Germania, Danimarca, Norvegia, Polonia, Svezia", "ship": "Costa Diadema", "dest": "Germania, Danimarca, Norvegia, Polonia, Svezia", "dur": 14, "ports": ["Kiel"], "dates": ["07/05/2027"], "basePrice": 793, "eqtRef": "EQT-CR2027-2242", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DI14270507"}, {"id": "CR-1249", "type": "crociere", "company": "Costa", "title": "Costa Diadema • Germania, Danimarca, Polonia, Svezia", "ship": "Costa Diadema", "dest": "Germania, Danimarca, Polonia, Svezia", "dur": 7, "ports": ["Kiel"], "dates": ["14/05/2027"], "basePrice": 1067, "eqtRef": "EQT-CR2027-2249", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DI07270514"}, {"id": "CR-1248", "type": "crociere", "company": "Costa", "title": "Costa Diadema • Germania, Danimarca, Polonia, Svezia, Norvegia", "ship": "Costa Diadema", "dest": "Germania, Danimarca, Polonia, Svezia, Norvegia", "dur": 14, "ports": ["Kiel"], "dates": ["14/05/2027"], "basePrice": 1000, "eqtRef": "EQT-CR2026-2248", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DI14270514"}, {"id": "CR-1131", "type": "crociere", "company": "Costa", "title": "Costa Diadema • Isole Canarie, Capo Verde, Brasile", "ship": "Costa Diadema", "dest": "Isole Canarie, Capo Verde, Brasile", "dur": 13, "ports": ["Las Palmas | Gran Canaria"], "dates": ["10/11/2026"], "basePrice": 731, "eqtRef": "EQT-CR2027-2131", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DI13261110"}, {"id": "CR-1132", "type": "crociere", "company": "Costa", "title": "Costa Diadema • Isole Canarie, Capo Verde, Brasile", "ship": "Costa Diadema", "dest": "Isole Canarie, Capo Verde, Brasile", "dur": 12, "ports": ["Las Palmas | Gran Canaria", "Santa Cruz | Tenerife"], "dates": ["10/11/2026", "11/11/2026"], "basePrice": 798, "eqtRef": "EQT-CR2026-2132", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DI12261110"}, {"id": "CR-1133", "type": "crociere", "company": "Costa", "title": "Costa Diadema • Isole Canarie, Capo Verde, Brasile", "ship": "Costa Diadema", "dest": "Isole Canarie, Capo Verde, Brasile", "dur": 11, "ports": ["Santa Cruz | Tenerife"], "dates": ["11/11/2026"], "basePrice": 932, "eqtRef": "EQT-CR2026-2133", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DI11261111"}, {"id": "CR-1088", "type": "crociere", "company": "Costa", "title": "Costa Diadema • Italia, Isole Baleari", "ship": "Costa Diadema", "dest": "Italia, Isole Baleari", "dur": 2, "ports": ["Savona"], "dates": ["23/09/2026"], "basePrice": 1088, "eqtRef": "EQT-CR2026-2088", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DI02260923"}, {"id": "CR-1087", "type": "crociere", "company": "Costa", "title": "Costa Diadema • Italia, Isole Baleari, Francia", "ship": "Costa Diadema", "dest": "Italia, Isole Baleari, Francia", "dur": 4, "ports": ["Savona"], "dates": ["23/09/2026"], "basePrice": 1021, "eqtRef": "EQT-CR2027-2087", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DI04260923"}, {"id": "CR-1106", "type": "crociere", "company": "Costa", "title": "Costa Diadema • Italia, Spagna", "ship": "Costa Diadema", "dest": "Italia, Spagna", "dur": 2, "ports": ["Savona"], "dates": ["29/10/2026"], "basePrice": 783, "eqtRef": "EQT-CR2027-2106", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DI02261029"}, {"id": "CR-1105", "type": "crociere", "company": "Costa", "title": "Costa Diadema • Italia, Spagna, Francia", "ship": "Costa Diadema", "dest": "Italia, Spagna, Francia", "dur": 4, "ports": ["Savona"], "dates": ["29/10/2026"], "basePrice": 716, "eqtRef": "EQT-CR2026-2105", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DI04261029"}, {"id": "CR-1306", "type": "crociere", "company": "Costa", "title": "Costa Diadema • Italia, Spagna, Marocco, Francia", "ship": "Costa Diadema", "dest": "Italia, Spagna, Marocco, Francia", "dur": 10, "ports": ["Savona"], "dates": ["22/09/2027"], "basePrice": 1065, "eqtRef": "EQT-CR2027-2306", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DI10270922"}, {"id": "CR-1100", "type": "crociere", "company": "Costa", "title": "Costa Diadema • Italia, Spagna, Marocco, Gibilterra, Francia", "ship": "Costa Diadema", "dest": "Italia, Spagna, Marocco, Gibilterra, Francia", "dur": 10, "ports": ["Savona"], "dates": ["08/10/2026"], "basePrice": 1100, "eqtRef": "EQT-CR2026-2100", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DI10261008"}, {"id": "CR-1314", "type": "crociere", "company": "Costa", "title": "Costa Diadema • Italia, Spagna, Marocco, Gibilterra, Portogallo, Francia", "ship": "Costa Diadema", "dest": "Italia, Spagna, Marocco, Gibilterra, Portogallo, Francia", "dur": 12, "ports": ["Savona"], "dates": ["22/10/2027"], "basePrice": 958, "eqtRef": "EQT-CR2026-2314", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DI12271022"}, {"id": "CR-1110", "type": "crociere", "company": "Costa", "title": "Costa Diadema • Italia, Spagna, Portogallo", "ship": "Costa Diadema", "dest": "Italia, Spagna, Portogallo", "dur": 6, "ports": ["Savona"], "dates": ["02/11/2026"], "basePrice": 1188, "eqtRef": "EQT-CR2026-2110", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DI06261102"}, {"id": "CR-1089", "type": "crociere", "company": "Costa", "title": "Costa Diadema • Italia, Spagna, Portogallo, Gibilterra, Francia", "ship": "Costa Diadema", "dest": "Italia, Spagna, Portogallo, Gibilterra, Francia", "dur": 11, "ports": ["Savona"], "dates": ["27/09/2026", "18/10/2026"], "basePrice": 1158, "eqtRef": "EQT-CR2026-2089", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "hiddenCode": "DI11260927"}];
     const DATA_MARE = [{"id": "MI-1", "type": "mare_italia", "operator": "Alpitour / VOIhotels", "title": "VOI Colonna Village • Golfo Aranci", "region": "Sardegna", "resort": "VOI Colonna Village 4* S", "dest": "Golfo Aranci - Olbia", "dur": 7, "ports": ["Olbia", "Golfo Aranci", "Porto Torres"], "airports": ["Milano Malpensa", "Roma Fiumicino", "Bologna", "Verona", "Napoli"], "dates": ["06/06/2026", "13/06/2026", "20/06/2026", "27/06/2026", "04/07/2026", "11/07/2026", "18/07/2026", "25/07/2026", "01/08/2026", "08/08/2026"], "basePrice": 840, "eqtRef": "EQT-SAR-2026-01", "image": "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=600&q=80", "tag": "Bimbo Free 0-12 Anni", "perks": ["Nave o Volo Incluso", "Spiaggia Privata Attrezzata", "Mini & Junior Club", "Formula All-Inclusive Drink"]}, {"id": "MI-2", "type": "mare_italia", "operator": "Bravo Club", "title": "Bravo Porto Kaleo • Cutro & Le Castella", "region": "Calabria", "resort": "Bravo Porto Kaleo Resort 4*", "dest": "Costa Ionica - Le Castella", "dur": 7, "ports": ["Auto Propria / Treno"], "airports": ["Lamezia Terme", "Crotone"], "dates": ["07/06/2026", "14/06/2026", "21/06/2026", "28/06/2026", "05/07/2026", "12/07/2026", "19/07/2026", "26/07/2026", "02/08/2026", "09/08/2026"], "basePrice": 620, "eqtRef": "EQT-CAL-2026-02", "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80", "tag": "Formula Open Bar", "perks": ["Animazione Bravo Inclusa", "Acquapark e Piscine", "Cucina Tipica Calabrese", "Bambino Gratis in 3° Letto"]}, {"id": "MI-3", "type": "mare_italia", "operator": "VOIhotels", "title": "VOI Arenella Resort • Siracusa & Plemmirio", "region": "Sicilia", "resort": "VOI Arenella Resort 4*", "dest": "Siracusa - Oasi Plemmirio", "dur": 7, "ports": ["Catania", "Palermo"], "airports": ["Milano Malpensa", "Roma Fiumicino", "Bergamo", "Venezia", "Bari"], "dates": ["05/06/2026", "12/06/2026", "19/06/2026", "26/06/2026", "03/07/2026", "10/07/2026", "17/07/2026", "24/07/2026", "31/07/2026", "07/08/2026"], "basePrice": 780, "eqtRef": "EQT-SIC-2026-03", "image": "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=600&q=80", "tag": "Oasi Naturale & Mare Cristallino", "perks": ["Volo + Trasferimenti Inclusi", "Biberoneria Dedicata", "Centro Benessere & SPA", "Soft All-Inclusive"]}, {"id": "MI-4", "type": "mare_italia", "operator": "Alpitour Selezioni", "title": "Riva Marina Resort • Carovigno & Salento", "region": "Puglia", "resort": "Riva Marina Resort 4* S", "dest": "Alto Salento - Oasi Torre Guaceto", "dur": 7, "ports": ["Bari", "Brindisi"], "airports": ["Bari Palese", "Brindisi Papola Casale"], "dates": ["07/06/2026", "14/06/2026", "21/06/2026", "28/06/2026", "05/07/2026", "12/07/2026", "19/07/2026", "26/07/2026", "02/08/2026"], "basePrice": 730, "eqtRef": "EQT-PUG-2026-04", "image": "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80", "tag": "Tessera Club Inclusa", "perks": ["Trenino Privato per la Spiaggia", "Ristorazione Tipica Pugliese", "Impianti Sportivi d'Eccellenza", "Assistente Equestre Tour"]}, {"id": "MI-5", "type": "mare_italia", "operator": "Bravo Club", "title": "Bravo Baia di Tindari • Golfo di Patti", "region": "Sicilia", "resort": "Bravo Baia di Tindari 4*", "dest": "Tindari - Isole Eolie di fronte", "dur": 7, "ports": ["Messina", "Catania"], "airports": ["Milano Malpensa", "Roma Fiumicino", "Verona"], "dates": ["06/06/2026", "13/06/2026", "20/06/2026", "27/06/2026", "04/07/2026", "11/07/2026", "18/07/2026", "25/07/2026"], "basePrice": 810, "eqtRef": "EQT-SIC-2026-05", "image": "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=600&q=80", "tag": "Vista Isole Eolie", "perks": ["Animazione Esclusiva Bravo", "Escursioni Vulcano & Lipari", "Formula Tutto Incluso", "Piscine Laguna"]}, {"id": "MI-6", "type": "mare_italia", "operator": "Alpitour Friends", "title": "Club Hotel Cormorano • Baja Sardinia", "region": "Sardegna", "resort": "Club Hotel Cormorano 4*", "dest": "Costa Smeralda - Baja Sardinia", "dur": 7, "ports": ["Olbia", "Golfo Aranci"], "airports": ["Milano Malpensa", "Roma Fiumicino", "Bologna"], "dates": ["08/06/2026", "15/06/2026", "22/06/2026", "29/06/2026", "06/07/2026", "13/07/2026", "20/07/2026", "27/07/2026"], "basePrice": 940, "eqtRef": "EQT-SAR-2026-06", "image": "https://images.unsplash.com/photo-1506929562872-bb421503ef21?auto=format&fit=crop&w=600&q=80", "tag": "Cuore della Costa Smeralda", "perks": ["A 50m dalla Piazzetta di Baja", "Spiaggia Cala Battistoni", "Nave Gratis con Auto al Seguito", "Consulente Equestre Tour"]}];
-    const DATA_PACCHETTI = [{"id": "PV-1", "type": "pacchetti", "operator": "Bravo Club / Alpitour", "title": "Bravo Kiwengwa • Zanzibar Esotica", "country": "Tanzania / Zanzibar", "resort": "Bravo Kiwengwa 4* S", "dest": "Kiwengwa Beach - Costa Est", "dur": 9, "airports": ["Milano Malpensa", "Roma Fiumicino", "Verona"], "dates": ["08/06/2026", "15/06/2026", "22/06/2026", "29/06/2026", "06/07/2026", "13/07/2026", "20/07/2026", "27/07/2026", "03/08/2026"], "basePrice": 1390, "eqtRef": "EQT-ZAN-2026-01", "image": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=600&q=80", "tag": "Volo Diretto + Formula Tutto Incluso", "perks": ["Spiaggia di Sabbia Borotalco", "Visti e Tasse Aeroportuali Incluse", "Assicurazione Medico No-Limits", "Assistenza Italiana in Loco"]}, {"id": "PV-2", "type": "pacchetti", "operator": "Alpitour / Domina", "title": "Domina Coral Bay Oasis • Sharm El Sheikh", "country": "Egitto / Mar Rosso", "resort": "Domina Coral Bay Resort 5*", "dest": "Sharm El Sheikh - Sheikh Coast", "dur": 7, "airports": ["Milano Malpensa", "Roma Fiumicino", "Bologna", "Napoli", "Bari"], "dates": ["06/06/2026", "13/06/2026", "20/06/2026", "27/06/2026", "04/07/2026", "11/07/2026", "18/07/2026", "25/07/2026", "01/08/2026"], "basePrice": 690, "eqtRef": "EQT-EGY-2026-02", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "tag": "Barriera Corallina Privata", "perks": ["Pontile Diretto sul Reef", "Pensione Completa All-Inclusive", "Quota Iscrizione e Visto Inclusi", "Bambini con Quota Speciale"]}, {"id": "PV-3", "type": "pacchetti", "operator": "Francorosso Selezioni", "title": "Diamonds Thudufushi Beach & Water Villas", "country": "Maldive / Atollo di Ari", "resort": "Diamonds Thudufushi Luxury Resort 5*", "dest": "Atollo di Ari Sud - Maldive", "dur": 9, "airports": ["Milano Malpensa", "Roma Fiumicino"], "dates": ["07/06/2026", "14/06/2026", "21/06/2026", "28/06/2026", "05/07/2026", "12/07/2026", "19/07/2026", "26/07/2026"], "basePrice": 2490, "eqtRef": "EQT-MDV-2026-03", "image": "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=600&q=80", "tag": "Idrovolante Panoramico Incluso", "perks": ["All-Inclusive di Altissimo Livello", "Snorkeling Guidato dal Biologo", "Ville sull'Acqua con Terrazza", "Zero Spese Nascoste"]}, {"id": "PV-4", "type": "pacchetti", "operator": "Bravo Club", "title": "Bravo Viva Dominicus Beach • Bayahibe", "country": "Repubblica Dominicana", "resort": "Bravo Viva Dominicus Beach 4* S", "dest": "Bayahibe - Mare Caraibico", "dur": 9, "airports": ["Milano Malpensa", "Roma Fiumicino", "Verona"], "dates": ["09/06/2026", "16/06/2026", "23/06/2026", "30/06/2026", "07/07/2026", "14/07/2026", "21/07/2026", "28/07/2026"], "basePrice": 1480, "eqtRef": "EQT-DOM-2026-04", "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80", "tag": "Il Faro Iconico di Bayahibe", "perks": ["Spiaggia di Sabbia Bianca Caraibica", "Escursione Isola di Saona Riservata", "Open Bar 24h & Ristoranti a Tema", "Consulenza Equestre Tour"]}, {"id": "PV-5", "type": "pacchetti", "operator": "Francorosso Grandi Viaggi", "title": "Tour del Giappone: Tokyo, Kyoto & Monte Fuji", "country": "Giappone", "resort": "Hotel Selezionati 4* Centrali", "dest": "Tokyo • Monte Fuji • Kyoto • Nara • Osaka", "dur": 11, "airports": ["Milano Malpensa", "Roma Fiumicino"], "dates": ["10/06/2026", "24/06/2026", "08/07/2026", "22/07/2026", "05/08/2026", "19/08/2026"], "basePrice": 2790, "eqtRef": "EQT-JPN-2026-05", "image": "https://images.unsplash.com/photo-1506929562872-bb421503ef21?auto=format&fit=crop&w=600&q=80", "tag": "Guida Esclusiva in Italiano", "perks": ["Treno Proiettile Shinkansen Incluso", "Cena Tradizionale Kaiseki", "Assicurazione Medico Integrativa", "Gestione Pratiche Passaporto"]}, {"id": "PV-6", "type": "pacchetti", "operator": "Alpitour Mondo", "title": "Dubai Futuristica & Safari nel Deserto", "country": "Emirati Arabi Uniti", "resort": "Mövenpick Grand Al Bustan 5*", "dest": "Dubai Downtown • Marina • Deserto Arabico", "dur": 6, "airports": ["Milano Malpensa", "Roma Fiumicino", "Bologna", "Venezia"], "dates": ["04/06/2026", "11/06/2026", "18/06/2026", "25/06/2026", "02/07/2026", "09/07/2026", "16/07/2026", "23/07/2026"], "basePrice": 980, "eqtRef": "EQT-DXB-2026-06", "image": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=600&q=80", "tag": "Esperienza Dune Bashing 4x4 Inclusa", "perks": ["Biglietto Burj Khalifa al Tramonto", "Piscina Panoramica a Sfioro", "Trasferimenti Privati con Autista", "Assistenza Equestre Tour H24"]}];
+    const DATA_PACCHETTI = [{"id": "PV-1", "type": "pacchetti", "operator": "Bravo Club / Alpitour", "title": "Bravo Kiwengwa • Zanzibar Esotica", "country": "Tanzania / Zanzibar", "resort": "Bravo Kiwengwa 4* S", "dest": "Kiwengwa Beach - Costa Est", "dur": 9, "airports": ["Milano Malpensa", "Roma Fiumicino", "Verona"], "dates": ["08/06/2026", "15/06/2026", "22/06/2026", "29/06/2026", "06/07/2026", "13/07/2026", "20/07/2026", "27/07/2026", "03/08/2026"], "basePrice": 1390, "eqtRef": "EQT-ZAN-2026-01", "image": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=600&q=80", "tag": "Volo Diretto + Formula Tutto Incluso", "perks": ["Spiaggia di Sabbia Borotalco", "Visti e Tasse Aeroportuali Incluse", "Assicurazione Medico No-Limits", "Assistenza Italiana in Loco"]}, {"id": "PV-2", "type": "pacchetti", "operator": "Alpitour / Domina", "title": "Domina Coral Bay Oasis • Sharm El Sheikh", "country": "Egitto / Mar Rosso", "resort": "Domina Coral Bay Resort 5*", "dest": "Sharm El Sheikh - Sheikh Coast", "dur": 7, "airports": ["Milano Malpensa", "Roma Fiumicino", "Bologna", "Napoli", "Bari"], "dates": ["06/06/2026", "13/06/2026", "20/06/2026", "27/06/2026", "04/07/2026", "11/07/2026", "18/07/2026", "25/07/2026", "01/08/2026"], "basePrice": 690, "eqtRef": "EQT-EGY-2026-02", "image": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80", "tag": "Barriera Corallina Privata", "perks": ["Pontile Diretto sul Reef", "Pensione Completa All-Inclusive", "Quota Iscrizione e Visto Inclusi", "Bambini con Quota Speciale"]}, {"id": "PV-3", "type": "pacchetti", "operator": "Francorosso Selezioni", "title": "Diamonds Thudufushi Beach & Water Villas", "country": "Maldive / Atollo di Ari", "resort": "Diamonds Thudufushi Luxury Resort 5*", "dest": "Atollo di Ari Sud - Maldive", "dur": 9, "airports": ["Milano Malpensa", "Roma Fiumicino"], "dates": ["07/06/2026", "14/06/2026", "21/06/2026", "28/06/2026", "05/07/2026", "12/07/2026", "19/07/2026", "26/07/2026"], "basePrice": 2490, "eqtRef": "EQT-MDV-2026-03", "image": "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=600&q=80", "tag": "Idrovolante Panoramico Incluso", "perks": ["All-Inclusive di Altissimo Livello", "Snorkeling Guidato dal Biologo", "Ville sull'Acqua con Terrazza", "Zero Spese Nascoste"]}, {"id": "PV-4", "type": "pacchetti", "operator": "Bravo Club", "title": "Bravo Viva Dominicus Beach • Bayahibe", "country": "Repubblica Dominicana", "resort": "Bravo Viva Dominicus Beach 4* S", "dest": "Bayahibe - Mare Caraibico", "dur": 9, "airports": ["Milano Malpensa", "Roma Fiumicino", "Verona"], "dates": ["09/06/2026", "16/06/2026", "23/06/2026", "30/06/2026", "07/07/2026", "14/07/2026", "21/07/2026", "28/07/2026"], "basePrice": 1480, "eqtRef": "EQT-DOM-2026-04", "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80", "tag": "Il Faro Iconico di Bayahibe", "perks": ["Spiaggia di Sabbia Bianca Caraibica", "Escursione Isola di Saona Riservata", "Open Bar 24h & Ristoranti a Tema", "Consulenza Equestre Tour"]}, {"id": "PV-5", "type": "pacchetti", "operator": "Francorosso Grandi Viaggi", "title": "Tour del Giappone: Tokyo, Kyoto & Monte Fuji", "country": "Giappone", "resort": "Hotel Selezionati 4* Centrali", "dest": "Tokyo • Monte Fuji • Kyoto • Nara • Osaka", "dur": 11, "airports": ["Milano Malpensa", "Roma Fiumicino"], "dates": ["10/06/2026", "24/06/2026", "08/07/2026", "22/07/2026", "05/08/2026", "19/08/2026"], "basePrice": 2790, "eqtRef": "EQT-JPN-2026-05", "image": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=700&q=80", "tag": "Guida Esclusiva in Italiano", "perks": ["Treno Proiettile Shinkansen Incluso", "Cena Tradizionale Kaiseki", "Assicurazione Medico Integrativa", "Gestione Pratiche Passaporto"]}, {"id": "PV-6", "type": "pacchetti", "operator": "Alpitour Mondo", "title": "Dubai Futuristica & Safari nel Deserto", "country": "Emirati Arabi Uniti", "resort": "Mövenpick Grand Al Bustan 5*", "dest": "Dubai Downtown • Marina • Deserto Arabico", "dur": 6, "airports": ["Milano Malpensa", "Roma Fiumicino", "Bologna", "Venezia"], "dates": ["04/06/2026", "11/06/2026", "18/06/2026", "25/06/2026", "02/07/2026", "09/07/2026", "16/07/2026", "23/07/2026"], "basePrice": 980, "eqtRef": "EQT-DXB-2026-06", "image": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=700&q=80", "tag": "Esperienza Dune Bashing 4x4 Inclusa", "perks": ["Biglietto Burj Khalifa al Tramonto", "Piscina Panoramica a Sfioro", "Trasferimenti Privati con Autista", "Assistenza Equestre Tour H24"]}];
 
     let currentMacroTab = 'crociere';
     let currentOffer = null;
@@ -2009,6 +2288,17 @@
         searchTriggerBtn.classList.add(`theme-${tabKey}`);
       }
 
+      const spotlightBar = document.getElementById('category-spotlight');
+      const sIcon = document.getElementById('spotlight-icon');
+      const sTitle = document.getElementById('spotlight-title');
+      const sDesc = document.getElementById('spotlight-desc');
+      const sBadge = document.getElementById('spotlight-badge');
+
+      if (spotlightBar) {
+        spotlightBar.classList.remove('theme-spotlight-crociere', 'theme-spotlight-mare_italia', 'theme-spotlight-pacchetti');
+        spotlightBar.classList.add(`theme-spotlight-${tabKey}`);
+      }
+
       if (tabKey === 'crociere') {
         lblPort.textContent = 'Porto di Imbarco';
         lblDest.textContent = 'Destinazione Crociera';
@@ -2018,6 +2308,10 @@
           heroBanner.style.backgroundImage = "linear-gradient(180deg, rgba(15, 23, 42, 0.55) 0%, rgba(15, 23, 42, 0.88) 100%), url('https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=2200&q=85')";
         }
         if (heroBadge) heroBadge.textContent = "Boutique Crociere Ufficiale • MSC & Costa • Tariffe Negoziate 2026";
+        if (sIcon) sIcon.textContent = "🚢";
+        if (sTitle) sTitle.textContent = "Area Ufficiale Crociere nel Mediterraneo & Fiordi";
+        if (sDesc) sDesc.textContent = "Tutte le partenze includono: tasse portuali, cabina garantita, pensione completa a bordo e assistenza per check-in e cabine.";
+        if (sBadge) { sBadge.textContent = "⚓ Cabina Garantita & Tasse Incluse"; }
       } else if (tabKey === 'mare_italia') {
         lblPort.textContent = 'Porto / Aeroporto / Auto';
         lblDest.textContent = 'Regione / Isola';
@@ -2027,6 +2321,10 @@
           heroBanner.style.backgroundImage = "linear-gradient(180deg, rgba(15, 23, 42, 0.55) 0%, rgba(15, 23, 42, 0.88) 100%), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2200&q=85')";
         }
         if (heroBadge) heroBadge.textContent = "Villaggi & Resort Mare Italia • Formula Bimbo Gratis • Spiaggia Inclusa";
+        if (sIcon) sIcon.textContent = "🏖️";
+        if (sTitle) sTitle.textContent = "Villaggi Club Mare Italia • Formula Bimbo Free 0-12 Anni";
+        if (sDesc) sDesc.textContent = "Spiaggia privata attrezzata con ombrellone, ristorazione a buffet con bevande, animazione per bimbi e nave gratis o transfer convenzionati.";
+        if (sBadge) { sBadge.textContent = "👶 1° Bambino 0€ Quota Base"; }
       } else {
         lblPort.textContent = 'Aeroporto di Partenza';
         lblDest.textContent = 'Destinazione Mondo';
@@ -2036,6 +2334,10 @@
           heroBanner.style.backgroundImage = "linear-gradient(180deg, rgba(15, 23, 42, 0.55) 0%, rgba(15, 23, 42, 0.88) 100%), url('https://images.unsplash.com/photo-1512100356356-de1b84283e18?auto=format&fit=crop&w=2200&q=85')";
         }
         if (heroBadge) heroBadge.textContent = "Grandi Viaggi & Tour del Mondo • Volo + Resort + Assistenza Esclusiva";
+        if (sIcon) sIcon.textContent = "✈️";
+        if (sTitle) sTitle.textContent = "Pacchetti Volo + Resort & Tour Guidati Esclusivi";
+        if (sDesc) sDesc.textContent = "Tutto compreso: voli diretti con bagaglio da stiva, resort selezionati 4★/5★, trasferimenti dedicati e assicurazione medico/bagaglio.";
+        if (sBadge) { sBadge.textContent = "🌍 Volo + Resort + Transfer Incluso"; }
       }
 
       initFilterDropdowns();
@@ -2234,13 +2536,13 @@
       if (items.length === 0) {
         container.innerHTML = `
           <div style="grid-column: 1 / -1; background:#FFFFFF; border-radius:16px; padding:48px 24px; text-align:center; border:1px solid var(--border-soft);">
-            <div style="font-size:40px; margin-bottom:12px;">🚢</div>
-            <h3 style="font-size:20px; font-weight:800; margin-bottom:8px;">Nessuna partenza con i filtri selezionati</h3>
+            <div style="font-size:40px; margin-bottom:12px;">🔍</div>
+            <h3 style="font-size:20px; font-weight:800; margin-bottom:8px;">Nessuna proposta trovata con i filtri attuali</h3>
             <p style="color:var(--text-muted); font-size:14px; max-width:480px; margin:0 auto 16px auto;">
-              Nessun problema: il nostro centro prenotazioni ha accesso diretto ai cataloghi completi di Costa, MSC e Alpitour.
+              Nessun problema: il nostro centro prenotazioni ha accesso a migliaia di combinazioni in tempo reale.
             </p>
             <button type="button" class="btn-search-trigger" style="display:inline-block; max-width:240px;" onclick="selectAllFilter('port', true); selectAllFilter('dest', true); applyFilters();">
-              Ripristina Tutte le Partenze
+              Ripristina Tutte le Proposte
             </button>
           </div>
         `;
@@ -2250,46 +2552,159 @@
       const displayList = items.slice(0, 18);
       container.innerHTML = displayList.map(item => {
         const originList = (item.ports || item.airports || []).slice(0, 3).join(', ');
-        const badgeTag = item.tag || (item.company ? `${item.company} Ufficiale` : 'Offerta Selezionata');
-        const whiteLabelCategory = item.operator || item.company || 'Boutique EquestreTour';
 
+        // === 1. CARD PER CROCIERE ===
+        if (currentMacroTab === 'crociere') {
+          return `
+            <div class="boutique-card card-style-crociere" onmouseenter="AIPredictiveCache.warmupOffer('${item.id}')">
+              <div>
+                <div class="card-photo-wrapper" style="background-image: url('${item.image}');">
+                  <div class="card-top-badges">
+                    <span class="badge-nautico">⚓ ${item.company || 'Costa'} Ufficiale</span>
+                    <span class="badge-accent-crociera">Rotta 2026</span>
+                  </div>
+                  <div class="card-bottom-tags">
+                    <span class="pill-departure-code">⚓ Scalo d'imbarco: ${originList}</span>
+                  </div>
+                </div>
+
+                <div class="card-body">
+                  <div>
+                    <div class="card-category-indicator category-crociere">
+                      <span>🚢 Crociera Mediterraneo</span>
+                      <span class="dur-pill">🌙 ${item.dur} Notti</span>
+                    </div>
+                    <h3 class="card-ship-title">${item.title || item.ship}</h3>
+                    <p class="card-destination-desc">🗺️ ${item.dest || item.region}</p>
+                    
+                    <div class="card-agency-perks perks-crociere">
+                      <div class="agency-perk-row"><span>⚓</span> <strong>Imbarco:</strong> ${originList || 'Principali porti'}</div>
+                      <div class="agency-perk-row"><span>🍽️</span> <strong>Trattamento:</strong> Pensione Completa & Spettacoli</div>
+                      <div class="agency-perk-row"><span>🛡️</span> <strong>Garanzia:</strong> Tasse Portuali & Assistenza Incluse</div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <div class="card-pricing-block">
+                      <div>
+                        <div class="price-sub-label">A Partire Da</div>
+                        <span class="price-note">a persona • Tasse portuali incluse</span>
+                      </div>
+                      <div class="price-main-val val-crociere">€${item.basePrice}</div>
+                    </div>
+
+                    <div class="card-action-buttons">
+                      <button type="button" class="btn-card-personalize btn-action-crociere" onclick="openOfferModal('${item.id}')">
+                        <span>🚢</span> Scegli Cabina & Data
+                      </button>
+                      <button type="button" class="btn-card-lock" onclick="quickLock('${item.id}')">
+                        Blocca 24h a €0
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          `;
+        }
+
+        // === 2. CARD PER MARE ITALIA ===
+        if (currentMacroTab === 'mare_italia') {
+          return `
+            <div class="boutique-card card-style-mare" onmouseenter="AIPredictiveCache.warmupOffer('${item.id}')">
+              <div>
+                <div class="card-photo-wrapper" style="background-image: url('${item.image}');">
+                  <div class="card-top-badges">
+                    <span class="badge-resort">🏖️ ${item.operator || 'Villaggi Club'}</span>
+                    <span class="badge-bimbo-free">👶 BIMBO FREE 0-12 ANNI</span>
+                  </div>
+                  <div class="card-bottom-tags">
+                    <span class="pill-departure-code">🏖️ ${item.dest || item.region}</span>
+                  </div>
+                </div>
+
+                <div class="card-body">
+                  <div>
+                    <div class="card-category-indicator category-mare">
+                      <span>🏖️ Villaggio & Resort</span>
+                      <span class="dur-pill">☀️ 7 Notti Relax</span>
+                    </div>
+                    <h3 class="card-ship-title title-mare">${item.title}</h3>
+                    <p class="card-destination-desc">📍 ${item.dest || item.region}</p>
+                    
+                    <div class="card-agency-perks perks-mare">
+                      <div class="agency-perk-row"><span>🌊</span> <strong>Spiaggia:</strong> Ombrellone & Lettini Inclusi</div>
+                      <div class="agency-perk-row"><span>🍹</span> <strong>Formula:</strong> All-Inclusive & Open Bar Resort</div>
+                      <div class="agency-perk-row"><span>👶</span> <strong>Famiglie:</strong> 1° Bambino 0€ & Mini Club</div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <div class="card-pricing-block">
+                      <div>
+                        <div class="price-sub-label">A Partire Da</div>
+                        <span class="price-note">a persona • Tessera Club Inclusa</span>
+                      </div>
+                      <div class="price-main-val val-mare">€${item.basePrice}</div>
+                    </div>
+
+                    <div class="card-action-buttons">
+                      <button type="button" class="btn-card-personalize btn-action-mare" onclick="openOfferModal('${item.id}')">
+                        <span>🏖️</span> Preventivo Famiglia
+                      </button>
+                      <button type="button" class="btn-card-lock" onclick="quickLock('${item.id}')">
+                        Blocca 24h a €0
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          `;
+        }
+
+        // === 3. CARD PER PACCHETTI VIAGGIO ===
         return `
-          <div class="boutique-card card-theme-' + currentMacroTab + '" onmouseenter="AIPredictiveCache.warmupOffer('${item.id}')">
+          <div class="boutique-card card-style-pacchetti" onmouseenter="AIPredictiveCache.warmupOffer('${item.id}')">
             <div>
               <div class="card-photo-wrapper" style="background-image: url('${item.image}');">
                 <div class="card-top-badges">
-                  <span class="badge-collection">${whiteLabelCategory}</span>
-                  <span class="badge-agency-guarantee">★ ${badgeTag}</span>
+                  <span class="badge-volo">✈️ VOLO + RESORT INCLUSO</span>
+                  <span class="badge-esotico">🌍 ${item.country || 'Mondo'}</span>
                 </div>
                 <div class="card-bottom-tags">
-                  <span class="pill-departure-code">Pratica: ${item.eqtRef}</span>
+                  <span class="pill-departure-code">🛫 Voli da: ${originList}</span>
                 </div>
               </div>
 
               <div class="card-body">
                 <div>
-                  <h3 class="card-ship-title">${item.title || item.ship}</h3>
-                  <p class="card-destination-desc">${item.dest || item.region || item.country}</p>
+                  <div class="card-category-indicator category-pacchetti">
+                    <span>✈️ Pacchetto Completo</span>
+                    <span class="dur-pill">🌍 ${item.dur} Notti</span>
+                  </div>
+                  <h3 class="card-ship-title title-pacchetti">${item.title}</h3>
+                  <p class="card-destination-desc">📍 ${item.dest || item.country}</p>
                   
-                  <div class="card-agency-perks">
-                    <div class="agency-perk-row"><span>📍</span> <strong>Partenza da:</strong> ${originList || 'Principali nodi italiani'}</div>
-                    <div class="agency-perk-row"><span>🌙</span> <strong>Durata:</strong> ${item.dur} Notti</div>
-                    <div class="agency-perk-row"><span>👨‍💼</span> <strong>Assistenza:</strong> Consulente Personale Inclusa</div>
+                  <div class="card-agency-perks perks-pacchetti">
+                    <div class="agency-perk-row"><span>🛫</span> <strong>Volo & Bagaglio:</strong> Volo a/r + Bagaglio in stiva</div>
+                    <div class="agency-perk-row"><span>🌴</span> <strong>Soggiorno:</strong> Transfer + Resort Selezionato</div>
+                    <div class="agency-perk-row"><span>🛡️</span> <strong>Protezione:</strong> Assicurazione Medico-Bagaglio Inclusa</div>
                   </div>
                 </div>
 
                 <div>
                   <div class="card-pricing-block">
                     <div>
-                      <div class="price-sub-label">A Partire Da</div>
-                      <span class="price-note">per persona • Tasse incluse</span>
+                      <div class="price-sub-label">Pacchetto Completo Da</div>
+                      <span class="price-note">volo + hotel + tasse incluse</span>
                     </div>
-                    <div class="price-main-val">€${item.basePrice}</div>
+                    <div class="price-main-val val-pacchetti">€${item.basePrice}</div>
                   </div>
 
                   <div class="card-action-buttons">
-                    <button type="button" class="btn-card-personalize" onclick="openOfferModal('${item.id}')">
-                      Calcola Preventivo Reale
+                    <button type="button" class="btn-card-personalize btn-action-pacchetti" onclick="openOfferModal('${item.id}')">
+                      <span>✈️</span> Configura Volo & Hotel
                     </button>
                     <button type="button" class="btn-card-lock" onclick="quickLock('${item.id}')">
                       Blocca 24h a €0
