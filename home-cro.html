@@ -166,7 +166,7 @@
                   url('https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=2200&q=85');
       background-size: cover;
       background-position: center 35%;
-      padding: 72px 0 88px 0;
+      padding: 72px 0 105px 0;
       color: #FFFFFF;
       text-align: center;
     }
@@ -225,12 +225,29 @@
     }
     .hero-perk-item span { color: var(--secondary-gold); font-weight: 900; }
 
-    /* 3. TRUST BAR BOUTIQUE */
+    /* 3. MOTORE DI RICERCA UNIFICATO A 3 TAB */
+    .search-section {
+      margin-top: -60px;
+      position: relative;
+      z-index: 50;
+      margin-bottom: 28px;
+    }
+    .search-chamber {
+      background: #FFFFFF;
+      border-radius: var(--radius-lg);
+      box-shadow: 0 20px 45px -12px rgba(15, 23, 42, 0.18);
+      border: 1px solid var(--border-soft);
+      padding: 24px;
+    }
+
+    /* 4. TRUST BAR BOUTIQUE */
     .boutique-trust-bar {
       background: #FFFFFF;
-      border-bottom: 1px solid var(--border-soft);
-      padding: 16px 0;
-      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius-md);
+      padding: 20px 24px;
+      margin-bottom: 45px;
+      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.04);
     }
     .trust-grid {
       display: grid;
@@ -266,21 +283,6 @@
       color: var(--text-muted);
       display: block;
       line-height: 1.25;
-    }
-
-    /* 4. MOTORE DI RICERCA UNIFICATO A 3 TAB */
-    .search-section {
-      margin-top: -40px;
-      position: relative;
-      z-index: 50;
-      margin-bottom: 50px;
-    }
-    .search-chamber {
-      background: #FFFFFF;
-      border-radius: var(--radius-lg);
-      box-shadow: var(--shadow-xl);
-      border: 1px solid var(--border-soft);
-      padding: 24px;
     }
 
     /* TABS SELECTOR */
@@ -1250,6 +1252,8 @@
     }
     @media (max-width: 768px) {
       .header-nav { display: none; }
+      .search-section { margin-top: -25px; margin-bottom: 20px; }
+      .boutique-trust-bar { padding: 16px; margin-bottom: 30px; }
       .hero-main-title { font-size: 32px; }
       .trust-grid { grid-template-columns: 1fr; }
       .filters-grid { grid-template-columns: 1fr; }
@@ -1312,43 +1316,7 @@
     </div>
   </section>
 
-  <!-- 3. TRUST BAR BOUTIQUE -->
-  <section class="boutique-trust-bar" id="garanzie">
-    <div class="container">
-      <div class="trust-grid">
-        <div class="trust-item">
-          <div class="trust-icon-box">🏛️</div>
-          <div class="trust-content">
-            <strong>20 Anni di Esperienza</strong>
-            <small>Boutique di viaggi con licenza ufficiale</small>
-          </div>
-        </div>
-        <div class="trust-item">
-          <div class="trust-icon-box">👨‍💼</div>
-          <div class="trust-content">
-            <strong>Consulente Dedicato H24</strong>
-            <small>Assistenza continua prima e durante il viaggio</small>
-          </div>
-        </div>
-        <div class="trust-item">
-          <div class="trust-icon-box">🏷️</div>
-          <div class="trust-content">
-            <strong>Miglior Prezzo Reale</strong>
-            <small>Prezzo totale finito con tasse e diritti</small>
-          </div>
-        </div>
-        <div class="trust-item">
-          <div class="trust-icon-box">🔒</div>
-          <div class="trust-content">
-            <strong>Pagamenti Protetti SSL</strong>
-            <small>Fondo di Garanzia Viaggi e crittografia 256-bit</small>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 4. MOTORE DI RICERCA A 3 TAB UNIFICATO -->
+  <!-- 3. MOTORE DI RICERCA A 3 TAB UNIFICATO -->
   <div class="container search-section" id="ricerca-motore">
     <div class="search-chamber">
       
@@ -1452,6 +1420,42 @@
       </div>
 
     </div>
+  </div>
+
+  <!-- 4. TRUST BAR BOUTIQUE (GARANZIE) -->
+  <div class="container">
+    <section class="boutique-trust-bar" id="garanzie">
+      <div class="trust-grid">
+        <div class="trust-item">
+          <div class="trust-icon-box">🏛️</div>
+          <div class="trust-content">
+            <strong>20 Anni di Esperienza</strong>
+            <small>Boutique di viaggi con licenza ufficiale</small>
+          </div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon-box">👨‍💼</div>
+          <div class="trust-content">
+            <strong>Consulente Dedicato H24</strong>
+            <small>Assistenza continua prima e durante il viaggio</small>
+          </div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon-box">🏷️</div>
+          <div class="trust-content">
+            <strong>Miglior Prezzo Reale</strong>
+            <small>Prezzo totale finito con tasse e diritti</small>
+          </div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon-box">🔒</div>
+          <div class="trust-content">
+            <strong>Pagamenti Protetti SSL</strong>
+            <small>Fondo di Garanzia Viaggi e crittografia 256-bit</small>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 
   <!-- 5. VETRINA BOUTIQUE RISULTATI -->
