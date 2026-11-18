@@ -67,96 +67,144 @@
       padding: 0 24px;
     }
 
-    /* 1. HEADER BOUTIQUE STICKY */
+    /* 1. HEADER BOUTIQUE SU HERO FULL-BLEED (IMMAGINE FINO IN CIMA) */
     .site-header {
-      background: #FFFFFF;
-      border-bottom: 1px solid var(--border-soft);
-      position: sticky;
+      position: absolute;
       top: 0;
+      left: 0;
+      right: 0;
       z-index: 1000;
-      box-shadow: var(--shadow-sm);
+      background: linear-gradient(180deg, rgba(15, 23, 42, 0.90) 0%, rgba(15, 23, 42, 0.45) 75%, transparent 100%);
+      padding: 16px 0 22px 0;
+      border-bottom: none;
     }
     .header-inner {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 82px;
+      height: 74px;
     }
     .logo-link {
       display: inline-flex;
       align-items: center;
       text-decoration: none;
+      gap: 14px;
+    }
+    /* LOGO CON CERCHIO BIANCO SU FOTO FULL-SCREEN */
+    .logo-circle-badge {
+      width: 66px;
+      height: 66px;
+      border-radius: 50%;
+      background: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+      border: 3px solid rgba(255, 255, 255, 0.95);
+      padding: 7px;
+      flex-shrink: 0;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .logo-circle-badge:hover {
+      transform: scale(1.06);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
     }
     .site-logo-img {
-      height: 52px;
-      width: auto;
+      width: 100%;
+      height: 100%;
       object-fit: contain;
     }
-    .header-nav {
+    .brand-title-box {
       display: flex;
-      align-items: center;
-      gap: 28px;
+      flex-direction: column;
     }
-    .header-nav-btn {
-      text-decoration: none;
-      color: var(--text-main);
+    .brand-title-main {
+      font-size: 21px;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+      line-height: 1.1;
+      color: #FFFFFF;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+    }
+    .brand-title-sub {
+      font-size: 11px;
       font-weight: 700;
-      font-size: 14px;
-      padding: 8px 12px;
-      border-radius: var(--radius-sm);
-      transition: all 0.15s;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-    .header-nav-btn:hover, .header-nav-btn.active {
-      color: var(--primary-blue);
-      background: var(--primary-blue-light);
+      color: var(--secondary-gold);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
     }
     .header-actions {
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 12px;
     }
-    .phone-contact-pill {
+    .header-contact-pill {
       display: flex;
       align-items: center;
       gap: 10px;
       text-decoration: none;
-      background: var(--primary-blue-light);
       padding: 8px 16px;
       border-radius: var(--radius-full);
-      border: 1px solid rgba(0, 102, 255, 0.15);
-      transition: all 0.2s;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      transition: transform 0.2s, box-shadow 0.2s;
     }
-    .phone-contact-pill:hover {
-      background: #DBEAFE;
-      transform: translateY(-1px);
+    .header-contact-pill:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
     }
-    .phone-icon-box {
-      width: 28px;
-      height: 28px;
-      background: var(--primary-blue);
-      color: #FFF;
+    .whatsapp-pill {
+      background: #FFFFFF;
+      border: 2px solid #25D366;
+    }
+    .whatsapp-icon {
+      width: 36px;
+      height: 36px;
       border-radius: 50%;
+      background: #25D366;
+      color: #FFFFFF;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 13px;
+      font-size: 18px;
     }
-    .phone-texts small {
+    .whatsapp-pill strong {
+      color: #128C7E;
+    }
+    .phone-pill {
+      background: #FFFFFF;
+      border: 2px solid var(--primary-blue);
+    }
+    .phone-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--primary-blue);
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+    }
+    .phone-pill strong {
+      color: var(--primary-blue-dark);
+    }
+    .contact-texts {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.15;
+    }
+    .contact-texts small {
       font-size: 10px;
+      font-weight: 800;
       text-transform: uppercase;
-      font-weight: 800;
-      color: var(--primary-blue);
       letter-spacing: 0.5px;
-      display: block;
+      color: var(--text-muted);
     }
-    .phone-texts strong {
-      font-size: 14px;
-      font-weight: 800;
-      color: var(--text-main);
+    .contact-texts strong {
+      font-size: 15px;
+      font-weight: 900;
+      letter-spacing: -0.3px;
     }
 
     /* 2. HERO WIDESCREEN AD ALTO IMPATTO */
@@ -166,7 +214,7 @@
                   url('https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=2200&q=85');
       background-size: cover;
       background-position: center 35%;
-      padding: 72px 0 105px 0;
+      padding: 135px 0 115px 0; transition: background 0.5s ease-in-out;
       color: #FFFFFF;
       text-align: center;
     }
@@ -283,6 +331,77 @@
       color: var(--text-muted);
       display: block;
       line-height: 1.25;
+    }
+
+    
+    /* TEMI DISTINTIVI PER LE 3 MACRO-AREE (CROCIERE / MARE ITALIA / PACCHETTI) */
+    #tab-btn-crociere.active {
+      background: linear-gradient(135deg, #0055B1 0%, #0066FF 100%) !important;
+      color: #FFFFFF !important;
+      border-color: #0055B1 !important;
+      box-shadow: 0 6px 18px rgba(0, 102, 255, 0.4) !important;
+    }
+    #tab-btn-mare_italia.active {
+      background: linear-gradient(135deg, #0284C7 0%, #0D9488 100%) !important;
+      color: #FFFFFF !important;
+      border-color: #0D9488 !important;
+      box-shadow: 0 6px 18px rgba(13, 148, 136, 0.4) !important;
+    }
+    #tab-btn-pacchetti.active {
+      background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%) !important;
+      color: #FFFFFF !important;
+      border-color: #6366F1 !important;
+      box-shadow: 0 6px 18px rgba(99, 102, 241, 0.4) !important;
+    }
+
+    /* ACCENTO PULSANTE CERCA PER CATEGORIA */
+    .btn-search-trigger.theme-crociere {
+      background: linear-gradient(135deg, #0055B1 0%, #0066FF 100%);
+    }
+    .btn-search-trigger.theme-mare_italia {
+      background: linear-gradient(135deg, #0284C7 0%, #0D9488 100%);
+      box-shadow: 0 4px 14px rgba(13, 148, 136, 0.35);
+    }
+    .btn-search-trigger.theme-pacchetti {
+      background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%);
+      box-shadow: 0 4px 14px rgba(99, 102, 241, 0.35);
+    }
+
+    /* CARD THEMES */
+    .card-theme-crociere {
+      border-top: 4px solid #0066FF !important;
+    }
+    .card-theme-crociere .badge-collection {
+      background: #0066FF !important;
+    }
+    .card-theme-crociere .btn-card-personalize {
+      background: #0066FF !important;
+    }
+
+    .card-theme-mare_italia {
+      border-top: 4px solid #0D9488 !important;
+    }
+    .card-theme-mare_italia .badge-collection {
+      background: linear-gradient(135deg, #0284C7, #0D9488) !important;
+    }
+    .card-theme-mare_italia .btn-card-personalize {
+      background: linear-gradient(135deg, #0284C7, #0D9488) !important;
+    }
+    .card-theme-mare_italia .card-ship-title {
+      color: #0F766E !important;
+    }
+
+    .card-theme-pacchetti {
+      border-top: 4px solid #6366F1 !important;
+    }
+    .card-theme-pacchetti .badge-collection {
+      background: linear-gradient(135deg, #4F46E5, #7C3AED) !important;
+    }
+    .card-theme-pacchetti .btn-card-personalize {
+      background: linear-gradient(135deg, #4F46E5, #7C3AED) !important;
+    }
+    .card-theme-pacchetti .card-ship-title {
+      color: #4338CA !important;
     }
 
     /* TABS SELECTOR */
@@ -1251,7 +1370,15 @@
       .footer-grid { grid-template-columns: 1fr 1fr; }
     }
     @media (max-width: 768px) {
-      .header-nav { display: none; }
+      @media (max-width: 768px) {
+      .site-header { padding: 10px 0; }
+      .header-inner { flex-direction: column; height: auto; gap: 12px; }
+      .logo-circle-badge { width: 52px; height: 52px; }
+      .brand-title-main { font-size: 17px; }
+      .header-actions { width: 100%; justify-content: center; flex-wrap: wrap; gap: 8px; }
+      .header-contact-pill { padding: 6px 12px; }
+      .contact-texts strong { font-size: 13px; }
+      .hero-widescreen { padding: 160px 0 80px 0; }
       .search-section { margin-top: -25px; margin-bottom: 20px; }
       .boutique-trust-bar { padding: 16px; margin-bottom: 30px; }
       .hero-main-title { font-size: 32px; }
@@ -1269,26 +1396,38 @@
 </head>
 <body>
 
-  <!-- 1. HEADER BOUTIQUE STICKY -->
+  <!-- 1. HEADER BOUTIQUE SU HERO FULL-BLEED (IMMAGINE FINO IN CIMA) -->
   <header class="site-header">
     <div class="container">
       <div class="header-inner">
-        <a href="/" class="logo-link">
-          <img src="https://www.equestretour.com/images/logo.svg" alt="Equestre Tour" class="site-logo-img" onerror="this.src='images/logo.svg'">
+        <a href="/" class="logo-link" title="Equestre Tour - Home">
+          <div class="logo-circle-badge">
+            <img src="https://www.equestretour.com/images/logo.svg" alt="Equestre Tour" class="site-logo-img" onerror="this.src='images/logo.svg'">
+          </div>
+          <div class="brand-title-box">
+            <span class="brand-title-main">EQUESTRE TOUR</span>
+            <span class="brand-title-sub">Boutique dei Viaggi</span>
+          </div>
         </a>
-        
-        <nav class="header-nav">
-          <button type="button" class="header-nav-btn active" onclick="switchMacroTab('crociere')">🚢 Crociere</button>
-          <button type="button" class="header-nav-btn" onclick="switchMacroTab('mare_italia')">🏖️ Mare Italia</button>
-          <button type="button" class="header-nav-btn" onclick="switchMacroTab('pacchetti')">✈️ Pacchetti Viaggio</button>
-          <a href="#garanzie" class="header-nav-btn">🛡️ Vantaggi Agenzia</a>
-        </nav>
 
+        <!-- CONTATTI BEN VISIBILI: WHATSAPP E CENTRALINO -->
         <div class="header-actions">
-          <a href="tel:0292854066" class="phone-contact-pill">
-            <div class="phone-icon-box">📞</div>
-            <div class="phone-texts">
-              <small>Consulente Dedicato</small>
+          <a href="https://wa.me/390882228122?text=Salve,%20vorrei%20informazioni%20su%20un%20viaggio%20con%20Equestre%20Tour" target="_blank" rel="noopener" class="header-contact-pill whatsapp-pill" title="Scrivici su WhatsApp">
+            <div class="contact-icon-box whatsapp-icon">
+              💬
+            </div>
+            <div class="contact-texts">
+              <small>WhatsApp</small>
+              <strong>0882 22 81 22</strong>
+            </div>
+          </a>
+
+          <a href="tel:0292854066" class="header-contact-pill phone-pill" title="Chiama il nostro centralino">
+            <div class="contact-icon-box phone-icon">
+              📞
+            </div>
+            <div class="contact-texts">
+              <small>Centralino</small>
               <strong>02 928 540 66</strong>
             </div>
           </a>
@@ -1298,11 +1437,11 @@
   </header>
 
   <!-- 2. HERO WIDESCREEN AD ALTO IMPATTO -->
-  <section class="hero-widescreen">
+  <section class="hero-widescreen" id="hero-banner">
     <div class="container">
       <div class="hero-badge-pill">
         <div class="hero-badge-dot"></div>
-        <span>Boutique di Viaggio Ufficiale • Tariffe Negoziate & Blocco Reale 24h</span>
+        <span id="hero-badge-text">Boutique di Viaggio Ufficiale • Tariffe Negoziate & Blocco Reale 24h</span>
       </div>
       <h1 class="hero-main-title">Il tuo viaggio ideale, selezionato dai nostri esperti.<br><span>Cerca, Blocca l'Offerta, Parti.</span></h1>
       <p class="hero-subtitle">Confronta in tempo reale le disponibilità ufficiali di MSC Crociere, Costa Crociere e Alpitour. Quotazione trasparente con calcolo esatto riduzioni bimbi, comparazione date adiacenti e blocco opzione per 24 ore senza carta di credito.</p>
@@ -1765,7 +1904,7 @@
             <a href="tel:0292854066" class="btn-exit-hold24" style="text-decoration:none; display:inline-flex; align-items:center; gap:6px;">
               📞 Linea Assistenza: 02 928 540 66
             </a>
-            <a href="https://wa.me/390292854066" target="_blank" class="btn-exit-checkout" style="text-decoration:none; display:inline-flex; align-items:center; gap:6px; background:#10B981;">
+            <a href="https://wa.me/390882228122?text=Salve,%20vorrei%20informazioni" target="_blank" class="btn-exit-checkout" style="text-decoration:none; display:inline-flex; align-items:center; gap:6px; background:#10B981;">
               💬 Assistenza WhatsApp
             </a>
           </div>
@@ -1801,7 +1940,7 @@
           <h4>Sede & Contatti</h4>
           <p style="margin-bottom: 8px;">📍 <strong>Via Calabria 42</strong><br>71016 San Severo (FG) - Italia</p>
           <p style="margin-bottom: 8px;">📞 Centralino Unico: <a href="tel:0292854066" style="color:var(--secondary-gold); font-weight:800;">02 928 540 66</a></p>
-          <p style="margin-bottom: 8px;">💬 WhatsApp Clienti: <a href="https://wa.me/390292854066" target="_blank" style="color:#FFF;">Chat Dedicata</a></p>
+          <p style="margin-bottom: 8px;">💬 WhatsApp Clienti: <a href="https://wa.me/390882228122?text=Salve,%20vorrei%20informazioni" target="_blank" style="color:#FFF;">0882 22 81 22</a></p>
           <p>🕒 Lun - Ven: 09:00 - 19:30<br>Sabato: 09:00 - 13:00</p>
         </div>
 
@@ -1861,21 +2000,42 @@
       const title = document.getElementById('showcase-title');
       const subtitle = document.getElementById('showcase-subtitle');
 
+      const heroBanner = document.getElementById('hero-banner');
+      const heroBadge = document.getElementById('hero-badge-text');
+      const searchTriggerBtn = document.querySelector('.btn-search-trigger');
+
+      if (searchTriggerBtn) {
+        searchTriggerBtn.classList.remove('theme-crociere', 'theme-mare_italia', 'theme-pacchetti');
+        searchTriggerBtn.classList.add(`theme-${tabKey}`);
+      }
+
       if (tabKey === 'crociere') {
         lblPort.textContent = 'Porto di Imbarco';
         lblDest.textContent = 'Destinazione Crociera';
         title.textContent = 'La Collezione Ufficiale Crociere 2026';
         subtitle.textContent = 'Partenze MSC & Costa con assistenza agenzia e opzione 24h garantita';
+        if (heroBanner) {
+          heroBanner.style.backgroundImage = "linear-gradient(180deg, rgba(15, 23, 42, 0.55) 0%, rgba(15, 23, 42, 0.88) 100%), url('https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=2200&q=85')";
+        }
+        if (heroBadge) heroBadge.textContent = "Boutique Crociere Ufficiale • MSC & Costa • Tariffe Negoziate 2026";
       } else if (tabKey === 'mare_italia') {
         lblPort.textContent = 'Porto / Aeroporto / Auto';
         lblDest.textContent = 'Regione / Isola';
         title.textContent = 'I Migliori Villaggi Mare Italia (Alpitour & Selezioni)';
         subtitle.textContent = 'Sardegna, Sicilia, Puglia e Calabria con Bimbo Free e Formula All-Inclusive';
+        if (heroBanner) {
+          heroBanner.style.backgroundImage = "linear-gradient(180deg, rgba(15, 23, 42, 0.55) 0%, rgba(15, 23, 42, 0.88) 100%), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2200&q=85')";
+        }
+        if (heroBadge) heroBadge.textContent = "Villaggi & Resort Mare Italia • Formula Bimbo Gratis • Spiaggia Inclusa";
       } else {
         lblPort.textContent = 'Aeroporto di Partenza';
         lblDest.textContent = 'Destinazione Mondo';
         title.textContent = 'Pacchetti Vacanza & Grandi Viaggi';
         subtitle.textContent = 'Zanzibar, Mar Rosso, Maldive, Caraibi e Tour Giappone con voli e guide inclusi';
+        if (heroBanner) {
+          heroBanner.style.backgroundImage = "linear-gradient(180deg, rgba(15, 23, 42, 0.55) 0%, rgba(15, 23, 42, 0.88) 100%), url('https://images.unsplash.com/photo-1512100356356-de1b84283e18?auto=format&fit=crop&w=2200&q=85')";
+        }
+        if (heroBadge) heroBadge.textContent = "Grandi Viaggi & Tour del Mondo • Volo + Resort + Assistenza Esclusiva";
       }
 
       initFilterDropdowns();
@@ -2094,7 +2254,7 @@
         const whiteLabelCategory = item.operator || item.company || 'Boutique EquestreTour';
 
         return `
-          <div class="boutique-card" onmouseenter="AIPredictiveCache.warmupOffer('${item.id}')">
+          <div class="boutique-card card-theme-' + currentMacroTab + '" onmouseenter="AIPredictiveCache.warmupOffer('${item.id}')">
             <div>
               <div class="card-photo-wrapper" style="background-image: url('${item.image}');">
                 <div class="card-top-badges">
